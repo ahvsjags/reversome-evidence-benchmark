@@ -1,6 +1,6 @@
 {
   "status": "frozen_paired_result_formally_audited",
-  "generated_at_utc": "2026-08-13T16:42:23.821768+00:00",
+  "generated_at_utc": "2026-08-13T17:24:06.609028+00:00",
   "primary_endpoint": "mean specimen-level paired-minus-permuted cosine similarity",
   "inference": [
     {
@@ -13,7 +13,7 @@
       "fold_percentile_97_5": 0.2936067399073856,
       "specimen_bootstrap_ci95_low": 0.19465206965828624,
       "specimen_bootstrap_ci95_high": 0.23845554786032366,
-      "exact_two_sided_sign_flip_p": 4.577566870622702e-05,
+      "exact_two_sided_sign_flip_p": 3.0517578125e-05,
       "positive_specimen_fraction": 1.0,
       "bootstrap_draws": 20000,
       "random_seed": 20260812
@@ -28,7 +28,7 @@
       "fold_percentile_97_5": 0.28267180052152463,
       "specimen_bootstrap_ci95_low": 0.20519697111181937,
       "specimen_bootstrap_ci95_high": 0.24308928241812705,
-      "exact_two_sided_sign_flip_p": 4.577566870622702e-05,
+      "exact_two_sided_sign_flip_p": 3.0517578125e-05,
       "positive_specimen_fraction": 1.0,
       "bootstrap_draws": 20000,
       "random_seed": 20260813
@@ -43,23 +43,23 @@
       "fold_percentile_97_5": 0.03585041204872964,
       "specimen_bootstrap_ci95_low": 0.020772481720599173,
       "specimen_bootstrap_ci95_high": 0.02802469523875499,
-      "exact_two_sided_sign_flip_p": 4.577566870622702e-05,
+      "exact_two_sided_sign_flip_p": 3.0517578125e-05,
       "positive_specimen_fraction": 1.0,
       "bootstrap_draws": 20000,
       "random_seed": 20260814
     },
     {
-      "metric": "retrieval_top1",
+      "metric": "retrieval_top1_excess_over_random",
       "n_independent_specimens": 16,
       "effect_estimator": "unweighted mean across held-out specimens",
-      "effect": 0.0020625,
-      "median": 0.00175,
-      "fold_percentile_2_5": 0.0005,
-      "fold_percentile_97_5": 0.004125,
-      "specimen_bootstrap_ci95_low": 0.00153125,
-      "specimen_bootstrap_ci95_high": 0.0026249999999999997,
-      "exact_two_sided_sign_flip_p": 4.577566870622702e-05,
-      "positive_specimen_fraction": 1.0,
+      "effect": 0.0015625,
+      "median": 0.00125,
+      "fold_percentile_2_5": 0.0,
+      "fold_percentile_97_5": 0.003625,
+      "specimen_bootstrap_ci95_low": 0.00103125,
+      "specimen_bootstrap_ci95_high": 0.002125,
+      "exact_two_sided_sign_flip_p": 0.0001220703125,
+      "positive_specimen_fraction": 0.875,
       "bootstrap_draws": 20000,
       "random_seed": 20260815
     }
