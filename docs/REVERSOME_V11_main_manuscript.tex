@@ -1,0 +1,226 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{microtype}
+\usepackage{hyperref}
+\usepackage[numbers,sort&compress]{natbib}
+\hypersetup{colorlinks=true,citecolor=blue,linkcolor=blue,urlcolor=blue}
+\title{REVERSOME: specimen-held-out multimodal state transfer with evidence-bounded evaluation}
+\author{Author list to be completed before submission}
+\date{}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Paired single-cell assays, pretrained representations and external cohorts support different inferential claims, yet are often combined without preserving those distinctions. We introduce REVERSOME, an evidence-bounded evaluation framework whose primary test asks whether exact same-cell RNA--ATAC provenance improves transfer to unseen human lung specimens. In 12,800 paired profiles from 16 specimens, native pairing increased held-out cosine similarity over a pairing-breaking control by a specimen-level mean of 0.2164 (95\% bootstrap confidence interval, 0.1947--0.2385; exact two-sided sign-flip $P=3.05\times10^{-5}$) and reduced ATAC principal-component mean absolute error by 2.44\% (95\% confidence interval, 2.08--2.80\%). Exact-pair retrieval remained low, distinguishing state transfer from cell reconstruction. A four-model embedding benchmark used donor-grouped balanced accuracy as its primary endpoint and retained dataset-held-out analysis as a sensitivity stress test. UCE and scFoundation performed strongly, but a simple expression PCA--logistic baseline was competitive; three degenerate dataset folds were excluded from sensitivity summaries and remained visible in source data. A pre-specified PBMC analysis was inconsistent across donors, limiting the claim to lung-specimen transfer. Public hPCLS, spatial and external-lung analyses were retained as contextual association, and a receipt-bound agent as release control. REVERSOME couples a supported paired-state result to explicit negative findings, uncertainty and claim ceilings.
+\end{abstract}
+
+\section*{Introduction}
+
+Single-cell atlases describe cellular states across tissues, diseases and anatomical compartments at increasing scale \cite{Travaglini2020,Sikkema2023}. Multimodal assays extend these atlases by observing complementary molecular layers in the same cell. However, visually coherent integration is not equivalent to transfer beyond a donor or specimen. Same-cell RNA--chromatin data provide a direct substrate for testing this distinction because the shared barcode establishes paired provenance before computational alignment \cite{Ma2020,Long2024}.
+
+Methods such as MultiVI, scGLUE, MaxFuse and scPair model shared or modality-specific structure and have motivated increasingly broad multimodal benchmarks \cite{Ashuach2023,Cao2022,Chen2024,Hu2024,Fu2025}. Their evaluations also show that performance depends on the prediction target, pairing design, data quality and split unit. A cell-level random split can therefore answer a materially easier question than withholding a biological specimen. Likewise, a state-level correspondence metric and exact cell retrieval should not be interpreted as interchangeable outcomes.
+
+Single-cell foundation models introduce a related problem. Geneformer, scGPT, UCE and scFoundation differ in pretraining data, vocabularies, preprocessing and intended downstream use \cite{Theodoris2023,Cui2024,Rosen2026,Hao2024}. Recent benchmarks show that conventional task-specific representations can remain competitive and that foundation-model rankings are endpoint dependent \cite{Wang2026}. Consequently, model provenance, simple baselines, label coverage and degenerate folds must accompany any headline score.
+
+We developed REVERSOME around one primary question: does exact paired provenance support RNA-to-ATAC state transfer in specimens excluded from model fitting? The primary analysis uses a corrected public human lung multiome object from GSE241468 \cite{Long2024}. We then use a four-model embedding benchmark as a secondary result and retain public hPCLS, spatial, external-cohort and agent analyses as contextual or release-control evidence. The framework is designed to make negative results and claim boundaries visible rather than allowing evidence layers to imply a single validation tier.
+
+\begin{figure}[p]
+\centering
+\includegraphics[width=\textwidth]{figures/fig1_reversome_system_framework.png}
+\caption{REVERSOME evidence-bounded multimodal evaluation framework. Released public inputs enter separately labelled evidence paths. The central branch uses exact RNA--ATAC cell barcodes; foundation-model embeddings are handled as frozen artefacts; hPCLS, spatial and external-cohort layers provide context, localisation and association; and the agent is restricted to release control. This is a systems schematic, not an experimental or clinical workflow.}
+\label{fig:framework}
+\end{figure}
+
+\section*{Results}
+
+\subsection*{Registered evidence roles define the unit and ceiling of inference}
+
+REVERSOME registers each input by assay, biological unit, provenance, split and permitted claim before rendering a result (Fig.~\ref{fig:framework}). The direct multimodal branch is evaluated at specimen level. Foundation-model outputs are frozen representation artefacts evaluated under grouped folds. Public hPCLS, spatial and external-lung datasets are analysed as ex vivo context, anatomical localisation and external association. The agent operates only after deterministic provenance and policy checks.
+
+This ordering prevents later contextual layers from promoting a descriptive or predictive observation into causal, mechanistic or clinical evidence. The primary endpoint and independent unit are fixed before the secondary benchmark and contextual analyses are interpreted.
+
+\subsection*{A barcode-paired human lung atlas supplies the direct test substrate}
+
+The corrected GSE241468 object contains barcode-shared transcriptome and chromatin measurements from 16 human lung specimens \cite{Long2024}. The frozen evaluation subset contains 12,800 cells spanning 23 released cell-type annotations (Fig.~\ref{fig:atlas}). RNA, ATAC and paired-cell views recover broad epithelial, stromal, endothelial and immune organisation. These maps establish data availability and state structure; they do not establish a regulatory mechanism.
+
+The specimen, not the cell, is the independent generalisation unit. In every outer fold, one specimen is excluded from feature selection, scaling, dimensionality reduction and mapping. This design prevents cells from the same specimen from appearing on both sides of the primary comparison.
+
+\subsection*{Native pairing improves state transfer to unseen lung specimens}
+
+For each held-out specimen, training-specimen-only RNA and ATAC features were selected, separately standardized and projected to 16 principal components. A fixed Ridge mapping ($\alpha=1$) predicted ATAC components from RNA components. Native ATAC partners were compared with a pre-specified held-out ATAC permutation, a held-out RNA permutation and a training-specimen mean-ATAC comparator (Fig.~\ref{fig:crossmodal}).
+
+The primary specimen-level mean paired-minus-permuted cosine difference was 0.2164 (95\% bootstrap confidence interval, 0.1947--0.2385; exact two-sided sign-flip $P=3.05\times10^{-5}$); all 16 specimen effects were positive. The 2.5th--97.5th percentiles of individual fold effects were 0.1448--0.2936. These fold percentiles describe heterogeneity and are not confidence limits for the mean. Mean relative ATAC principal-component MAE reduction versus the mean-ATAC comparator was 2.44\% (95\% confidence interval, 2.08--2.80\%; exact $P=3.05\times10^{-5}$).
+
+The result is state transfer rather than exact reconstruction. Mean top-1 native-partner retrieval was 0.00206 versus a random expectation of 0.00050, an absolute excess of 0.00156; the low absolute value rules out reliable cell identification. Leakage audit gates confirmed unique held-out specimens, exact barcode provenance, disjoint training lists and fold-specific train-only feature manifests.
+
+\subsection*{A pre-specified PBMC analysis limits cross-context generalisation}
+
+The same frozen mapping protocol was evaluated in a paired PBMC dataset using six donor-held-out folds. The mean paired-minus-permuted cosine difference was positive but heterogeneous; one donor was slightly negative. Relative MAE gain was negative for one donor and its donor-bootstrap interval crossed zero. Exact-pair retrieval was at or near random for five of six donors. Thus, the PBMC analysis does not support a tissue-general transfer claim. It is retained as a pre-specified secondary analysis, and the primary conclusion is explicitly limited to specimen-held-out transfer in the evaluated lung cohort.
+
+\subsection*{Foundation-model scores are high on some endpoints but not uniquely advantageous}
+
+We evaluated frozen Geneformer, scGPT, UCE and scFoundation embedding artefacts on the same 2,329-row public Census-derived pseudobulk set (Fig.~\ref{fig:foundation}). File hashes, row counts, dimensions and finite-value checks were recorded before scoring. Donor-grouped pooled out-of-fold balanced accuracy was the primary endpoint; macro-F1 was secondary. Majority, study-only, expression PCA50 plus logistic regression and expression Ridge baselines used identical grouped folds.
+
+Donor-grouped balanced accuracies were 0.389 (95\% cluster-bootstrap interval, 0.355--0.424) for Geneformer, 0.965 (0.952--0.976) for scGPT, 0.986 (0.978--0.993) for UCE and 0.987 (0.979--0.994) for scFoundation. The expression PCA50--logistic baseline reached 0.983 (0.974--0.991), and expression Ridge reached 0.977 (0.968--0.986). Thus, UCE and scFoundation were strong representations for this endpoint, but the benchmark does not demonstrate a universal foundation-model advantage over a simple task-specific expression baseline.
+
+Dataset-held-out analysis was retained as a sensitivity stress test rather than pooled with the primary endpoint. Its five test folds contained 840, 437, 138, 45 and 4 rows; the 138-row fold had one test class. The single-class fold and folds with fewer than 50 rows were marked ineligible for the sensitivity summary. Macro-F1 for the single-class fold remained missing by design and was never imputed. Across the two eligible dataset folds, UCE achieved pooled balanced accuracy 0.973, scFoundation 0.944, scGPT 0.879 and Geneformer 0.224; expression PCA50--logistic achieved 0.952. The full fold table, including the 4-row perfect-score fold, remains released to prevent selective reporting.
+
+\subsection*{Public biological layers provide context, not causal validation}
+
+Released hPCLS data place lung programmes in an ex vivo perturbation design, but the reanalysis contains only two donors (Fig.~\ref{fig:hpcls}) \cite{Lang2023}. A frozen signature was directionally negative overall but not statistically distinguishable from its matched-null distribution. We therefore use the result as intervention context rather than therapeutic, rescue or mechanism evidence.
+
+The spatial layer contains 1,045 in-tissue spots from one normal distal-lung section in GSE178361 (Fig.~\ref{fig:spatial}) \cite{Murthy2022}. Spatial autocorrelation localises epithelial and stromal programmes but cannot test disease specificity because there is no matched fibrotic section or treatment outcome.
+
+In an independent frozen-lung cohort, an oriented score separated 160 labelled cases from 108 controls with AUROC 0.920 and participant-bootstrap interval 0.885--0.950 (Fig.~\ref{fig:multiscale}). However, a signed-permutation null spanned 0.093--0.914 between its 2.5th and 97.5th percentiles, close to the observed value. This retains the external cohort as an association stress test and prevents a biomarker, causal or clinical-utility claim.
+
+\subsection*{The agent audit is a receipt-bound release-control test}
+
+The agent component was evaluated on 50 predefined cases after deterministic provenance, claim-scope and permission checks. A post-verifier achieved balanced accuracy 1.00 on this fixed suite, whereas direct diagnostic routing achieved 0.50. This supports tested policy routing with hash-bound receipts. It does not measure autonomous scientific reasoning, causal validation, independent peer review or clinical correctness.
+
+\begin{figure}[p]
+\centering
+\includegraphics[width=\textwidth]{figures/fig2_paired_multimodal_atlas.png}
+\caption{Released paired lung multiomic atlas defines the state substrate. RNA, ATAC and joint paired-cell representations of 12,800 GSE241468 cells from 16 specimens are shown with broad compartment and marker overlays. Specimen design and assay-depth summaries expose biological and technical structure.}
+\label{fig:atlas}
+\end{figure}
+
+\begin{figure}[p]
+\centering
+\includegraphics[width=\textwidth]{figures/fig3_same_cell_crossmodal_evidence.png}
+\caption{Same-cell barcodes support specimen-held-out cross-modal state transfer. Native pairing is compared with pairing-breaking and mean-ATAC controls. The primary mean paired-minus-permuted cosine effect is 0.2164 (95\% specimen-bootstrap confidence interval, 0.1947--0.2385; exact two-sided sign-flip $P=3.05\times10^{-5}$; $n=16$ specimens). Fold-percentile ranges describe heterogeneity, not confidence intervals. Low absolute top-1 retrieval prevents an exact cell-matching claim.}
+\label{fig:crossmodal}
+\end{figure}
+
+\begin{figure}[p]
+\centering
+\includegraphics[width=\textwidth]{figures/fig4_verified_foundation_model_benchmark.png}
+\caption{Verified foundation-model embeddings reveal endpoint-specific identifiability. Donor-grouped balanced accuracy is the primary endpoint. Dataset-held-out folds are a sensitivity stress test; single-class and fewer-than-50-row folds remain visible but are excluded from sensitivity summaries. Simple expression baselines and cluster-bootstrap confidence intervals are reported in source data. The panel is not a universal model leaderboard.}
+\label{fig:foundation}
+\end{figure}
+
+\begin{figure}[p]
+\centering
+\includegraphics[width=\textwidth]{figures/fig5_released_hpcls_perturbation.png}
+\caption{Released hPCLS data provide bounded ex vivo context. Public hPCLS cells from two donors are summarized across released conditions. The reanalysis does not perform or validate a new perturbation, rescue or therapeutic mechanism.}
+\label{fig:hpcls}
+\end{figure}
+
+\begin{figure}[p]
+\centering
+\includegraphics[width=\textwidth]{figures/fig6_independent_lung_spatial_localization.png}
+\caption{Normal-lung spatial transcriptomics localises epithelial and stromal programmes. The 1,045 in-tissue spots derive from one released distal-lung section. The panel supplies anatomical context only and contains neither fibrotic comparison nor treatment outcome.}
+\label{fig:spatial}
+\end{figure}
+
+\begin{figure}[p]
+\centering
+\includegraphics[width=\textwidth]{figures/fig7_multiscale_public_lung_evidence.png}
+\caption{Contextual public-lung evidence is integrated with claim boundaries. The external cohort association is reported with bootstrap uncertainty and a signed-permutation falsifier. Integration supports hypothesis generation and association, not clinical validity, causal mechanism or treatment efficacy.}
+\label{fig:multiscale}
+\end{figure}
+
+\section*{Discussion}
+
+Exact same-cell provenance improved RNA-to-ATAC state transfer in specimens excluded from model fitting. Formal specimen-level inference, rather than only fold percentiles, shows that the mean paired-minus-permuted effect is positive across the 16 evaluated lung specimens. The result remains deliberately narrow: exact-pair retrieval is low, the dataset is tumor-distant normal lung from smokers and never-smokers rather than an IPF cohort, and the analysis cannot establish cis-regulatory causality.
+
+The PBMC analysis defines an important transportability boundary. Its donor effects were heterogeneous and the MAE advantage was not stable. Reporting this failure prevents the positive lung result from becoming a general multimodal-transfer claim. A prospective multi-tissue study with harmonized assays and specimen-level sampling would be needed to evaluate broader transportability.
+
+The hardened foundation benchmark changes the interpretation of the four-model result. UCE and scFoundation produced highly identifiable cell-lineage representations, but a PCA--logistic baseline from the input expression matrix was nearly as strong. Moreover, three of five dataset folds were unsuitable for stable multiclass sensitivity summaries. These findings support receipt-aware and endpoint-aware evaluation, not a universal ranking or superiority claim. They also align with recent multimodal and foundation-model benchmarks that emphasize task-specific baselines and standardized preprocessing \cite{Fu2025,Wang2026}.
+
+Public hPCLS, spatial and bulk-lung datasets enrich biological context without closing a causal loop. The small donor count, single normal spatial section and broad signed-permutation null are not writing defects to be hidden; they define what these layers can support. The agent has an analogous boundary at the workflow level: it can enforce a predefined evidence policy on a fixed test suite, but it is not an independent scientific validator.
+
+The practical contribution of REVERSOME is therefore an evaluation and release architecture. It links each claim to an independent unit, split, uncertainty estimate, negative control and source receipt. Its strongest evidence is a paired lung state-transfer result, while its negative and contextual analyses identify where new specimens, interventions or orthogonal assays would be required.
+
+\section*{Methods}
+
+\subsection*{Study design, registration terminology and evidence policy}
+
+This study is a retrospective computational reanalysis of public datasets. No participant was recruited, no specimen collected and no animal or wet-lab experiment performed. The project used a time-stamped internal analysis plan frozen before external outcome access for the primary lung analysis. Because the plan was not deposited in an independent public registry before analysis, we use the term \emph{pre-specified}. The frozen YAML, SHA256 receipt and subsequent deviations are included in the release.
+
+Evidence roles were direct paired observation, frozen representation artefact, public ex vivo context, public spatial localisation, external association and release-control audit. A claim register fixed the maximum interpretation for each role.
+
+\subsection*{Paired lung source, sampling and quality control}
+
+The primary source was the corrected GSE241468 processed Seurat object, released after the repository replaced an erroneous earlier object \cite{Long2024}. The registered object contained 16 specimens. Cells with fewer than 20 nonzero RNA features or 20 nonzero ATAC features were excluded. At most 2,000 cells per specimen were sampled with seed 20260812, producing 32,000 fold-evaluable paired rows and a 12,800-cell atlas visualization subset. RNA and ATAC measurements were paired only when they shared the exact released multiome barcode. No synthetic pairing was permitted.
+
+\subsection*{Frozen RNA-to-ATAC mapping}
+
+The outer split was leave-one-released-specimen-out. Within each fold, the 64 RNA genes and 64 100-kb ATAC bins with the largest aggregate training counts were selected using training specimens only. Each modality was library-size normalized to 10,000 and log-transformed with $\log(1+x)$. StandardScaler parameters and separate 16-component PCAs were fitted on training specimens only. A Ridge regression with $\alpha=1.0$ mapped training RNA PCs to training ATAC PCs. No post-lock hyperparameter search, early stopping or external-label tuning was performed.
+
+For each held-out cell, cosine similarity compared the predicted and observed ATAC PC vectors. The primary statistic was the unweighted mean across 16 specimen-level paired-minus-permuted cosine effects. Negative controls permuted ATAC targets within the held-out specimen, permuted RNA inputs and used the training-specimen mean ATAC vector. Additional outcomes were relative MAE improvement over mean ATAC and top-1 native-pair retrieval.
+
+\subsection*{Primary inference and leakage audit}
+
+The 95\% confidence interval for each mean specimen-level effect used 20,000 nonparametric bootstrap resamples of the 16 specimens. The paired cosine analysis used seed 20260812; subsequent registered metrics incremented the seed by one. Exact two-sided sign-flip tests enumerated all $2^{16}=65,536$ possible sign assignments and compared the absolute null mean with the observed absolute mean. Individual-fold 2.5th--97.5th percentiles were reported separately as heterogeneity summaries.
+
+The leakage audit required that every held-out specimen was absent from its training list; paired-cell and sampled-cell identifiers were unique and identical; each pair retained same-barcode evidence; each scored row appeared only in its own specimen holdout; and each fold contained exactly 64 train-selected RNA features and 64 train-selected ATAC bins. All gates passed. The audit and input hashes are machine readable in \texttt{reports/v11/paired\_specimen\_inference.json}.
+
+\subsection*{PBMC transportability analysis}
+
+The pre-specified secondary PBMC analysis used six donor-held-out folds and the same fixed feature-count, normalization, PCA and Ridge protocol. The mean paired-minus-permuted cosine effect was 0.0371 (95\% donor-bootstrap confidence interval, 0.0111--0.0675), but one donor was negative. Mean relative MAE gain was 0.0646 (95\% confidence interval, $-0.0141$ to 0.1086), and exact retrieval was near random in five of six donors. All donor effects, including the negative fold, are retained. PBMC was therefore interpreted as an inconsistent transportability test rather than pooled with the lung result.
+
+\subsection*{Foundation-model inputs and embedding extraction}
+
+The common evaluation set contained 2,329 public Census-derived pseudobulk rows. Geneformer used the V1-10M artefact and produced 256-dimensional embeddings. scGPT used the original public whole-human model and produced 512-dimensional embeddings. UCE used the public four-layer checkpoint and produced 1,280-dimensional embeddings. scFoundation used the public model mirror and produced 768-dimensional embeddings. Model-native vocabularies and preprocessing were applied during extraction; the release records script entrypoints, source mirrors, licences, model dimensions, row order, SHA256 hashes and finite-value checks. The benchmark does not redistribute third-party weights.
+
+\subsection*{Foundation-model endpoint, baselines and fold policy}
+
+Cell types were mapped to five ontology-coarsened lineages represented in at least three datasets. Five-fold GroupKFold splits were built separately by donor and dataset. For each frozen embedding, StandardScaler and a class-balanced logistic regression ($C=1$, maximum 4,000 iterations, seed 20260812) were fitted on training rows only.
+
+The primary endpoint was pooled donor-grouped out-of-fold balanced accuracy; donor-grouped macro-F1 was secondary. Baselines were training-fold majority class, study-only majority mapping, expression PCA50 plus class-balanced logistic regression and expression Ridge ($\alpha=1$). Expression baselines used library-size normalization to 10,000, $\log(1+x)$, the 2,000 highest-variance training genes and training-only dimensionality reduction.
+
+Dataset-held-out results were a sensitivity stress test. Folds were eligible for sensitivity summary only when $n_{test}\geq50$ and at least two test classes were present. Ineligible folds remained in the fold table. Macro-F1 was missing, not zero and not imputed, for a single-class test fold. Confidence intervals used 20,000 cluster-bootstrap resamples of held-out groups with seed 20260812.
+
+\subsection*{Contextual lung analyses}
+
+The hPCLS source used public GSE291190 data described by Lang \emph{et al.} \cite{Lang2023}; donor was the independent unit. The spatial source was the normal distal-lung GSE178361 Visium section \cite{Murthy2022}; spots were used for localisation and Moran's $I$, not independent patient inference. The external lung analysis used a frozen oriented score in 268 participants and participant-level bootstrap resampling. Its signed and matched-gene negative controls were generated from frozen source lists without using outcome labels to select the reported signature.
+
+\subsection*{Agent audit and software environment}
+
+The agent audit used 50 predefined typed cases and hash-bound runtime receipts. Deterministic checks covered provenance, claim scope and permissions. The post-verifier was scored only as a policy-routing procedure.
+
+Core statistical analysis used Python 3.9 with NumPy 1.26.4, pandas 2.3.3, SciPy 1.13.1, scikit-learn 1.6.1, anndata 0.10.9, Scanpy 1.10.3 and pyarrow 21.0.0. The complete frozen environment, operating-system metadata, run commands, CPU/GPU inventory and checksums are included in the public release. Model embedding extraction used KAUST IBEX GPU nodes; the paired Ridge/PCA and statistical audits ran on CPU. All figures were copied unchanged from the frozen V9 asset set.
+
+\section*{Data availability}
+
+No new primary data were generated. GSE241468 provides the barcode-paired human lung multiome source; GSE291190 provides hPCLS context; GSE178361 provides normal distal-lung spatial data; and GSE47460 and GSE188464 provide external or perturbational lung context. Raw and source-study processed data remain under their repository accessions. The versioned REVERSOME repository contains derived source tables, fold definitions, out-of-fold predictions, negative-control outputs, model receipts, statistical reports, claim registers and checksums needed to inspect every reported value. Source Data are provided for all main and extended-data figures. The Zenodo archival DOI will be inserted after author-controlled deposition of the tagged release: \texttt{[ZENODO DOI]}. No restricted participant-level data are redistributed.
+
+\section*{Code availability}
+
+The executable analysis and release code, environment lock, configuration files and frozen statistical outputs are publicly available at \url{https://github.com/ahvsjags/reversome-evidence-benchmark}, release \texttt{v1.0.0-manuscript}. The repository excludes third-party model weights and large public raw datasets; scripted acquisition instructions and SHA256 receipts identify those dependencies. A citable Zenodo snapshot will be linked as \texttt{[ZENODO DOI]} when deposition is completed.
+
+\section*{Acknowledgements}
+
+Computational analyses used the KAUST IBEX high-performance computing facility. Funding and data-provider acknowledgements must be completed by the authors before submission.
+
+\section*{Author contributions}
+
+Author names and CRediT roles must be completed and approved by all authors before submission.
+
+\section*{Competing interests}
+
+The authors must provide the final competing-interest declaration before submission.
+
+\clearpage
+\bibliographystyle{unsrtnat}
+\input{REVERSOME_V11_references.bbl}
+
+\clearpage
+\renewcommand{\figurename}{Extended Data Figure}
+\setcounter{figure}{0}
+\begin{figure}[p]
+\centering
+\includegraphics[width=\textwidth]{figures/extended_data_fig1_agent_audit.png}
+\caption{Predefined agent routing is receipt-bound and capability-limited. A post-verifier routes 50 predefined cases with hash-bound receipts. Autonomous tool use, scientific correctness, causal validity and clinical validity are not measured or claimed.}
+\label{fig:agent}
+\end{figure}
+
+\begin{figure}[p]
+\centering
+\includegraphics[width=\textwidth]{figures/extended_data_fig2_external_lung_evidence_boundaries.png}
+\caption{External frozen-lung evidence includes bootstrap and falsifier analyses. The wide signed-signature permutation distribution limits interpretation of the observed association and rules out a uniquely informative, causal or clinical signature.}
+\label{fig:external}
+\end{figure}
+\end{document}

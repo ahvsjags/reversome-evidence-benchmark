@@ -1,0 +1,22 @@
+\begin{thebibliography}{20}
+\bibitem{Travaglini2020} Travaglini, K. J. \emph{et al.} A molecular cell atlas of the human lung from single-cell RNA sequencing. \emph{Nature} \textbf{587}, 619--625 (2020).
+\bibitem{Sikkema2023} Sikkema, L. \emph{et al.} An integrated cell atlas of the lung in health and disease. \emph{Nat. Med.} \textbf{29}, 1563--1577 (2023).
+\bibitem{Ma2020} Ma, S. \emph{et al.} Chromatin potential identified by shared single-cell profiling of RNA and chromatin. \emph{Cell} \textbf{183}, 1103--1116.e20 (2020).
+\bibitem{Long2024} Long, E. \emph{et al.} Context-aware single-cell multiomics approach identifies cell-type-specific lung cancer susceptibility genes. \emph{Nat. Commun.} \textbf{15}, 7995 (2024).
+\bibitem{Ashuach2023} Ashuach, T. \emph{et al.} MultiVI: deep generative model for the integration of multimodal data. \emph{Nat. Methods} \textbf{20}, 1222--1231 (2023).
+\bibitem{Cao2022} Cao, Z.-J. \& Gao, G. Multi-omics single-cell data integration and regulatory inference with graph-linked embedding. \emph{Nat. Biotechnol.} \textbf{40}, 1458--1466 (2022).
+\bibitem{Chen2024} Chen, S. \emph{et al.} Integration of spatial and single-cell data across modalities with weakly linked features. \emph{Nat. Biotechnol.} \textbf{42}, 1096--1106 (2024).
+\bibitem{Hu2024} Hu, H. \& Quon, G. scPair: boosting single-cell multimodal analysis by leveraging implicit feature selection and single-cell atlases. \emph{Nat. Commun.} \textbf{15}, 9609 (2024).
+\bibitem{Fu2025} Fu, S. \emph{et al.} Benchmarking single-cell multi-modal data integrations. \emph{Nat. Methods} \textbf{22}, 2437--2448 (2025).
+\bibitem{Theodoris2023} Theodoris, C. V. \emph{et al.} Transfer learning enables predictions in network biology. \emph{Nature} \textbf{618}, 616--624 (2023).
+\bibitem{Cui2024} Cui, H. \emph{et al.} scGPT: toward building a foundation model for single-cell multi-omics using generative AI. \emph{Nat. Methods} \textbf{21}, 1470--1480 (2024).
+\bibitem{Rosen2026} Rosen, Y. \emph{et al.} Universal cell embedding provides a foundation model for cell biology. \emph{Nature} \textbf{656}, 183--191 (2026).
+\bibitem{Hao2024} Hao, M. \emph{et al.} Large-scale foundation model on single-cell transcriptomics. \emph{Nat. Methods} \textbf{21}, 1481--1491 (2024).
+\bibitem{Wang2026} Wang, Y. \emph{et al.} SCMBench: benchmarking domain-specific and foundation models for single-cell multi-omics data integration. \emph{Nat. Commun.} \textbf{17} (2026).
+\bibitem{Lang2023} Lang, N. J. \emph{et al.} Ex vivo tissue perturbations coupled to single-cell RNA-seq reveal multilineage cell circuit dynamics in human lung fibrogenesis. \emph{Sci. Transl. Med.} \textbf{15}, eadh0908 (2023).
+\bibitem{Murthy2022} Murthy, P. K. L. \emph{et al.} Human distal lung maps and lineage hierarchies reveal a bipotent progenitor. \emph{Nature} \textbf{604}, 111--119 (2022).
+\bibitem{Lopez2018} Lopez, R., Regier, J., Cole, M. B., Jordan, M. I. \& Yosef, N. Deep generative modeling for single-cell transcriptomics. \emph{Nat. Methods} \textbf{15}, 1053--1058 (2018).
+\bibitem{Zhu2023} Zhu, B. \emph{et al.} Robust single-cell matching and multimodal analysis using shared and distinct features. \emph{Nat. Methods} \textbf{20}, 304--315 (2023).
+\bibitem{Hao2021} Hao, Y. \emph{et al.} Integrated analysis of multimodal single-cell data. \emph{Cell} \textbf{184}, 3573--3587.e29 (2021).
+\bibitem{Kim2015} Kim, S. \emph{et al.} Integrative phenotyping framework: integrative clustering of multiple omics data identifies novel lung disease subphenotypes. \emph{BMC Genomics} \textbf{16}, 924 (2015).
+\end{thebibliography}

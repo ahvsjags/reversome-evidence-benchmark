@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this software or derived benchmark, please cite the manuscript release."
+title: "REVERSOME: specimen-held-out multimodal state transfer with evidence-bounded evaluation"
+type: software
+version: 1.0.0-manuscript
+date-released: 2026-08-14
+license: MIT
+repository-code: "https://github.com/ahvsjags/reversome-evidence-benchmark"
+url: "https://github.com/ahvsjags/reversome-evidence-benchmark/releases/tag/v1.0.0-manuscript"
+authors:
+  - name: "REVERSOME contributors"
+abstract: "Code, derived data and statistical audits for specimen-held-out paired multimodal state transfer and a four-model embedding benchmark."

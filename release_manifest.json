@@ -1,0 +1,16 @@
+{
+  "name": "REVERSOME evidence-bounded benchmark",
+  "version": "1.0.0-manuscript",
+  "release_date": "2026-08-14",
+  "repository": "https://github.com/ahvsjags/reversome-evidence-benchmark",
+  "tag": "v1.0.0-manuscript",
+  "commit_resolution": "resolve immutable commit from annotated tag v1.0.0-manuscript",
+  "archive_doi": null,
+  "doi_status": "awaiting author-verified Zenodo deposition",
+  "primary_analysis_seed": 20260812,
+  "bootstrap_draws": 20000,
+  "primary_endpoint": "unweighted specimen-level mean paired-minus-permuted cosine",
+  "foundation_primary_endpoint": "donor-grouped pooled out-of-fold balanced accuracy",
+  "raw_data_redistributed": false,
+  "model_weights_redistributed": false
+}

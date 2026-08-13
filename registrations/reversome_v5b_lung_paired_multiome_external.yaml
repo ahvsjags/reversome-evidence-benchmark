@@ -1,0 +1,71 @@
+registration_id: REVERSOME-V5B-LUNG-PAIRED-MULTIOME-EXTERNAL
+registered_at_utc: "2026-08-12T10:40:00Z"
+status: frozen_before_external_matrix_access
+scope:
+  primary_question: "Does the frozen V5 RNA-to-ATAC paired-state mapping protocol transport to independently released human lung multiome specimens?"
+  allowed_claim: "Independent public, barcode-shared human lung multiome donor/specimen-held-out cross-modal state mapping."
+  forbidden_claims:
+    - "idiopathic pulmonary fibrosis mechanism"
+    - "smoking causal effect"
+    - "clinical prediction or clinical utility"
+    - "therapeutic efficacy"
+    - "experimental validation"
+external_source:
+  accession: GSE241468
+  official_url: "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE241468"
+  platform_description: "10x barcode-shared human lung single-cell multiome (RNA plus ATAC)"
+  registered_supplementary_object: "GSE241468_share_seur.rds"
+  expected_specimen_count: 16
+  expected_cells_reported_by_source: 117911
+  matrix_outcomes_access_before_lock: false
+  data_access_rule: "Only public processed data from the registered accession; preserve original specimen metadata and same-barcode pairing."
+cohort_and_qc:
+  unit_of_generalization: "released specimen or donor label; never individual cells"
+  pairing_definition: "RNA and ATAC values from the exact same released 10x multiome barcode"
+  min_nonzero_rna_features: 20
+  min_nonzero_atac_features: 20
+  max_cells_per_specimen: 2000
+  sampling_seed: 20260812
+  disallow_synthetic_pairing: true
+  disallow_cell_level_train_test_split: true
+frozen_model:
+  feature_selection: "training-specimen-only top 64 shared RNA features and top 64 shared 100 kb ATAC bins by aggregate count"
+  preprocessing: "library-size normalize to 10000, log1p, training-only StandardScaler, training-only PCA with 16 components"
+  mapping: "Ridge(alpha=1.0) from RNA PCs to ATAC PCs"
+  no_hyperparameter_search: true
+evaluation:
+  outer_split: "leave-one-released-specimen-or-donor-out"
+  required_evaluable_specimens: 12
+  required_minimum_pairs_per_heldout_specimen: 100
+  negative_controls:
+    - "heldout ATAC target permutation"
+    - "heldout RNA input permutation"
+    - "training-specimen mean ATAC"
+  primary_metrics:
+    - "paired minus heldout-ATAC-permuted cosine similarity"
+    - "paired minus training-specimen-mean ATAC cosine similarity"
+    - "relative MAE improvement versus training-specimen mean ATAC"
+    - "top-1 paired retrieval versus random expectation"
+  uncertainty: "specimen-level bootstrap 95% confidence intervals, 20000 draws, seed 20260812"
+acceptance_gates:
+  - "All evaluable rows retain same-barcode pairing evidence and paired_rows is greater than zero."
+  - "At least 12 released specimens/donors have at least 100 held-out pairs."
+  - "Specimen-bootstrap 95% CI for paired-minus-permuted cosine excludes zero."
+  - "Frozen mapping has positive relative MAE gain over training-specimen mean ATAC in at least 75 percent of evaluable specimens."
+  - "All negative-control outcomes, including failures, are retained in the release."
+integrity:
+  required_pre_score_manifest:
+    - "registered source object name"
+    - "raw object hash"
+    - "registration SHA256"
+    - "released specimen labels"
+  required_release_outputs:
+    - "specimen-level metrics"
+    - "paired cell manifest"
+    - "machine-readable report"
+    - "code and Slurm entrypoint"
+  outcome_switching: prohibited
+evidence_boundary:
+  maximum_evidence_level: E2_real_public_paired_multimodal_specimen_holdout
+  interpretation: "A pass supports cross-modal transport in this public lung cohort only. It cannot establish a lung-fibrosis mechanism or intervention response."
+

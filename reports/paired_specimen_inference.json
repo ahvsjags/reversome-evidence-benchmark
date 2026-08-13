@@ -1,0 +1,87 @@
+{
+  "status": "frozen_paired_result_formally_audited",
+  "generated_at_utc": "2026-08-13T16:42:23.821768+00:00",
+  "primary_endpoint": "mean specimen-level paired-minus-permuted cosine similarity",
+  "inference": [
+    {
+      "metric": "paired_minus_permuted_cosine",
+      "n_independent_specimens": 16,
+      "effect_estimator": "unweighted mean across held-out specimens",
+      "effect": 0.21643427061184656,
+      "median": 0.2162353428388185,
+      "fold_percentile_2_5": 0.14482293053245526,
+      "fold_percentile_97_5": 0.2936067399073856,
+      "specimen_bootstrap_ci95_low": 0.19465206965828624,
+      "specimen_bootstrap_ci95_high": 0.23845554786032366,
+      "exact_two_sided_sign_flip_p": 4.577566870622702e-05,
+      "positive_specimen_fraction": 1.0,
+      "bootstrap_draws": 20000,
+      "random_seed": 20260812
+    },
+    {
+      "metric": "paired_minus_mean_atac_cosine",
+      "n_independent_specimens": 16,
+      "effect_estimator": "unweighted mean across held-out specimens",
+      "effect": 0.2239174506101898,
+      "median": 0.215544192736909,
+      "fold_percentile_2_5": 0.16998068391466864,
+      "fold_percentile_97_5": 0.28267180052152463,
+      "specimen_bootstrap_ci95_low": 0.20519697111181937,
+      "specimen_bootstrap_ci95_high": 0.24308928241812705,
+      "exact_two_sided_sign_flip_p": 4.577566870622702e-05,
+      "positive_specimen_fraction": 1.0,
+      "bootstrap_draws": 20000,
+      "random_seed": 20260813
+    },
+    {
+      "metric": "relative_mae_gain_vs_mean_atac",
+      "n_independent_specimens": 16,
+      "effect_estimator": "unweighted mean across held-out specimens",
+      "effect": 0.024415511664329675,
+      "median": 0.02254810228896305,
+      "fold_percentile_2_5": 0.0122385777235499,
+      "fold_percentile_97_5": 0.03585041204872964,
+      "specimen_bootstrap_ci95_low": 0.020772481720599173,
+      "specimen_bootstrap_ci95_high": 0.02802469523875499,
+      "exact_two_sided_sign_flip_p": 4.577566870622702e-05,
+      "positive_specimen_fraction": 1.0,
+      "bootstrap_draws": 20000,
+      "random_seed": 20260814
+    },
+    {
+      "metric": "retrieval_top1",
+      "n_independent_specimens": 16,
+      "effect_estimator": "unweighted mean across held-out specimens",
+      "effect": 0.0020625,
+      "median": 0.00175,
+      "fold_percentile_2_5": 0.0005,
+      "fold_percentile_97_5": 0.004125,
+      "specimen_bootstrap_ci95_low": 0.00153125,
+      "specimen_bootstrap_ci95_high": 0.0026249999999999997,
+      "exact_two_sided_sign_flip_p": 4.577566870622702e-05,
+      "positive_specimen_fraction": 1.0,
+      "bootstrap_draws": 20000,
+      "random_seed": 20260815
+    }
+  ],
+  "leakage_audit": {
+    "heldout_specimen_never_in_training_list": true,
+    "unique_heldout_specimens": true,
+    "pair_rows_unique": true,
+    "sampled_rows_unique": true,
+    "pair_and_sampled_manifests_identical": true,
+    "all_pairs_exact_same_barcode": true,
+    "each_pair_appears_in_its_specimen_holdout_only": true,
+    "train_only_feature_manifest_complete": true,
+    "preprocessing_fit_scope": "feature selection, StandardScaler and PCA fitted on training specimens only",
+    "outer_split": "leave-one-released-specimen-out; no cell-level random split",
+    "hyperparameter_search": "none after registration; Ridge alpha=1.0 and 16 PCs frozen"
+  },
+  "input_sha256": {
+    "reversome_v5b_lung_paired_multiome_folds.csv": "8aea17dc763645deba6f5fa0911cb73f08191b7b09969a7cd358530082d79812",
+    "reversome_v5b_lung_paired_multiome_pairs.csv": "bbb65c2eae57c9f359b8d897e9b678d0ea0b0292e063190890fa487e44149d33",
+    "reversome_v5b_lung_paired_multiome_train_only_features.csv": "8bfcaca428d99a5b1be73f673408f22b743f4ea3e4bba501438a0df4bbb2cc21",
+    "reversome_v5b_lung_paired_multiome_sampled_cells.csv": "be676167ff82767bebaad615a04511f9fcb6d72612fb513a21fa1ce13e61ce2c"
+  },
+  "interpretation": "Bootstrap confidence intervals quantify uncertainty in the mean effect across specimens; fold percentiles describe heterogeneity and are not confidence intervals."
+}

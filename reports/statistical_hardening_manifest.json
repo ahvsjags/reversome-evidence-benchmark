@@ -1,0 +1,21 @@
+{
+  "status": "reversome_v11_statistical_hardening_complete",
+  "generated_at_utc": "2026-08-13T16:45:38.923678+00:00",
+  "paired_primary": {
+    "metric": "paired_minus_permuted_cosine",
+    "n_independent_specimens": 16,
+    "effect_estimator": "unweighted mean across held-out specimens",
+    "effect": 0.21643427061184656,
+    "median": 0.2162353428388185,
+    "fold_percentile_2_5": 0.14482293053245526,
+    "fold_percentile_97_5": 0.2936067399073856,
+    "specimen_bootstrap_ci95_low": 0.19465206965828624,
+    "specimen_bootstrap_ci95_high": 0.23845554786032366,
+    "exact_two_sided_sign_flip_p": 4.577566870622702e-05,
+    "positive_specimen_fraction": 1.0,
+    "bootstrap_draws": 20000,
+    "random_seed": 20260812
+  },
+  "foundation_primary_endpoint": "donor-grouped pooled out-of-fold balanced accuracy",
+  "foundation_summary_rows": 16
+}

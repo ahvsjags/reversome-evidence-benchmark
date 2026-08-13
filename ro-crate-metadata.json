@@ -1,0 +1,48 @@
+{
+  "@context": "https://w3id.org/ro/crate/1.1/context",
+  "@graph": [
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "about": {"@id": "./"},
+      "conformsTo": {"@id": "https://w3id.org/ro/crate/1.1"}
+    },
+    {
+      "@id": "./",
+      "@type": "Dataset",
+      "name": "REVERSOME evidence-bounded benchmark v1.0.0-manuscript",
+      "description": "Code, derived data, fold definitions and statistical audits for specimen-held-out paired multimodal state transfer and a four-model embedding benchmark.",
+      "datePublished": "2026-08-14",
+      "license": {"@id": "https://spdx.org/licenses/MIT.html"},
+      "codeRepository": "https://github.com/ahvsjags/reversome-evidence-benchmark",
+      "version": "1.0.0-manuscript",
+      "hasPart": [
+        {"@id": "analysis/reversome_v11_statistical_hardening.py"},
+        {"@id": "environment/requirements.freeze.txt"},
+        {"@id": "reports/paired_specimen_inference.json"},
+        {"@id": "reports/foundation_benchmark_hardened.json"}
+      ]
+    },
+    {
+      "@id": "analysis/reversome_v11_statistical_hardening.py",
+      "@type": "SoftwareSourceCode",
+      "programmingLanguage": "Python",
+      "runtimePlatform": "Python 3.9"
+    },
+    {
+      "@id": "environment/requirements.freeze.txt",
+      "@type": "File",
+      "encodingFormat": "text/plain"
+    },
+    {
+      "@id": "reports/paired_specimen_inference.json",
+      "@type": "File",
+      "encodingFormat": "application/json"
+    },
+    {
+      "@id": "reports/foundation_benchmark_hardened.json",
+      "@type": "File",
+      "encodingFormat": "application/json"
+    }
+  ]
+}
