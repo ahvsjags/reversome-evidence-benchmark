@@ -1,0 +1,1880 @@
+[
+  {
+    "case_id": "baron:correct_design",
+    "input": {
+      "packet_sha256": "8261062e5e752412d17d4fb8abaad44c7318178aa958ef06472835c6a425e856",
+      "claim_kind": "unit_design",
+      "unit": "donor",
+      "n": 4,
+      "alpha": 0.05,
+      "threshold_protocol_sha256": "799a57c530fa2ee08be377507693b9d5989c336c754c8e942ce9c676d5355997"
+    },
+    "expected_control": "RELEASE",
+    "actual": {
+      "decision": "RELEASE",
+      "checks": [
+        {
+          "requirement": "full_source_packet",
+          "state": "PASS",
+          "witness": "All declared source files hashed together, not just one matrix"
+        },
+        {
+          "requirement": "scientific_claim_type",
+          "state": "PASS",
+          "witness": "Available source evidence type"
+        },
+        {
+          "requirement": "independent_unit",
+          "state": "PASS",
+          "witness": "Actual parent donor"
+        },
+        {
+          "requirement": "independent_n",
+          "state": "PASS",
+          "witness": "Computed independent parent count 4"
+        },
+        {
+          "requirement": "threshold_provenance",
+          "state": "PASS",
+          "witness": "Must resolve to actual frozen protocol bytes, not a free-text declaration"
+        },
+        {
+          "requirement": "threshold_value",
+          "state": "PASS",
+          "witness": "Declared conservative analysis alpha range (0,.05], not a universal biological truth criterion"
+        }
+      ]
+    },
+    "matches": true
+  },
+  {
+    "case_id": "baron:wrong_full_packet",
+    "input": {
+      "packet_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "claim_kind": "unit_design",
+      "unit": "donor",
+      "n": 4,
+      "alpha": 0.05,
+      "threshold_protocol_sha256": "799a57c530fa2ee08be377507693b9d5989c336c754c8e942ce9c676d5355997"
+    },
+    "expected_control": "WITHHOLD",
+    "actual": {
+      "decision": "WITHHOLD",
+      "checks": [
+        {
+          "requirement": "full_source_packet",
+          "state": "FAIL",
+          "witness": "All declared source files hashed together, not just one matrix"
+        },
+        {
+          "requirement": "scientific_claim_type",
+          "state": "PASS",
+          "witness": "Available source evidence type"
+        },
+        {
+          "requirement": "independent_unit",
+          "state": "PASS",
+          "witness": "Actual parent donor"
+        },
+        {
+          "requirement": "independent_n",
+          "state": "PASS",
+          "witness": "Computed independent parent count 4"
+        },
+        {
+          "requirement": "threshold_provenance",
+          "state": "PASS",
+          "witness": "Must resolve to actual frozen protocol bytes, not a free-text declaration"
+        },
+        {
+          "requirement": "threshold_value",
+          "state": "PASS",
+          "witness": "Declared conservative analysis alpha range (0,.05], not a universal biological truth criterion"
+        }
+      ]
+    },
+    "matches": true
+  },
+  {
+    "case_id": "baron:missing_claim_type",
+    "input": {
+      "packet_sha256": "8261062e5e752412d17d4fb8abaad44c7318178aa958ef06472835c6a425e856",
+      "claim_kind": null,
+      "unit": "donor",
+      "n": 4,
+      "alpha": 0.05,
+      "threshold_protocol_sha256": "799a57c530fa2ee08be377507693b9d5989c336c754c8e942ce9c676d5355997"
+    },
+    "expected_control": "ESCALATE",
+    "actual": {
+      "decision": "ESCALATE",
+      "checks": [
+        {
+          "requirement": "full_source_packet",
+          "state": "PASS",
+          "witness": "All declared source files hashed together, not just one matrix"
+        },
+        {
+          "requirement": "scientific_claim_type",
+          "state": "UNKNOWN",
+          "witness": "Scientific target must be explicit"
+        },
+        {
+          "requirement": "independent_unit",
+          "state": "PASS",
+          "witness": "Actual parent donor"
+        },
+        {
+          "requirement": "independent_n",
+          "state": "PASS",
+          "witness": "Computed independent parent count 4"
+        },
+        {
+          "requirement": "threshold_provenance",
+          "state": "PASS",
+          "witness": "Must resolve to actual frozen protocol bytes, not a free-text declaration"
+        },
+        {
+          "requirement": "threshold_value",
+          "state": "PASS",
+          "witness": "Declared conservative analysis alpha range (0,.05], not a universal biological truth criterion"
+        }
+      ]
+    },
+    "matches": true
+  },
+  {
+    "case_id": "baron:free_text_threshold_claim",
+    "input": {
+      "packet_sha256": "8261062e5e752412d17d4fb8abaad44c7318178aa958ef06472835c6a425e856",
+      "claim_kind": "unit_design",
+      "unit": "donor",
+      "n": 4,
+      "alpha": 0.05,
+      "threshold_protocol_sha256": "we preregistered this"
+    },
+    "expected_control": "ESCALATE",
+    "actual": {
+      "decision": "ESCALATE",
+      "checks": [
+        {
+          "requirement": "full_source_packet",
+          "state": "PASS",
+          "witness": "All declared source files hashed together, not just one matrix"
+        },
+        {
+          "requirement": "scientific_claim_type",
+          "state": "PASS",
+          "witness": "Available source evidence type"
+        },
+        {
+          "requirement": "independent_unit",
+          "state": "PASS",
+          "witness": "Actual parent donor"
+        },
+        {
+          "requirement": "independent_n",
+          "state": "PASS",
+          "witness": "Computed independent parent count 4"
+        },
+        {
+          "requirement": "threshold_provenance",
+          "state": "UNKNOWN",
+          "witness": "Must resolve to actual frozen protocol bytes, not a free-text declaration"
+        },
+        {
+          "requirement": "threshold_value",
+          "state": "PASS",
+          "witness": "Declared conservative analysis alpha range (0,.05], not a universal biological truth criterion"
+        }
+      ]
+    },
+    "matches": true
+  },
+  {
+    "case_id": "baron:permissive_alpha",
+    "input": {
+      "packet_sha256": "8261062e5e752412d17d4fb8abaad44c7318178aa958ef06472835c6a425e856",
+      "claim_kind": "unit_design",
+      "unit": "donor",
+      "n": 4,
+      "alpha": 0.5,
+      "threshold_protocol_sha256": "799a57c530fa2ee08be377507693b9d5989c336c754c8e942ce9c676d5355997"
+    },
+    "expected_control": "WITHHOLD",
+    "actual": {
+      "decision": "WITHHOLD",
+      "checks": [
+        {
+          "requirement": "full_source_packet",
+          "state": "PASS",
+          "witness": "All declared source files hashed together, not just one matrix"
+        },
+        {
+          "requirement": "scientific_claim_type",
+          "state": "PASS",
+          "witness": "Available source evidence type"
+        },
+        {
+          "requirement": "independent_unit",
+          "state": "PASS",
+          "witness": "Actual parent donor"
+        },
+        {
+          "requirement": "independent_n",
+          "state": "PASS",
+          "witness": "Computed independent parent count 4"
+        },
+        {
+          "requirement": "threshold_provenance",
+          "state": "PASS",
+          "witness": "Must resolve to actual frozen protocol bytes, not a free-text declaration"
+        },
+        {
+          "requirement": "threshold_value",
+          "state": "FAIL",
+          "witness": "Declared conservative analysis alpha range (0,.05], not a universal biological truth criterion"
+        }
+      ]
+    },
+    "matches": true
+  },
+  {
+    "case_id": "baron:negative_alpha",
+    "input": {
+      "packet_sha256": "8261062e5e752412d17d4fb8abaad44c7318178aa958ef06472835c6a425e856",
+      "claim_kind": "unit_design",
+      "unit": "donor",
+      "n": 4,
+      "alpha": -0.1,
+      "threshold_protocol_sha256": "799a57c530fa2ee08be377507693b9d5989c336c754c8e942ce9c676d5355997"
+    },
+    "expected_control": "WITHHOLD",
+    "actual": {
+      "decision": "WITHHOLD",
+      "checks": [
+        {
+          "requirement": "full_source_packet",
+          "state": "PASS",
+          "witness": "All declared source files hashed together, not just one matrix"
+        },
+        {
+          "requirement": "scientific_claim_type",
+          "state": "PASS",
+          "witness": "Available source evidence type"
+        },
+        {
+          "requirement": "independent_unit",
+          "state": "PASS",
+          "witness": "Actual parent donor"
+        },
+        {
+          "requirement": "independent_n",
+          "state": "PASS",
+          "witness": "Computed independent parent count 4"
+        },
+        {
+          "requirement": "threshold_provenance",
+          "state": "PASS",
+          "witness": "Must resolve to actual frozen protocol bytes, not a free-text declaration"
+        },
+        {
+          "requirement": "threshold_value",
+          "state": "FAIL",
+          "witness": "Declared conservative analysis alpha range (0,.05], not a universal biological truth criterion"
+        }
+      ]
+    },
+    "matches": true
+  },
+  {
+    "case_id": "baron:conservative_alpha",
+    "input": {
+      "packet_sha256": "8261062e5e752412d17d4fb8abaad44c7318178aa958ef06472835c6a425e856",
+      "claim_kind": "unit_design",
+      "unit": "donor",
+      "n": 4,
+      "alpha": 0.01,
+      "threshold_protocol_sha256": "799a57c530fa2ee08be377507693b9d5989c336c754c8e942ce9c676d5355997"
+    },
+    "expected_control": "RELEASE",
+    "actual": {
+      "decision": "RELEASE",
+      "checks": [
+        {
+          "requirement": "full_source_packet",
+          "state": "PASS",
+          "witness": "All declared source files hashed together, not just one matrix"
+        },
+        {
+          "requirement": "scientific_claim_type",
+          "state": "PASS",
+          "witness": "Available source evidence type"
+        },
+        {
+          "requirement": "independent_unit",
+          "state": "PASS",
+          "witness": "Actual parent donor"
+        },
+        {
+          "requirement": "independent_n",
+          "state": "PASS",
+          "witness": "Computed independent parent count 4"
+        },
+        {
+          "requirement": "threshold_provenance",
+          "state": "PASS",
+          "witness": "Must resolve to actual frozen protocol bytes, not a free-text declaration"
+        },
+        {
+          "requirement": "threshold_value",
+          "state": "PASS",
+          "witness": "Declared conservative analysis alpha range (0,.05], not a universal biological truth criterion"
+        }
+      ]
+    },
+    "matches": true
+  },
+  {
+    "case_id": "baron:unsupported_cross_modality",
+    "input": {
+      "packet_sha256": "8261062e5e752412d17d4fb8abaad44c7318178aa958ef06472835c6a425e856",
+      "claim_kind": "RNA_ATAC_transfer",
+      "unit": "donor",
+      "n": 4,
+      "alpha": 0.05,
+      "threshold_protocol_sha256": "799a57c530fa2ee08be377507693b9d5989c336c754c8e942ce9c676d5355997"
+    },
+    "expected_control": "WITHHOLD",
+    "actual": {
+      "decision": "WITHHOLD",
+      "checks": [
+        {
+          "requirement": "full_source_packet",
+          "state": "PASS",
+          "witness": "All declared source files hashed together, not just one matrix"
+        },
+        {
+          "requirement": "scientific_claim_type",
+          "state": "FAIL",
+          "witness": "Provided packet supports ['unit_design', 'cell_description', 'marker_contrast']; metadata does not establish expression results"
+        },
+        {
+          "requirement": "independent_unit",
+          "state": "PASS",
+          "witness": "Actual parent donor"
+        },
+        {
+          "requirement": "independent_n",
+          "state": "PASS",
+          "witness": "Computed independent parent count 4"
+        },
+        {
+          "requirement": "threshold_provenance",
+          "state": "PASS",
+          "witness": "Must resolve to actual frozen protocol bytes, not a free-text declaration"
+        },
+        {
+          "requirement": "threshold_value",
+          "state": "PASS",
+          "witness": "Declared conservative analysis alpha range (0,.05], not a universal biological truth criterion"
+        }
+      ]
+    },
+    "matches": true
+  },
+  {
+    "case_id": "pbmc:correct_design",
+    "input": {
+      "packet_sha256": "22115a600055bacd4ed518f9f724a5cd1ff8f5349027f13e6b8880d513a0654f",
+      "claim_kind": "unit_design",
+      "unit": "donor",
+      "n": 8,
+      "alpha": 0.05,
+      "threshold_protocol_sha256": "799a57c530fa2ee08be377507693b9d5989c336c754c8e942ce9c676d5355997"
+    },
+    "expected_control": "RELEASE",
+    "actual": {
+      "decision": "RELEASE",
+      "checks": [
+        {
+          "requirement": "full_source_packet",
+          "state": "PASS",
+          "witness": "All declared source files hashed together, not just one matrix"
+        },
+        {
+          "requirement": "scientific_claim_type",
+          "state": "PASS",
+          "witness": "Available source evidence type"
+        },
+        {
+          "requirement": "independent_unit",
+          "state": "PASS",
+          "witness": "Actual parent donor"
+        },
+        {
+          "requirement": "independent_n",
+          "state": "PASS",
+          "witness": "Computed independent parent count 8"
+        },
+        {
+          "requirement": "threshold_provenance",
+          "state": "PASS",
+          "witness": "Must resolve to actual frozen protocol bytes, not a free-text declaration"
+        },
+        {
+          "requirement": "threshold_value",
+          "state": "PASS",
+          "witness": "Declared conservative analysis alpha range (0,.05], not a universal biological truth criterion"
+        }
+      ]
+    },
+    "matches": true
+  },
+  {
+    "case_id": "pbmc:wrong_full_packet",
+    "input": {
+      "packet_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "claim_kind": "unit_design",
+      "unit": "donor",
+      "n": 8,
+      "alpha": 0.05,
+      "threshold_protocol_sha256": "799a57c530fa2ee08be377507693b9d5989c336c754c8e942ce9c676d5355997"
+    },
+    "expected_control": "WITHHOLD",
+    "actual": {
+      "decision": "WITHHOLD",
+      "checks": [
+        {
+          "requirement": "full_source_packet",
+          "state": "FAIL",
+          "witness": "All declared source files hashed together, not just one matrix"
+        },
+        {
+          "requirement": "scientific_claim_type",
+          "state": "PASS",
+          "witness": "Available source evidence type"
+        },
+        {
+          "requirement": "independent_unit",
+          "state": "PASS",
+          "witness": "Actual parent donor"
+        },
+        {
+          "requirement": "independent_n",
+          "state": "PASS",
+          "witness": "Computed independent parent count 8"
+        },
+        {
+          "requirement": "threshold_provenance",
+          "state": "PASS",
+          "witness": "Must resolve to actual frozen protocol bytes, not a free-text declaration"
+        },
+        {
+          "requirement": "threshold_value",
+          "state": "PASS",
+          "witness": "Declared conservative analysis alpha range (0,.05], not a universal biological truth criterion"
+        }
+      ]
+    },
+    "matches": true
+  },
+  {
+    "case_id": "pbmc:missing_claim_type",
+    "input": {
+      "packet_sha256": "22115a600055bacd4ed518f9f724a5cd1ff8f5349027f13e6b8880d513a0654f",
+      "claim_kind": null,
+      "unit": "donor",
+      "n": 8,
+      "alpha": 0.05,
+      "threshold_protocol_sha256": "799a57c530fa2ee08be377507693b9d5989c336c754c8e942ce9c676d5355997"
+    },
+    "expected_control": "ESCALATE",
+    "actual": {
+      "decision": "ESCALATE",
+      "checks": [
+        {
+          "requirement": "full_source_packet",
+          "state": "PASS",
+          "witness": "All declared source files hashed together, not just one matrix"
+        },
+        {
+          "requirement": "scientific_claim_type",
+          "state": "UNKNOWN",
+          "witness": "Scientific target must be explicit"
+        },
+        {
+          "requirement": "independent_unit",
+          "state": "PASS",
+          "witness": "Actual parent donor"
+        },
+        {
+          "requirement": "independent_n",
+          "state": "PASS",
+          "witness": "Computed independent parent count 8"
+        },
+        {
+          "requirement": "threshold_provenance",
+          "state": "PASS",
+          "witness": "Must resolve to actual frozen protocol bytes, not a free-text declaration"
+        },
+        {
+          "requirement": "threshold_value",
+          "state": "PASS",
+          "witness": "Declared conservative analysis alpha range (0,.05], not a universal biological truth criterion"
+        }
+      ]
+    },
+    "matches": true
+  },
+  {
+    "case_id": "pbmc:free_text_threshold_claim",
+    "input": {
+      "packet_sha256": "22115a600055bacd4ed518f9f724a5cd1ff8f5349027f13e6b8880d513a0654f",
+      "claim_kind": "unit_design",
+      "unit": "donor",
+      "n": 8,
+      "alpha": 0.05,
+      "threshold_protocol_sha256": "we preregistered this"
+    },
+    "expected_control": "ESCALATE",
+    "actual": {
+      "decision": "ESCALATE",
+      "checks": [
+        {
+          "requirement": "full_source_packet",
+          "state": "PASS",
+          "witness": "All declared source files hashed together, not just one matrix"
+        },
+        {
+          "requirement": "scientific_claim_type",
+          "state": "PASS",
+          "witness": "Available source evidence type"
+        },
+        {
+          "requirement": "independent_unit",
+          "state": "PASS",
+          "witness": "Actual parent donor"
+        },
+        {
+          "requirement": "independent_n",
+          "state": "PASS",
+          "witness": "Computed independent parent count 8"
+        },
+        {
+          "requirement": "threshold_provenance",
+          "state": "UNKNOWN",
+          "witness": "Must resolve to actual frozen protocol bytes, not a free-text declaration"
+        },
+        {
+          "requirement": "threshold_value",
+          "state": "PASS",
+          "witness": "Declared conservative analysis alpha range (0,.05], not a universal biological truth criterion"
+        }
+      ]
+    },
+    "matches": true
+  },
+  {
+    "case_id": "pbmc:permissive_alpha",
+    "input": {
+      "packet_sha256": "22115a600055bacd4ed518f9f724a5cd1ff8f5349027f13e6b8880d513a0654f",
+      "claim_kind": "unit_design",
+      "unit": "donor",
+      "n": 8,
+      "alpha": 0.5,
+      "threshold_protocol_sha256": "799a57c530fa2ee08be377507693b9d5989c336c754c8e942ce9c676d5355997"
+    },
+    "expected_control": "WITHHOLD",
+    "actual": {
+      "decision": "WITHHOLD",
+      "checks": [
+        {
+          "requirement": "full_source_packet",
+          "state": "PASS",
+          "witness": "All declared source files hashed together, not just one matrix"
+        },
+        {
+          "requirement": "scientific_claim_type",
+          "state": "PASS",
+          "witness": "Available source evidence type"
+        },
+        {
+          "requirement": "independent_unit",
+          "state": "PASS",
+          "witness": "Actual parent donor"
+        },
+        {
+          "requirement": "independent_n",
+          "state": "PASS",
+          "witness": "Computed independent parent count 8"
+        },
+        {
+          "requirement": "threshold_provenance",
+          "state": "PASS",
+          "witness": "Must resolve to actual frozen protocol bytes, not a free-text declaration"
+        },
+        {
+          "requirement": "threshold_value",
+          "state": "FAIL",
+          "witness": "Declared conservative analysis alpha range (0,.05], not a universal biological truth criterion"
+        }
+      ]
+    },
+    "matches": true
+  },
+  {
+    "case_id": "pbmc:negative_alpha",
+    "input": {
+      "packet_sha256": "22115a600055bacd4ed518f9f724a5cd1ff8f5349027f13e6b8880d513a0654f",
+      "claim_kind": "unit_design",
+      "unit": "donor",
+      "n": 8,
+      "alpha": -0.1,
+      "threshold_protocol_sha256": "799a57c530fa2ee08be377507693b9d5989c336c754c8e942ce9c676d5355997"
+    },
+    "expected_control": "WITHHOLD",
+    "actual": {
+      "decision": "WITHHOLD",
+      "checks": [
+        {
+          "requirement": "full_source_packet",
+          "state": "PASS",
+          "witness": "All declared source files hashed together, not just one matrix"
+        },
+        {
+          "requirement": "scientific_claim_type",
+          "state": "PASS",
+          "witness": "Available source evidence type"
+        },
+        {
+          "requirement": "independent_unit",
+          "state": "PASS",
+          "witness": "Actual parent donor"
+        },
+        {
+          "requirement": "independent_n",
+          "state": "PASS",
+          "witness": "Computed independent parent count 8"
+        },
+        {
+          "requirement": "threshold_provenance",
+          "state": "PASS",
+          "witness": "Must resolve to actual frozen protocol bytes, not a free-text declaration"
+        },
+        {
+          "requirement": "threshold_value",
+          "state": "FAIL",
+          "witness": "Declared conservative analysis alpha range (0,.05], not a universal biological truth criterion"
+        }
+      ]
+    },
+    "matches": true
+  },
+  {
+    "case_id": "pbmc:conservative_alpha",
+    "input": {
+      "packet_sha256": "22115a600055bacd4ed518f9f724a5cd1ff8f5349027f13e6b8880d513a0654f",
+      "claim_kind": "unit_design",
+      "unit": "donor",
+      "n": 8,
+      "alpha": 0.01,
+      "threshold_protocol_sha256": "799a57c530fa2ee08be377507693b9d5989c336c754c8e942ce9c676d5355997"
+    },
+    "expected_control": "RELEASE",
+    "actual": {
+      "decision": "RELEASE",
+      "checks": [
+        {
+          "requirement": "full_source_packet",
+          "state": "PASS",
+          "witness": "All declared source files hashed together, not just one matrix"
+        },
+        {
+          "requirement": "scientific_claim_type",
+          "state": "PASS",
+          "witness": "Available source evidence type"
+        },
+        {
+          "requirement": "independent_unit",
+          "state": "PASS",
+          "witness": "Actual parent donor"
+        },
+        {
+          "requirement": "independent_n",
+          "state": "PASS",
+          "witness": "Computed independent parent count 8"
+        },
+        {
+          "requirement": "threshold_provenance",
+          "state": "PASS",
+          "witness": "Must resolve to actual frozen protocol bytes, not a free-text declaration"
+        },
+        {
+          "requirement": "threshold_value",
+          "state": "PASS",
+          "witness": "Declared conservative analysis alpha range (0,.05], not a universal biological truth criterion"
+        }
+      ]
+    },
+    "matches": true
+  },
+  {
+    "case_id": "pbmc:unsupported_cross_modality",
+    "input": {
+      "packet_sha256": "22115a600055bacd4ed518f9f724a5cd1ff8f5349027f13e6b8880d513a0654f",
+      "claim_kind": "RNA_ATAC_transfer",
+      "unit": "donor",
+      "n": 8,
+      "alpha": 0.05,
+      "threshold_protocol_sha256": "799a57c530fa2ee08be377507693b9d5989c336c754c8e942ce9c676d5355997"
+    },
+    "expected_control": "WITHHOLD",
+    "actual": {
+      "decision": "WITHHOLD",
+      "checks": [
+        {
+          "requirement": "full_source_packet",
+          "state": "PASS",
+          "witness": "All declared source files hashed together, not just one matrix"
+        },
+        {
+          "requirement": "scientific_claim_type",
+          "state": "FAIL",
+          "witness": "Provided packet supports ['unit_design', 'cell_description']; metadata does not establish expression results"
+        },
+        {
+          "requirement": "independent_unit",
+          "state": "PASS",
+          "witness": "Actual parent donor"
+        },
+        {
+          "requirement": "independent_n",
+          "state": "PASS",
+          "witness": "Computed independent parent count 8"
+        },
+        {
+          "requirement": "threshold_provenance",
+          "state": "PASS",
+          "witness": "Must resolve to actual frozen protocol bytes, not a free-text declaration"
+        },
+        {
+          "requirement": "threshold_value",
+          "state": "PASS",
+          "witness": "Declared conservative analysis alpha range (0,.05], not a universal biological truth criterion"
+        }
+      ]
+    },
+    "matches": true
+  },
+  {
+    "case_id": "pbmc:metadata_as_expression_result",
+    "input": {
+      "packet_sha256": "22115a600055bacd4ed518f9f724a5cd1ff8f5349027f13e6b8880d513a0654f",
+      "claim_kind": "marker_contrast",
+      "unit": "donor",
+      "n": 8,
+      "alpha": 0.05,
+      "threshold_protocol_sha256": "799a57c530fa2ee08be377507693b9d5989c336c754c8e942ce9c676d5355997",
+      "gene": "INS",
+      "uncertainty_unit": "donor",
+      "scope": "this_public_packet_parametric_contrast"
+    },
+    "expected_control": "ESCALATE",
+    "actual": {
+      "decision": "ESCALATE",
+      "checks": [
+        {
+          "requirement": "full_source_packet",
+          "state": "PASS",
+          "witness": "All declared source files hashed together, not just one matrix"
+        },
+        {
+          "requirement": "scientific_claim_type",
+          "state": "UNKNOWN",
+          "witness": "Provided packet supports ['unit_design', 'cell_description']; metadata does not establish expression results"
+        },
+        {
+          "requirement": "independent_unit",
+          "state": "PASS",
+          "witness": "Actual parent donor"
+        },
+        {
+          "requirement": "independent_n",
+          "state": "PASS",
+          "witness": "Computed independent parent count 8"
+        },
+        {
+          "requirement": "threshold_provenance",
+          "state": "PASS",
+          "witness": "Must resolve to actual frozen protocol bytes, not a free-text declaration"
+        },
+        {
+          "requirement": "threshold_value",
+          "state": "PASS",
+          "witness": "Declared conservative analysis alpha range (0,.05], not a universal biological truth criterion"
+        },
+        {
+          "requirement": "computed_effect",
+          "state": "PASS",
+          "witness": "Actual donor pseudobulk paired-t result, not a prefilled validity label"
+        },
+        {
+          "requirement": "statistical_unit",
+          "state": "PASS",
+          "witness": "Actual paired donor differences; cells do not become independent replicates"
+        },
+        {
+          "requirement": "scientific_scope",
+          "state": "PASS",
+          "witness": "Four-donor parametric result does not establish universal, causal, or cross-modal effects"
+        }
+      ]
+    },
+    "matches": true
+  },
+  {
+    "case_id": "airway:correct_design",
+    "input": {
+      "packet_sha256": "020abcf35453ceaa37148e85df21b1c0affe13bab247475a8d3d246f2d085062",
+      "claim_kind": "unit_design",
+      "unit": "cell_line",
+      "n": 4,
+      "alpha": 0.05,
+      "threshold_protocol_sha256": "799a57c530fa2ee08be377507693b9d5989c336c754c8e942ce9c676d5355997"
+    },
+    "expected_control": "RELEASE",
+    "actual": {
+      "decision": "RELEASE",
+      "checks": [
+        {
+          "requirement": "full_source_packet",
+          "state": "PASS",
+          "witness": "All declared source files hashed together, not just one matrix"
+        },
+        {
+          "requirement": "scientific_claim_type",
+          "state": "PASS",
+          "witness": "Available source evidence type"
+        },
+        {
+          "requirement": "independent_unit",
+          "state": "PASS",
+          "witness": "Actual parent cell_line"
+        },
+        {
+          "requirement": "independent_n",
+          "state": "PASS",
+          "witness": "Computed independent parent count 4"
+        },
+        {
+          "requirement": "threshold_provenance",
+          "state": "PASS",
+          "witness": "Must resolve to actual frozen protocol bytes, not a free-text declaration"
+        },
+        {
+          "requirement": "threshold_value",
+          "state": "PASS",
+          "witness": "Declared conservative analysis alpha range (0,.05], not a universal biological truth criterion"
+        }
+      ]
+    },
+    "matches": true
+  },
+  {
+    "case_id": "airway:wrong_full_packet",
+    "input": {
+      "packet_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "claim_kind": "unit_design",
+      "unit": "cell_line",
+      "n": 4,
+      "alpha": 0.05,
+      "threshold_protocol_sha256": "799a57c530fa2ee08be377507693b9d5989c336c754c8e942ce9c676d5355997"
+    },
+    "expected_control": "WITHHOLD",
+    "actual": {
+      "decision": "WITHHOLD",
+      "checks": [
+        {
+          "requirement": "full_source_packet",
+          "state": "FAIL",
+          "witness": "All declared source files hashed together, not just one matrix"
+        },
+        {
+          "requirement": "scientific_claim_type",
+          "state": "PASS",
+          "witness": "Available source evidence type"
+        },
+        {
+          "requirement": "independent_unit",
+          "state": "PASS",
+          "witness": "Actual parent cell_line"
+        },
+        {
+          "requirement": "independent_n",
+          "state": "PASS",
+          "witness": "Computed independent parent count 4"
+        },
+        {
+          "requirement": "threshold_provenance",
+          "state": "PASS",
+          "witness": "Must resolve to actual frozen protocol bytes, not a free-text declaration"
+        },
+        {
+          "requirement": "threshold_value",
+          "state": "PASS",
+          "witness": "Declared conservative analysis alpha range (0,.05], not a universal biological truth criterion"
+        }
+      ]
+    },
+    "matches": true
+  },
+  {
+    "case_id": "airway:missing_claim_type",
+    "input": {
+      "packet_sha256": "020abcf35453ceaa37148e85df21b1c0affe13bab247475a8d3d246f2d085062",
+      "claim_kind": null,
+      "unit": "cell_line",
+      "n": 4,
+      "alpha": 0.05,
+      "threshold_protocol_sha256": "799a57c530fa2ee08be377507693b9d5989c336c754c8e942ce9c676d5355997"
+    },
+    "expected_control": "ESCALATE",
+    "actual": {
+      "decision": "ESCALATE",
+      "checks": [
+        {
+          "requirement": "full_source_packet",
+          "state": "PASS",
+          "witness": "All declared source files hashed together, not just one matrix"
+        },
+        {
+          "requirement": "scientific_claim_type",
+          "state": "UNKNOWN",
+          "witness": "Scientific target must be explicit"
+        },
+        {
+          "requirement": "independent_unit",
+          "state": "PASS",
+          "witness": "Actual parent cell_line"
+        },
+        {
+          "requirement": "independent_n",
+          "state": "PASS",
+          "witness": "Computed independent parent count 4"
+        },
+        {
+          "requirement": "threshold_provenance",
+          "state": "PASS",
+          "witness": "Must resolve to actual frozen protocol bytes, not a free-text declaration"
+        },
+        {
+          "requirement": "threshold_value",
+          "state": "PASS",
+          "witness": "Declared conservative analysis alpha range (0,.05], not a universal biological truth criterion"
+        }
+      ]
+    },
+    "matches": true
+  },
+  {
+    "case_id": "airway:free_text_threshold_claim",
+    "input": {
+      "packet_sha256": "020abcf35453ceaa37148e85df21b1c0affe13bab247475a8d3d246f2d085062",
+      "claim_kind": "unit_design",
+      "unit": "cell_line",
+      "n": 4,
+      "alpha": 0.05,
+      "threshold_protocol_sha256": "we preregistered this"
+    },
+    "expected_control": "ESCALATE",
+    "actual": {
+      "decision": "ESCALATE",
+      "checks": [
+        {
+          "requirement": "full_source_packet",
+          "state": "PASS",
+          "witness": "All declared source files hashed together, not just one matrix"
+        },
+        {
+          "requirement": "scientific_claim_type",
+          "state": "PASS",
+          "witness": "Available source evidence type"
+        },
+        {
+          "requirement": "independent_unit",
+          "state": "PASS",
+          "witness": "Actual parent cell_line"
+        },
+        {
+          "requirement": "independent_n",
+          "state": "PASS",
+          "witness": "Computed independent parent count 4"
+        },
+        {
+          "requirement": "threshold_provenance",
+          "state": "UNKNOWN",
+          "witness": "Must resolve to actual frozen protocol bytes, not a free-text declaration"
+        },
+        {
+          "requirement": "threshold_value",
+          "state": "PASS",
+          "witness": "Declared conservative analysis alpha range (0,.05], not a universal biological truth criterion"
+        }
+      ]
+    },
+    "matches": true
+  },
+  {
+    "case_id": "airway:permissive_alpha",
+    "input": {
+      "packet_sha256": "020abcf35453ceaa37148e85df21b1c0affe13bab247475a8d3d246f2d085062",
+      "claim_kind": "unit_design",
+      "unit": "cell_line",
+      "n": 4,
+      "alpha": 0.5,
+      "threshold_protocol_sha256": "799a57c530fa2ee08be377507693b9d5989c336c754c8e942ce9c676d5355997"
+    },
+    "expected_control": "WITHHOLD",
+    "actual": {
+      "decision": "WITHHOLD",
+      "checks": [
+        {
+          "requirement": "full_source_packet",
+          "state": "PASS",
+          "witness": "All declared source files hashed together, not just one matrix"
+        },
+        {
+          "requirement": "scientific_claim_type",
+          "state": "PASS",
+          "witness": "Available source evidence type"
+        },
+        {
+          "requirement": "independent_unit",
+          "state": "PASS",
+          "witness": "Actual parent cell_line"
+        },
+        {
+          "requirement": "independent_n",
+          "state": "PASS",
+          "witness": "Computed independent parent count 4"
+        },
+        {
+          "requirement": "threshold_provenance",
+          "state": "PASS",
+          "witness": "Must resolve to actual frozen protocol bytes, not a free-text declaration"
+        },
+        {
+          "requirement": "threshold_value",
+          "state": "FAIL",
+          "witness": "Declared conservative analysis alpha range (0,.05], not a universal biological truth criterion"
+        }
+      ]
+    },
+    "matches": true
+  },
+  {
+    "case_id": "airway:negative_alpha",
+    "input": {
+      "packet_sha256": "020abcf35453ceaa37148e85df21b1c0affe13bab247475a8d3d246f2d085062",
+      "claim_kind": "unit_design",
+      "unit": "cell_line",
+      "n": 4,
+      "alpha": -0.1,
+      "threshold_protocol_sha256": "799a57c530fa2ee08be377507693b9d5989c336c754c8e942ce9c676d5355997"
+    },
+    "expected_control": "WITHHOLD",
+    "actual": {
+      "decision": "WITHHOLD",
+      "checks": [
+        {
+          "requirement": "full_source_packet",
+          "state": "PASS",
+          "witness": "All declared source files hashed together, not just one matrix"
+        },
+        {
+          "requirement": "scientific_claim_type",
+          "state": "PASS",
+          "witness": "Available source evidence type"
+        },
+        {
+          "requirement": "independent_unit",
+          "state": "PASS",
+          "witness": "Actual parent cell_line"
+        },
+        {
+          "requirement": "independent_n",
+          "state": "PASS",
+          "witness": "Computed independent parent count 4"
+        },
+        {
+          "requirement": "threshold_provenance",
+          "state": "PASS",
+          "witness": "Must resolve to actual frozen protocol bytes, not a free-text declaration"
+        },
+        {
+          "requirement": "threshold_value",
+          "state": "FAIL",
+          "witness": "Declared conservative analysis alpha range (0,.05], not a universal biological truth criterion"
+        }
+      ]
+    },
+    "matches": true
+  },
+  {
+    "case_id": "airway:conservative_alpha",
+    "input": {
+      "packet_sha256": "020abcf35453ceaa37148e85df21b1c0affe13bab247475a8d3d246f2d085062",
+      "claim_kind": "unit_design",
+      "unit": "cell_line",
+      "n": 4,
+      "alpha": 0.01,
+      "threshold_protocol_sha256": "799a57c530fa2ee08be377507693b9d5989c336c754c8e942ce9c676d5355997"
+    },
+    "expected_control": "RELEASE",
+    "actual": {
+      "decision": "RELEASE",
+      "checks": [
+        {
+          "requirement": "full_source_packet",
+          "state": "PASS",
+          "witness": "All declared source files hashed together, not just one matrix"
+        },
+        {
+          "requirement": "scientific_claim_type",
+          "state": "PASS",
+          "witness": "Available source evidence type"
+        },
+        {
+          "requirement": "independent_unit",
+          "state": "PASS",
+          "witness": "Actual parent cell_line"
+        },
+        {
+          "requirement": "independent_n",
+          "state": "PASS",
+          "witness": "Computed independent parent count 4"
+        },
+        {
+          "requirement": "threshold_provenance",
+          "state": "PASS",
+          "witness": "Must resolve to actual frozen protocol bytes, not a free-text declaration"
+        },
+        {
+          "requirement": "threshold_value",
+          "state": "PASS",
+          "witness": "Declared conservative analysis alpha range (0,.05], not a universal biological truth criterion"
+        }
+      ]
+    },
+    "matches": true
+  },
+  {
+    "case_id": "airway:unsupported_cross_modality",
+    "input": {
+      "packet_sha256": "020abcf35453ceaa37148e85df21b1c0affe13bab247475a8d3d246f2d085062",
+      "claim_kind": "RNA_ATAC_transfer",
+      "unit": "cell_line",
+      "n": 4,
+      "alpha": 0.05,
+      "threshold_protocol_sha256": "799a57c530fa2ee08be377507693b9d5989c336c754c8e942ce9c676d5355997"
+    },
+    "expected_control": "WITHHOLD",
+    "actual": {
+      "decision": "WITHHOLD",
+      "checks": [
+        {
+          "requirement": "full_source_packet",
+          "state": "PASS",
+          "witness": "All declared source files hashed together, not just one matrix"
+        },
+        {
+          "requirement": "scientific_claim_type",
+          "state": "FAIL",
+          "witness": "Provided packet supports ['unit_design', 'cell_description']; metadata does not establish expression results"
+        },
+        {
+          "requirement": "independent_unit",
+          "state": "PASS",
+          "witness": "Actual parent cell_line"
+        },
+        {
+          "requirement": "independent_n",
+          "state": "PASS",
+          "witness": "Computed independent parent count 4"
+        },
+        {
+          "requirement": "threshold_provenance",
+          "state": "PASS",
+          "witness": "Must resolve to actual frozen protocol bytes, not a free-text declaration"
+        },
+        {
+          "requirement": "threshold_value",
+          "state": "PASS",
+          "witness": "Declared conservative analysis alpha range (0,.05], not a universal biological truth criterion"
+        }
+      ]
+    },
+    "matches": true
+  },
+  {
+    "case_id": "airway:metadata_as_expression_result",
+    "input": {
+      "packet_sha256": "020abcf35453ceaa37148e85df21b1c0affe13bab247475a8d3d246f2d085062",
+      "claim_kind": "marker_contrast",
+      "unit": "cell_line",
+      "n": 4,
+      "alpha": 0.05,
+      "threshold_protocol_sha256": "799a57c530fa2ee08be377507693b9d5989c336c754c8e942ce9c676d5355997",
+      "gene": "INS",
+      "uncertainty_unit": "donor",
+      "scope": "this_public_packet_parametric_contrast"
+    },
+    "expected_control": "ESCALATE",
+    "actual": {
+      "decision": "ESCALATE",
+      "checks": [
+        {
+          "requirement": "full_source_packet",
+          "state": "PASS",
+          "witness": "All declared source files hashed together, not just one matrix"
+        },
+        {
+          "requirement": "scientific_claim_type",
+          "state": "UNKNOWN",
+          "witness": "Provided packet supports ['unit_design', 'cell_description']; metadata does not establish expression results"
+        },
+        {
+          "requirement": "independent_unit",
+          "state": "PASS",
+          "witness": "Actual parent cell_line"
+        },
+        {
+          "requirement": "independent_n",
+          "state": "PASS",
+          "witness": "Computed independent parent count 4"
+        },
+        {
+          "requirement": "threshold_provenance",
+          "state": "PASS",
+          "witness": "Must resolve to actual frozen protocol bytes, not a free-text declaration"
+        },
+        {
+          "requirement": "threshold_value",
+          "state": "PASS",
+          "witness": "Declared conservative analysis alpha range (0,.05], not a universal biological truth criterion"
+        },
+        {
+          "requirement": "computed_effect",
+          "state": "PASS",
+          "witness": "Actual donor pseudobulk paired-t result, not a prefilled validity label"
+        },
+        {
+          "requirement": "statistical_unit",
+          "state": "PASS",
+          "witness": "Actual paired donor differences; cells do not become independent replicates"
+        },
+        {
+          "requirement": "scientific_scope",
+          "state": "PASS",
+          "witness": "Four-donor parametric result does not establish universal, causal, or cross-modal effects"
+        }
+      ]
+    },
+    "matches": true
+  },
+  {
+    "case_id": "baron:actual_marker:INS",
+    "input": {
+      "packet_sha256": "8261062e5e752412d17d4fb8abaad44c7318178aa958ef06472835c6a425e856",
+      "claim_kind": "marker_contrast",
+      "unit": "donor",
+      "n": 4,
+      "alpha": 0.05,
+      "threshold_protocol_sha256": "799a57c530fa2ee08be377507693b9d5989c336c754c8e942ce9c676d5355997",
+      "gene": "INS",
+      "uncertainty_unit": "donor",
+      "scope": "this_public_packet_parametric_contrast"
+    },
+    "expected_control": "RELEASE",
+    "actual": {
+      "decision": "RELEASE",
+      "checks": [
+        {
+          "requirement": "full_source_packet",
+          "state": "PASS",
+          "witness": "All declared source files hashed together, not just one matrix"
+        },
+        {
+          "requirement": "scientific_claim_type",
+          "state": "PASS",
+          "witness": "Available source evidence type"
+        },
+        {
+          "requirement": "independent_unit",
+          "state": "PASS",
+          "witness": "Actual parent donor"
+        },
+        {
+          "requirement": "independent_n",
+          "state": "PASS",
+          "witness": "Computed independent parent count 4"
+        },
+        {
+          "requirement": "threshold_provenance",
+          "state": "PASS",
+          "witness": "Must resolve to actual frozen protocol bytes, not a free-text declaration"
+        },
+        {
+          "requirement": "threshold_value",
+          "state": "PASS",
+          "witness": "Declared conservative analysis alpha range (0,.05], not a universal biological truth criterion"
+        },
+        {
+          "requirement": "computed_effect",
+          "state": "PASS",
+          "witness": "Actual donor pseudobulk paired-t result, not a prefilled validity label"
+        },
+        {
+          "requirement": "statistical_unit",
+          "state": "PASS",
+          "witness": "Actual paired donor differences; cells do not become independent replicates"
+        },
+        {
+          "requirement": "scientific_scope",
+          "state": "PASS",
+          "witness": "Four-donor parametric result does not establish universal, causal, or cross-modal effects"
+        }
+      ]
+    },
+    "matches": true
+  },
+  {
+    "case_id": "baron:cell_inference",
+    "input": {
+      "packet_sha256": "8261062e5e752412d17d4fb8abaad44c7318178aa958ef06472835c6a425e856",
+      "claim_kind": "marker_contrast",
+      "unit": "cell",
+      "n": 8569,
+      "alpha": 0.05,
+      "threshold_protocol_sha256": "799a57c530fa2ee08be377507693b9d5989c336c754c8e942ce9c676d5355997",
+      "gene": "INS",
+      "uncertainty_unit": "cell",
+      "scope": "this_public_packet_parametric_contrast"
+    },
+    "expected_control": "WITHHOLD",
+    "actual": {
+      "decision": "WITHHOLD",
+      "checks": [
+        {
+          "requirement": "full_source_packet",
+          "state": "PASS",
+          "witness": "All declared source files hashed together, not just one matrix"
+        },
+        {
+          "requirement": "scientific_claim_type",
+          "state": "PASS",
+          "witness": "Available source evidence type"
+        },
+        {
+          "requirement": "independent_unit",
+          "state": "FAIL",
+          "witness": "Actual parent donor"
+        },
+        {
+          "requirement": "independent_n",
+          "state": "FAIL",
+          "witness": "Computed independent parent count 4"
+        },
+        {
+          "requirement": "threshold_provenance",
+          "state": "PASS",
+          "witness": "Must resolve to actual frozen protocol bytes, not a free-text declaration"
+        },
+        {
+          "requirement": "threshold_value",
+          "state": "PASS",
+          "witness": "Declared conservative analysis alpha range (0,.05], not a universal biological truth criterion"
+        },
+        {
+          "requirement": "computed_effect",
+          "state": "PASS",
+          "witness": "Actual donor pseudobulk paired-t result, not a prefilled validity label"
+        },
+        {
+          "requirement": "statistical_unit",
+          "state": "FAIL",
+          "witness": "Actual paired donor differences; cells do not become independent replicates"
+        },
+        {
+          "requirement": "scientific_scope",
+          "state": "PASS",
+          "witness": "Four-donor parametric result does not establish universal, causal, or cross-modal effects"
+        }
+      ]
+    },
+    "matches": true
+  },
+  {
+    "case_id": "baron:universal_scope",
+    "input": {
+      "packet_sha256": "8261062e5e752412d17d4fb8abaad44c7318178aa958ef06472835c6a425e856",
+      "claim_kind": "marker_contrast",
+      "unit": "donor",
+      "n": 4,
+      "alpha": 0.05,
+      "threshold_protocol_sha256": "799a57c530fa2ee08be377507693b9d5989c336c754c8e942ce9c676d5355997",
+      "gene": "INS",
+      "uncertainty_unit": "donor",
+      "scope": "all_humans"
+    },
+    "expected_control": "ESCALATE",
+    "actual": {
+      "decision": "ESCALATE",
+      "checks": [
+        {
+          "requirement": "full_source_packet",
+          "state": "PASS",
+          "witness": "All declared source files hashed together, not just one matrix"
+        },
+        {
+          "requirement": "scientific_claim_type",
+          "state": "PASS",
+          "witness": "Available source evidence type"
+        },
+        {
+          "requirement": "independent_unit",
+          "state": "PASS",
+          "witness": "Actual parent donor"
+        },
+        {
+          "requirement": "independent_n",
+          "state": "PASS",
+          "witness": "Computed independent parent count 4"
+        },
+        {
+          "requirement": "threshold_provenance",
+          "state": "PASS",
+          "witness": "Must resolve to actual frozen protocol bytes, not a free-text declaration"
+        },
+        {
+          "requirement": "threshold_value",
+          "state": "PASS",
+          "witness": "Declared conservative analysis alpha range (0,.05], not a universal biological truth criterion"
+        },
+        {
+          "requirement": "computed_effect",
+          "state": "PASS",
+          "witness": "Actual donor pseudobulk paired-t result, not a prefilled validity label"
+        },
+        {
+          "requirement": "statistical_unit",
+          "state": "PASS",
+          "witness": "Actual paired donor differences; cells do not become independent replicates"
+        },
+        {
+          "requirement": "scientific_scope",
+          "state": "UNKNOWN",
+          "witness": "Four-donor parametric result does not establish universal, causal, or cross-modal effects"
+        }
+      ]
+    },
+    "matches": true
+  },
+  {
+    "case_id": "baron:missing_alpha",
+    "input": {
+      "packet_sha256": "8261062e5e752412d17d4fb8abaad44c7318178aa958ef06472835c6a425e856",
+      "claim_kind": "marker_contrast",
+      "unit": "donor",
+      "n": 4,
+      "alpha": null,
+      "threshold_protocol_sha256": "799a57c530fa2ee08be377507693b9d5989c336c754c8e942ce9c676d5355997",
+      "gene": "INS",
+      "uncertainty_unit": "donor",
+      "scope": "this_public_packet_parametric_contrast"
+    },
+    "expected_control": "ESCALATE",
+    "actual": {
+      "decision": "ESCALATE",
+      "checks": [
+        {
+          "requirement": "full_source_packet",
+          "state": "PASS",
+          "witness": "All declared source files hashed together, not just one matrix"
+        },
+        {
+          "requirement": "scientific_claim_type",
+          "state": "PASS",
+          "witness": "Available source evidence type"
+        },
+        {
+          "requirement": "independent_unit",
+          "state": "PASS",
+          "witness": "Actual parent donor"
+        },
+        {
+          "requirement": "independent_n",
+          "state": "PASS",
+          "witness": "Computed independent parent count 4"
+        },
+        {
+          "requirement": "threshold_provenance",
+          "state": "PASS",
+          "witness": "Must resolve to actual frozen protocol bytes, not a free-text declaration"
+        },
+        {
+          "requirement": "threshold_value",
+          "state": "UNKNOWN",
+          "witness": "Declared conservative analysis alpha range (0,.05], not a universal biological truth criterion"
+        },
+        {
+          "requirement": "computed_effect",
+          "state": "UNKNOWN",
+          "witness": "Actual donor pseudobulk paired-t result, not a prefilled validity label"
+        },
+        {
+          "requirement": "statistical_unit",
+          "state": "PASS",
+          "witness": "Actual paired donor differences; cells do not become independent replicates"
+        },
+        {
+          "requirement": "scientific_scope",
+          "state": "PASS",
+          "witness": "Four-donor parametric result does not establish universal, causal, or cross-modal effects"
+        }
+      ]
+    },
+    "matches": true
+  },
+  {
+    "case_id": "baron:malformed_alpha",
+    "input": {
+      "packet_sha256": "8261062e5e752412d17d4fb8abaad44c7318178aa958ef06472835c6a425e856",
+      "claim_kind": "marker_contrast",
+      "unit": "donor",
+      "n": 4,
+      "alpha": "bad",
+      "threshold_protocol_sha256": "799a57c530fa2ee08be377507693b9d5989c336c754c8e942ce9c676d5355997",
+      "gene": "INS",
+      "uncertainty_unit": "donor",
+      "scope": "this_public_packet_parametric_contrast"
+    },
+    "expected_control": "WITHHOLD",
+    "actual": {
+      "decision": "WITHHOLD",
+      "checks": [
+        {
+          "requirement": "full_source_packet",
+          "state": "PASS",
+          "witness": "All declared source files hashed together, not just one matrix"
+        },
+        {
+          "requirement": "scientific_claim_type",
+          "state": "PASS",
+          "witness": "Available source evidence type"
+        },
+        {
+          "requirement": "independent_unit",
+          "state": "PASS",
+          "witness": "Actual parent donor"
+        },
+        {
+          "requirement": "independent_n",
+          "state": "PASS",
+          "witness": "Computed independent parent count 4"
+        },
+        {
+          "requirement": "threshold_provenance",
+          "state": "PASS",
+          "witness": "Must resolve to actual frozen protocol bytes, not a free-text declaration"
+        },
+        {
+          "requirement": "threshold_value",
+          "state": "FAIL",
+          "witness": "Declared conservative analysis alpha range (0,.05], not a universal biological truth criterion"
+        },
+        {
+          "requirement": "computed_effect",
+          "state": "UNKNOWN",
+          "witness": "Actual donor pseudobulk paired-t result, not a prefilled validity label"
+        },
+        {
+          "requirement": "statistical_unit",
+          "state": "PASS",
+          "witness": "Actual paired donor differences; cells do not become independent replicates"
+        },
+        {
+          "requirement": "scientific_scope",
+          "state": "PASS",
+          "witness": "Four-donor parametric result does not establish universal, causal, or cross-modal effects"
+        }
+      ]
+    },
+    "matches": true
+  },
+  {
+    "case_id": "baron:boolean_alpha",
+    "input": {
+      "packet_sha256": "8261062e5e752412d17d4fb8abaad44c7318178aa958ef06472835c6a425e856",
+      "claim_kind": "marker_contrast",
+      "unit": "donor",
+      "n": 4,
+      "alpha": true,
+      "threshold_protocol_sha256": "799a57c530fa2ee08be377507693b9d5989c336c754c8e942ce9c676d5355997",
+      "gene": "INS",
+      "uncertainty_unit": "donor",
+      "scope": "this_public_packet_parametric_contrast"
+    },
+    "expected_control": "WITHHOLD",
+    "actual": {
+      "decision": "WITHHOLD",
+      "checks": [
+        {
+          "requirement": "full_source_packet",
+          "state": "PASS",
+          "witness": "All declared source files hashed together, not just one matrix"
+        },
+        {
+          "requirement": "scientific_claim_type",
+          "state": "PASS",
+          "witness": "Available source evidence type"
+        },
+        {
+          "requirement": "independent_unit",
+          "state": "PASS",
+          "witness": "Actual parent donor"
+        },
+        {
+          "requirement": "independent_n",
+          "state": "PASS",
+          "witness": "Computed independent parent count 4"
+        },
+        {
+          "requirement": "threshold_provenance",
+          "state": "PASS",
+          "witness": "Must resolve to actual frozen protocol bytes, not a free-text declaration"
+        },
+        {
+          "requirement": "threshold_value",
+          "state": "FAIL",
+          "witness": "Declared conservative analysis alpha range (0,.05], not a universal biological truth criterion"
+        },
+        {
+          "requirement": "computed_effect",
+          "state": "UNKNOWN",
+          "witness": "Actual donor pseudobulk paired-t result, not a prefilled validity label"
+        },
+        {
+          "requirement": "statistical_unit",
+          "state": "PASS",
+          "witness": "Actual paired donor differences; cells do not become independent replicates"
+        },
+        {
+          "requirement": "scientific_scope",
+          "state": "PASS",
+          "witness": "Four-donor parametric result does not establish universal, causal, or cross-modal effects"
+        }
+      ]
+    },
+    "matches": true
+  },
+  {
+    "case_id": "baron:missing_marker",
+    "input": {
+      "packet_sha256": "8261062e5e752412d17d4fb8abaad44c7318178aa958ef06472835c6a425e856",
+      "claim_kind": "marker_contrast",
+      "unit": "donor",
+      "n": 4,
+      "alpha": 0.05,
+      "threshold_protocol_sha256": "799a57c530fa2ee08be377507693b9d5989c336c754c8e942ce9c676d5355997",
+      "gene": null,
+      "uncertainty_unit": "donor",
+      "scope": "this_public_packet_parametric_contrast"
+    },
+    "expected_control": "ESCALATE",
+    "actual": {
+      "decision": "ESCALATE",
+      "checks": [
+        {
+          "requirement": "full_source_packet",
+          "state": "PASS",
+          "witness": "All declared source files hashed together, not just one matrix"
+        },
+        {
+          "requirement": "scientific_claim_type",
+          "state": "PASS",
+          "witness": "Available source evidence type"
+        },
+        {
+          "requirement": "independent_unit",
+          "state": "PASS",
+          "witness": "Actual parent donor"
+        },
+        {
+          "requirement": "independent_n",
+          "state": "PASS",
+          "witness": "Computed independent parent count 4"
+        },
+        {
+          "requirement": "threshold_provenance",
+          "state": "PASS",
+          "witness": "Must resolve to actual frozen protocol bytes, not a free-text declaration"
+        },
+        {
+          "requirement": "threshold_value",
+          "state": "PASS",
+          "witness": "Declared conservative analysis alpha range (0,.05], not a universal biological truth criterion"
+        },
+        {
+          "requirement": "computed_effect",
+          "state": "UNKNOWN",
+          "witness": "Actual donor pseudobulk paired-t result, not a prefilled validity label"
+        },
+        {
+          "requirement": "statistical_unit",
+          "state": "PASS",
+          "witness": "Actual paired donor differences; cells do not become independent replicates"
+        },
+        {
+          "requirement": "scientific_scope",
+          "state": "PASS",
+          "witness": "Four-donor parametric result does not establish universal, causal, or cross-modal effects"
+        }
+      ]
+    },
+    "matches": true
+  },
+  {
+    "case_id": "baron:actual_marker:GCG",
+    "input": {
+      "packet_sha256": "8261062e5e752412d17d4fb8abaad44c7318178aa958ef06472835c6a425e856",
+      "claim_kind": "marker_contrast",
+      "unit": "donor",
+      "n": 4,
+      "alpha": 0.05,
+      "threshold_protocol_sha256": "799a57c530fa2ee08be377507693b9d5989c336c754c8e942ce9c676d5355997",
+      "gene": "GCG",
+      "uncertainty_unit": "donor",
+      "scope": "this_public_packet_parametric_contrast"
+    },
+    "expected_control": "RELEASE",
+    "actual": {
+      "decision": "RELEASE",
+      "checks": [
+        {
+          "requirement": "full_source_packet",
+          "state": "PASS",
+          "witness": "All declared source files hashed together, not just one matrix"
+        },
+        {
+          "requirement": "scientific_claim_type",
+          "state": "PASS",
+          "witness": "Available source evidence type"
+        },
+        {
+          "requirement": "independent_unit",
+          "state": "PASS",
+          "witness": "Actual parent donor"
+        },
+        {
+          "requirement": "independent_n",
+          "state": "PASS",
+          "witness": "Computed independent parent count 4"
+        },
+        {
+          "requirement": "threshold_provenance",
+          "state": "PASS",
+          "witness": "Must resolve to actual frozen protocol bytes, not a free-text declaration"
+        },
+        {
+          "requirement": "threshold_value",
+          "state": "PASS",
+          "witness": "Declared conservative analysis alpha range (0,.05], not a universal biological truth criterion"
+        },
+        {
+          "requirement": "computed_effect",
+          "state": "PASS",
+          "witness": "Actual donor pseudobulk paired-t result, not a prefilled validity label"
+        },
+        {
+          "requirement": "statistical_unit",
+          "state": "PASS",
+          "witness": "Actual paired donor differences; cells do not become independent replicates"
+        },
+        {
+          "requirement": "scientific_scope",
+          "state": "PASS",
+          "witness": "Four-donor parametric result does not establish universal, causal, or cross-modal effects"
+        }
+      ]
+    },
+    "matches": true
+  },
+  {
+    "case_id": "baron:actual_marker:MS4A1",
+    "input": {
+      "packet_sha256": "8261062e5e752412d17d4fb8abaad44c7318178aa958ef06472835c6a425e856",
+      "claim_kind": "marker_contrast",
+      "unit": "donor",
+      "n": 4,
+      "alpha": 0.05,
+      "threshold_protocol_sha256": "799a57c530fa2ee08be377507693b9d5989c336c754c8e942ce9c676d5355997",
+      "gene": "MS4A1",
+      "uncertainty_unit": "donor",
+      "scope": "this_public_packet_parametric_contrast"
+    },
+    "expected_control": "WITHHOLD",
+    "actual": {
+      "decision": "WITHHOLD",
+      "checks": [
+        {
+          "requirement": "full_source_packet",
+          "state": "PASS",
+          "witness": "All declared source files hashed together, not just one matrix"
+        },
+        {
+          "requirement": "scientific_claim_type",
+          "state": "PASS",
+          "witness": "Available source evidence type"
+        },
+        {
+          "requirement": "independent_unit",
+          "state": "PASS",
+          "witness": "Actual parent donor"
+        },
+        {
+          "requirement": "independent_n",
+          "state": "PASS",
+          "witness": "Computed independent parent count 4"
+        },
+        {
+          "requirement": "threshold_provenance",
+          "state": "PASS",
+          "witness": "Must resolve to actual frozen protocol bytes, not a free-text declaration"
+        },
+        {
+          "requirement": "threshold_value",
+          "state": "PASS",
+          "witness": "Declared conservative analysis alpha range (0,.05], not a universal biological truth criterion"
+        },
+        {
+          "requirement": "computed_effect",
+          "state": "FAIL",
+          "witness": "Actual donor pseudobulk paired-t result, not a prefilled validity label"
+        },
+        {
+          "requirement": "statistical_unit",
+          "state": "PASS",
+          "witness": "Actual paired donor differences; cells do not become independent replicates"
+        },
+        {
+          "requirement": "scientific_scope",
+          "state": "PASS",
+          "witness": "Four-donor parametric result does not establish universal, causal, or cross-modal effects"
+        }
+      ]
+    },
+    "matches": true
+  }
+]

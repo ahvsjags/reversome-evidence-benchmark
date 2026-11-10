@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "commit": "8e7dd09d92b9786e667947c7c52ca605905b0c18",
+  "parts": 144,
+  "archive_sha256": "d0202f2aeaee123ecd48e7be2a0568a050434086e653da098966b33c8608d760",
+  "fitted_model_sha256": "4ea38ec8530be55df421a53585dff01e571df49e5a543e2a74a1098c52c22709",
+  "public_base_reused_with_hash_verification": true,
+  "actual_neural_probe": true,
+  "wall_seconds": 181.55082910507917,
+  "created_utc": "2026-11-10T21:58:46.257934+00:00",
+  "credentials_used": false
+}

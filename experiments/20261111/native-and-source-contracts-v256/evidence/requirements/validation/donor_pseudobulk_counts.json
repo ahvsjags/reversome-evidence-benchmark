@@ -1,0 +1,621 @@
+{
+  "genes": [
+    "INS",
+    "GCG",
+    "MS4A1"
+  ],
+  "aggregates": {
+    "human1": {
+      "acinar": {
+        "n_cells": 110,
+        "UMI": 1195111,
+        "gene_UMI": [
+          1947,
+          176,
+          0
+        ]
+      },
+      "beta": {
+        "n_cells": 872,
+        "UMI": 5147913,
+        "gene_UMI": [
+          888574,
+          1842,
+          0
+        ]
+      },
+      "delta": {
+        "n_cells": 214,
+        "UMI": 1301790,
+        "gene_UMI": [
+          4224,
+          379,
+          0
+        ]
+      },
+      "activated_stellate": {
+        "n_cells": 51,
+        "UMI": 415327,
+        "gene_UMI": [
+          1529,
+          63,
+          0
+        ]
+      },
+      "ductal": {
+        "n_cells": 120,
+        "UMI": 748617,
+        "gene_UMI": [
+          6134,
+          716,
+          0
+        ]
+      },
+      "alpha": {
+        "n_cells": 236,
+        "UMI": 1223538,
+        "gene_UMI": [
+          4163,
+          100749,
+          0
+        ]
+      },
+      "epsilon": {
+        "n_cells": 13,
+        "UMI": 48510,
+        "gene_UMI": [
+          190,
+          13,
+          0
+        ]
+      },
+      "gamma": {
+        "n_cells": 70,
+        "UMI": 290885,
+        "gene_UMI": [
+          1042,
+          91,
+          0
+        ]
+      },
+      "endothelial": {
+        "n_cells": 130,
+        "UMI": 444008,
+        "gene_UMI": [
+          10113,
+          433,
+          0
+        ]
+      },
+      "quiescent_stellate": {
+        "n_cells": 92,
+        "UMI": 317323,
+        "gene_UMI": [
+          1439,
+          100,
+          0
+        ]
+      },
+      "macrophage": {
+        "n_cells": 14,
+        "UMI": 71614,
+        "gene_UMI": [
+          1726,
+          31,
+          0
+        ]
+      },
+      "schwann": {
+        "n_cells": 5,
+        "UMI": 19781,
+        "gene_UMI": [
+          1672,
+          4,
+          0
+        ]
+      },
+      "mast": {
+        "n_cells": 8,
+        "UMI": 16517,
+        "gene_UMI": [
+          307,
+          4,
+          0
+        ]
+      },
+      "t_cell": {
+        "n_cells": 2,
+        "UMI": 3797,
+        "gene_UMI": [
+          54,
+          3,
+          0
+        ]
+      }
+    },
+    "human2": {
+      "delta": {
+        "n_cells": 125,
+        "UMI": 642372,
+        "gene_UMI": [
+          1334,
+          736,
+          0
+        ]
+      },
+      "alpha": {
+        "n_cells": 676,
+        "UMI": 3170268,
+        "gene_UMI": [
+          5155,
+          428748,
+          0
+        ]
+      },
+      "activated_stellate": {
+        "n_cells": 81,
+        "UMI": 497663,
+        "gene_UMI": [
+          1850,
+          1486,
+          0
+        ]
+      },
+      "ductal": {
+        "n_cells": 301,
+        "UMI": 1807651,
+        "gene_UMI": [
+          2658,
+          4128,
+          0
+        ]
+      },
+      "beta": {
+        "n_cells": 371,
+        "UMI": 1978541,
+        "gene_UMI": [
+          364523,
+          2045,
+          0
+        ]
+      },
+      "macrophage": {
+        "n_cells": 17,
+        "UMI": 95140,
+        "gene_UMI": [
+          164,
+          1154,
+          0
+        ]
+      },
+      "quiescent_stellate": {
+        "n_cells": 22,
+        "UMI": 99383,
+        "gene_UMI": [
+          1483,
+          457,
+          0
+        ]
+      },
+      "gamma": {
+        "n_cells": 86,
+        "UMI": 329030,
+        "gene_UMI": [
+          566,
+          414,
+          0
+        ]
+      },
+      "endothelial": {
+        "n_cells": 23,
+        "UMI": 111751,
+        "gene_UMI": [
+          2106,
+          69,
+          0
+        ]
+      },
+      "epsilon": {
+        "n_cells": 2,
+        "UMI": 10876,
+        "gene_UMI": [
+          12,
+          80,
+          0
+        ]
+      },
+      "schwann": {
+        "n_cells": 6,
+        "UMI": 22015,
+        "gene_UMI": [
+          24,
+          18,
+          0
+        ]
+      },
+      "mast": {
+        "n_cells": 9,
+        "UMI": 16617,
+        "gene_UMI": [
+          50,
+          31,
+          0
+        ]
+      },
+      "acinar": {
+        "n_cells": 3,
+        "UMI": 23202,
+        "gene_UMI": [
+          12,
+          16,
+          0
+        ]
+      },
+      "t_cell": {
+        "n_cells": 2,
+        "UMI": 3617,
+        "gene_UMI": [
+          21,
+          7,
+          0
+        ]
+      }
+    },
+    "human3": {
+      "acinar": {
+        "n_cells": 843,
+        "UMI": 8822817,
+        "gene_UMI": [
+          5420,
+          1535,
+          0
+        ]
+      },
+      "delta": {
+        "n_cells": 161,
+        "UMI": 696960,
+        "gene_UMI": [
+          5088,
+          191,
+          0
+        ]
+      },
+      "ductal": {
+        "n_cells": 376,
+        "UMI": 1805833,
+        "gene_UMI": [
+          8660,
+          3943,
+          0
+        ]
+      },
+      "alpha": {
+        "n_cells": 1130,
+        "UMI": 4700717,
+        "gene_UMI": [
+          9096,
+          407171,
+          0
+        ]
+      },
+      "beta": {
+        "n_cells": 787,
+        "UMI": 3908154,
+        "gene_UMI": [
+          938214,
+          1404,
+          2
+        ]
+      },
+      "endothelial": {
+        "n_cells": 92,
+        "UMI": 297535,
+        "gene_UMI": [
+          2350,
+          600,
+          0
+        ]
+      },
+      "activated_stellate": {
+        "n_cells": 100,
+        "UMI": 512728,
+        "gene_UMI": [
+          2291,
+          1264,
+          0
+        ]
+      },
+      "quiescent_stellate": {
+        "n_cells": 54,
+        "UMI": 156181,
+        "gene_UMI": [
+          2093,
+          585,
+          0
+        ]
+      },
+      "gamma": {
+        "n_cells": 36,
+        "UMI": 147208,
+        "gene_UMI": [
+          224,
+          432,
+          0
+        ]
+      },
+      "macrophage": {
+        "n_cells": 14,
+        "UMI": 46205,
+        "gene_UMI": [
+          128,
+          6,
+          0
+        ]
+      },
+      "mast": {
+        "n_cells": 7,
+        "UMI": 13517,
+        "gene_UMI": [
+          55,
+          8,
+          0
+        ]
+      },
+      "epsilon": {
+        "n_cells": 2,
+        "UMI": 7439,
+        "gene_UMI": [
+          11,
+          1,
+          0
+        ]
+      },
+      "t_cell": {
+        "n_cells": 2,
+        "UMI": 3757,
+        "gene_UMI": [
+          5,
+          0,
+          0
+        ]
+      },
+      "schwann": {
+        "n_cells": 1,
+        "UMI": 1779,
+        "gene_UMI": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    "human4": {
+      "ductal": {
+        "n_cells": 280,
+        "UMI": 2346220,
+        "gene_UMI": [
+          4102,
+          1700,
+          0
+        ]
+      },
+      "delta": {
+        "n_cells": 101,
+        "UMI": 656091,
+        "gene_UMI": [
+          825,
+          348,
+          0
+        ]
+      },
+      "alpha": {
+        "n_cells": 284,
+        "UMI": 1656831,
+        "gene_UMI": [
+          910,
+          236558,
+          0
+        ]
+      },
+      "activated_stellate": {
+        "n_cells": 52,
+        "UMI": 426079,
+        "gene_UMI": [
+          1075,
+          185,
+          0
+        ]
+      },
+      "beta": {
+        "n_cells": 495,
+        "UMI": 3201545,
+        "gene_UMI": [
+          384175,
+          2387,
+          0
+        ]
+      },
+      "macrophage": {
+        "n_cells": 10,
+        "UMI": 93374,
+        "gene_UMI": [
+          687,
+          28,
+          0
+        ]
+      },
+      "quiescent_stellate": {
+        "n_cells": 5,
+        "UMI": 30136,
+        "gene_UMI": [
+          180,
+          8,
+          0
+        ]
+      },
+      "acinar": {
+        "n_cells": 2,
+        "UMI": 24254,
+        "gene_UMI": [
+          4,
+          5,
+          0
+        ]
+      },
+      "gamma": {
+        "n_cells": 63,
+        "UMI": 286811,
+        "gene_UMI": [
+          171,
+          154,
+          0
+        ]
+      },
+      "epsilon": {
+        "n_cells": 1,
+        "UMI": 5957,
+        "gene_UMI": [
+          20,
+          3,
+          0
+        ]
+      },
+      "endothelial": {
+        "n_cells": 7,
+        "UMI": 33670,
+        "gene_UMI": [
+          13,
+          18,
+          0
+        ]
+      },
+      "t_cell": {
+        "n_cells": 1,
+        "UMI": 2995,
+        "gene_UMI": [
+          2,
+          2,
+          0
+        ]
+      },
+      "mast": {
+        "n_cells": 1,
+        "UMI": 1675,
+        "gene_UMI": [
+          2,
+          0,
+          0
+        ]
+      },
+      "schwann": {
+        "n_cells": 1,
+        "UMI": 2737,
+        "gene_UMI": [
+          2,
+          9,
+          0
+        ]
+      }
+    }
+  },
+  "by_donor": {
+    "human1": {
+      "n_cells": 1937,
+      "cell_types": {
+        "acinar": 110,
+        "beta": 872,
+        "delta": 214,
+        "activated_stellate": 51,
+        "ductal": 120,
+        "alpha": 236,
+        "epsilon": 13,
+        "gamma": 70,
+        "endothelial": 130,
+        "quiescent_stellate": 92,
+        "macrophage": 14,
+        "schwann": 5,
+        "mast": 8,
+        "t_cell": 2
+      },
+      "source_sha256": "6fdee6c7f0c2c3098f851c761d7fafa4f9a359af200703258f7fda255ddd3e69"
+    },
+    "human2": {
+      "n_cells": 1724,
+      "cell_types": {
+        "delta": 125,
+        "alpha": 676,
+        "activated_stellate": 81,
+        "ductal": 301,
+        "beta": 371,
+        "macrophage": 17,
+        "quiescent_stellate": 22,
+        "gamma": 86,
+        "endothelial": 23,
+        "epsilon": 2,
+        "schwann": 6,
+        "mast": 9,
+        "acinar": 3,
+        "t_cell": 2
+      },
+      "source_sha256": "376bbea51a35096b56e3e30b36e33b8a43ead9abcf5c5c87b4fcbfd04e76d5d7"
+    },
+    "human3": {
+      "n_cells": 3605,
+      "cell_types": {
+        "acinar": 843,
+        "delta": 161,
+        "ductal": 376,
+        "alpha": 1130,
+        "beta": 787,
+        "endothelial": 92,
+        "activated_stellate": 100,
+        "quiescent_stellate": 54,
+        "gamma": 36,
+        "macrophage": 14,
+        "mast": 7,
+        "epsilon": 2,
+        "t_cell": 2,
+        "schwann": 1
+      },
+      "source_sha256": "187c77c0914043e2d56253a634b8cad5194ef87a64109e4f824df303ff5c215f"
+    },
+    "human4": {
+      "n_cells": 1303,
+      "cell_types": {
+        "ductal": 280,
+        "delta": 101,
+        "alpha": 284,
+        "activated_stellate": 52,
+        "beta": 495,
+        "macrophage": 10,
+        "quiescent_stellate": 5,
+        "acinar": 2,
+        "gamma": 63,
+        "epsilon": 1,
+        "endothelial": 7,
+        "t_cell": 1,
+        "mast": 1,
+        "schwann": 1
+      },
+      "source_sha256": "fd54cc3d83e213ac473632b2b938f608d48378c48fb1e0d0f7919cf2efa41e86"
+    }
+  },
+  "n_genes": 20125,
+  "libraries": [
+    "human1_lib1",
+    "human1_lib2",
+    "human1_lib3",
+    "human2_lib1",
+    "human2_lib2",
+    "human2_lib3",
+    "human3_lib1",
+    "human3_lib2",
+    "human3_lib3",
+    "human3_lib4",
+    "human4_lib1",
+    "human4_lib3"
+  ],
+  "n_cells": 8569,
+  "raw_barcode_unique": 8287,
+  "source_qualified_unique": 8569
+}

@@ -1,0 +1,26 @@
+{
+  "created_utc": "2026-11-10T21:41:53.925182+00:00",
+  "sources": [
+    "GSE84133humanRNA",
+    "GSE96583batch2PBMCmetadata",
+    "Bioconductorairwaymetadata"
+  ],
+  "scope": "New public source-bound requirement contract validation and a frozen marker worked packet. Source identities and published summary descriptions known; original artifacts not yet downloaded by this run. Not an independently human-adjudicated general claim-to-requirement benchmark.",
+  "claim_units": "Compute dimensions/parent groups from original files. Distinguish cells,libraries,donors/celllines. RNAonlyprovidedpacket cannot validate same-cellRNAATAC claim. Donor annotations are external-source/curator roles, never inferred just because cell barcodes differ.",
+  "marker_packet": "GSE84133human:INSbeta-minus-alpha primarypaired donor log1p(CPM)pseudobulk contrast; donorunit; two-sidedpairedt and95%tCIprimary; exactsignflipand20000donorbootstrap sensitivity; GCGalpha-minus-beta positivecontrol andMS4A1beta-minus-alpha exploratorynegativecontrol. Require>=20cells/type/donor,otherwise reportmissing,no thresholdadjustment.",
+  "fault_axes": [
+    "missingunit",
+    "wrongunit",
+    "wrongn",
+    "wrongcomparator",
+    "missingpairedgroup",
+    "unsupportedmodality",
+    "wrongsourcehash",
+    "ambiguousunit",
+    "missinguncertainty",
+    "falsepairing",
+    "unboundthreshold"
+  ],
+  "controls": "Correct inferential parent units; legitimate descriptivecell/librarycounts; conservative strongerregisteredthreshold; validsourcequalifiedcellIDs. Do not achieve lowerror byrejectingallcontrols.",
+  "private_clinical_or_expert_records": false
+}

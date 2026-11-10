@@ -1,0 +1,24 @@
+{
+  "rows": 29065,
+  "ind_values": [
+    "101",
+    "1015",
+    "1016",
+    "1039",
+    "107",
+    "1244",
+    "1256",
+    "1488"
+  ],
+  "conditions": [
+    "ctrl",
+    "stim"
+  ],
+  "multiplets_flags": {
+    "doublet": 3169,
+    "singlet": 24679,
+    "ambs": 1217
+  },
+  "scope": "All source metadata rows; no expression analysis and no undocumented multiplet filter.",
+  "header_repair": "Prepend cell_id to seven named columns, matching eight actual fields."
+}

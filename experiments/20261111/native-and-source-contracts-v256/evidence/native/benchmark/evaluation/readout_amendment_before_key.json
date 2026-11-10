@@ -1,0 +1,232 @@
+{
+  "created_utc": "2026-11-10T21:57:41.917262+00:00",
+  "reason": "The frozen substring parser incorrectly classified phrases such as not directly supported as SUPPORT. Original execution reports and frozen parsed labels remain unchanged. Both frozen and corrected readouts are reported, not selected by outcomes.",
+  "timing": "Reports inspected and generic negation rule fixed before this scorer opens official relation labels; this is post-execution readout repair, not a new prospective evaluation.",
+  "scorer_sha256": "2942bebcfdff31817edddf70b376bd6afb890a4164a5a91c864c30d78b583623",
+  "reports": [
+    {
+      "case_id": "836",
+      "arm": "native_auto",
+      "report_sha256": "f39e43fbe25edd898a52d2e44e9d7233acd5c5eb047053ad8a688e4f225516b1",
+      "frozen": "SUPPORT",
+      "corrected": "SUPPORT"
+    },
+    {
+      "case_id": "836",
+      "arm": "native_required_tool",
+      "report_sha256": "f39e43fbe25edd898a52d2e44e9d7233acd5c5eb047053ad8a688e4f225516b1",
+      "frozen": "SUPPORT",
+      "corrected": "SUPPORT"
+    },
+    {
+      "case_id": "731",
+      "arm": "native_auto",
+      "report_sha256": "d665a61e9334d6cd5b957ca540d709b7c3e4e96a071c63deb3b5e3b299e6ffd2",
+      "frozen": "NOT_ENOUGH_INFO",
+      "corrected": "NOT_ENOUGH_INFO"
+    },
+    {
+      "case_id": "731",
+      "arm": "native_required_tool",
+      "report_sha256": "d665a61e9334d6cd5b957ca540d709b7c3e4e96a071c63deb3b5e3b299e6ffd2",
+      "frozen": "NOT_ENOUGH_INFO",
+      "corrected": "NOT_ENOUGH_INFO"
+    },
+    {
+      "case_id": "402",
+      "arm": "native_auto",
+      "report_sha256": "7ca9cec5f44329c756f3ff76ed88a1c3cbbad828bd5b7b47ddcae54e3c164cba",
+      "frozen": "SUPPORT",
+      "corrected": "NOT_ENOUGH_INFO"
+    },
+    {
+      "case_id": "402",
+      "arm": "native_required_tool",
+      "report_sha256": "7ca9cec5f44329c756f3ff76ed88a1c3cbbad828bd5b7b47ddcae54e3c164cba",
+      "frozen": "SUPPORT",
+      "corrected": "NOT_ENOUGH_INFO"
+    },
+    {
+      "case_id": "833",
+      "arm": "native_auto",
+      "report_sha256": "5155d60909d79c6d627762701725f03e18b763efa3438a390dbc937dded962a3",
+      "frozen": "SUPPORT",
+      "corrected": "NOT_ENOUGH_INFO"
+    },
+    {
+      "case_id": "833",
+      "arm": "native_required_tool",
+      "report_sha256": "5155d60909d79c6d627762701725f03e18b763efa3438a390dbc937dded962a3",
+      "frozen": "SUPPORT",
+      "corrected": "NOT_ENOUGH_INFO"
+    },
+    {
+      "case_id": "1384",
+      "arm": "native_auto",
+      "report_sha256": "c4fea23b47de41645623caa38324e5162f868c3993ea35cc68b30ac9595e9da6",
+      "frozen": "SUPPORT",
+      "corrected": "SUPPORT"
+    },
+    {
+      "case_id": "1384",
+      "arm": "native_required_tool",
+      "report_sha256": "c4fea23b47de41645623caa38324e5162f868c3993ea35cc68b30ac9595e9da6",
+      "frozen": "SUPPORT",
+      "corrected": "SUPPORT"
+    },
+    {
+      "case_id": "958",
+      "arm": "native_auto",
+      "report_sha256": "7004501c4e423c0c9e288e1ce5138185f315e4a2e364d61977de41e06d0e52c3",
+      "frozen": "NOT_ENOUGH_INFO",
+      "corrected": "NOT_ENOUGH_INFO"
+    },
+    {
+      "case_id": "958",
+      "arm": "native_required_tool",
+      "report_sha256": "9b223223be46ebb90f684df9b8826cb53c5a7dc64aed7b7db238de05ad3f12a1",
+      "frozen": "NOT_ENOUGH_INFO",
+      "corrected": "NOT_ENOUGH_INFO"
+    },
+    {
+      "case_id": "322",
+      "arm": "native_auto",
+      "report_sha256": "6f09ce0e04074e132dd953cbf8a14d6375c9c7b19b96cf83471b89949e46d108",
+      "frozen": "SUPPORT",
+      "corrected": "SUPPORT"
+    },
+    {
+      "case_id": "322",
+      "arm": "native_required_tool",
+      "report_sha256": "6f09ce0e04074e132dd953cbf8a14d6375c9c7b19b96cf83471b89949e46d108",
+      "frozen": "SUPPORT",
+      "corrected": "SUPPORT"
+    },
+    {
+      "case_id": "1217",
+      "arm": "native_auto",
+      "report_sha256": "7895beba92f87f9598cab89708fc522f3dcdc88a623e874cb62226e6326043ef",
+      "frozen": "SUPPORT",
+      "corrected": "SUPPORT"
+    },
+    {
+      "case_id": "1217",
+      "arm": "native_required_tool",
+      "report_sha256": "7895beba92f87f9598cab89708fc522f3dcdc88a623e874cb62226e6326043ef",
+      "frozen": "SUPPORT",
+      "corrected": "SUPPORT"
+    },
+    {
+      "case_id": "1167",
+      "arm": "native_auto",
+      "report_sha256": "7237025f4c0d33147a725a5cb0b05787930a75950b5e351fc896b1095d671144",
+      "frozen": "NOT_ENOUGH_INFO",
+      "corrected": "NOT_ENOUGH_INFO"
+    },
+    {
+      "case_id": "1167",
+      "arm": "native_required_tool",
+      "report_sha256": "7237025f4c0d33147a725a5cb0b05787930a75950b5e351fc896b1095d671144",
+      "frozen": "NOT_ENOUGH_INFO",
+      "corrected": "NOT_ENOUGH_INFO"
+    },
+    {
+      "case_id": "1039",
+      "arm": "native_auto",
+      "report_sha256": "dc72b39feac77361821ba1af54c3ba42fd92aa7d7dcd9f690ab7632c5e0764b5",
+      "frozen": "NOT_ENOUGH_INFO",
+      "corrected": "NOT_ENOUGH_INFO"
+    },
+    {
+      "case_id": "1039",
+      "arm": "native_required_tool",
+      "report_sha256": "dc72b39feac77361821ba1af54c3ba42fd92aa7d7dcd9f690ab7632c5e0764b5",
+      "frozen": "NOT_ENOUGH_INFO",
+      "corrected": "NOT_ENOUGH_INFO"
+    },
+    {
+      "case_id": "1396",
+      "arm": "native_auto",
+      "report_sha256": "36d14b1cd03c8d6f4c4702305e8f9b56b652203bf23d27b715df8030f5c23aec",
+      "frozen": "SUPPORT",
+      "corrected": "SUPPORT"
+    },
+    {
+      "case_id": "1396",
+      "arm": "native_required_tool",
+      "report_sha256": "36d14b1cd03c8d6f4c4702305e8f9b56b652203bf23d27b715df8030f5c23aec",
+      "frozen": "SUPPORT",
+      "corrected": "SUPPORT"
+    },
+    {
+      "case_id": "207",
+      "arm": "native_auto",
+      "report_sha256": "4092a3b12a805e39a0e3881314336f5ed03c816a443f973be8281f6f0bb1e27d",
+      "frozen": "SUPPORT",
+      "corrected": "SUPPORT"
+    },
+    {
+      "case_id": "207",
+      "arm": "native_required_tool",
+      "report_sha256": "4092a3b12a805e39a0e3881314336f5ed03c816a443f973be8281f6f0bb1e27d",
+      "frozen": "SUPPORT",
+      "corrected": "SUPPORT"
+    },
+    {
+      "case_id": "675",
+      "arm": "native_auto",
+      "report_sha256": "31cf34b566a97b3ca903cb3ed9b0d46d01358a102e00e2f65287418a94ab6b11",
+      "frozen": "SUPPORT",
+      "corrected": "SUPPORT"
+    },
+    {
+      "case_id": "675",
+      "arm": "native_required_tool",
+      "report_sha256": "31cf34b566a97b3ca903cb3ed9b0d46d01358a102e00e2f65287418a94ab6b11",
+      "frozen": "SUPPORT",
+      "corrected": "SUPPORT"
+    },
+    {
+      "case_id": "701",
+      "arm": "native_auto",
+      "report_sha256": "b71a52bba78f41d5499a6b1a1f5cadf8d8ce3404dcf1fdec839bed2211f84ec1",
+      "frozen": "NOT_ENOUGH_INFO",
+      "corrected": "NOT_ENOUGH_INFO"
+    },
+    {
+      "case_id": "701",
+      "arm": "native_required_tool",
+      "report_sha256": "b71a52bba78f41d5499a6b1a1f5cadf8d8ce3404dcf1fdec839bed2211f84ec1",
+      "frozen": "NOT_ENOUGH_INFO",
+      "corrected": "NOT_ENOUGH_INFO"
+    },
+    {
+      "case_id": "1064",
+      "arm": "native_auto",
+      "report_sha256": "26bddaebd144f23c457ac88ea87351c17376fedc335d1f070b76339864bd4f7b",
+      "frozen": "SUPPORT",
+      "corrected": "SUPPORT"
+    },
+    {
+      "case_id": "1064",
+      "arm": "native_required_tool",
+      "report_sha256": "26bddaebd144f23c457ac88ea87351c17376fedc335d1f070b76339864bd4f7b",
+      "frozen": "SUPPORT",
+      "corrected": "SUPPORT"
+    },
+    {
+      "case_id": "1061",
+      "arm": "native_auto",
+      "report_sha256": "c361e42d00acf0495b7c5ba6c2f7b435eddf4c17cc1d877d757252b250be6c3d",
+      "frozen": "NOT_ENOUGH_INFO",
+      "corrected": "NOT_ENOUGH_INFO"
+    },
+    {
+      "case_id": "1061",
+      "arm": "native_required_tool",
+      "report_sha256": "c361e42d00acf0495b7c5ba6c2f7b435eddf4c17cc1d877d757252b250be6c3d",
+      "frozen": "NOT_ENOUGH_INFO",
+      "corrected": "NOT_ENOUGH_INFO"
+    }
+  ]
+}

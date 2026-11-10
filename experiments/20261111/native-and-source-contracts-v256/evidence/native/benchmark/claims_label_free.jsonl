@@ -1,0 +1,16 @@
+{"case_id": "833", "claim": "NLRP12 is a positive regulator of T-cell receptor activation.", "gene_anchors": ["NLRP12"], "source_component": 127}
+{"case_id": "1384", "claim": "c-MYC is important for maintaining pluripotent state of pluripotent stem cells.", "gene_anchors": ["MYC"], "source_component": 219}
+{"case_id": "207", "claim": "CHEK2 has a significant role in breast cancer", "gene_anchors": ["CHEK2"], "source_component": 34}
+{"case_id": "675", "claim": "LRBA controls CTLA - 4 expression.", "gene_anchors": ["LRBA"], "source_component": 106}
+{"case_id": "402", "claim": "Expression of MSX2 is induced 3 hours after the addition of BMP4, which occurs later than T and CDX2.", "gene_anchors": ["BMP4", "CDX2", "MSX2"], "source_component": 65}
+{"case_id": "322", "claim": "Delayed sleep phase disorder is associated with a dominant coding variation the core circadian clock gene CRY1.", "gene_anchors": ["CRY1"], "source_component": 54}
+{"case_id": "1039", "claim": "Replacement of OCT4 and SOX2 genes with mesendoderm-related genes has the ability to reprogram human cells.", "gene_anchors": ["SOX2"], "source_component": 163}
+{"case_id": "1064", "claim": "SOD1 integrates oxygen and glucose signals to repress cellular respiration.", "gene_anchors": ["SOD1"], "source_component": 167}
+{"case_id": "836", "claim": "NR5A2 is important in bile acid homeostasis in humans.", "gene_anchors": ["NR5A2"], "source_component": 128}
+{"case_id": "1217", "claim": "The first MBT repeat of the four malignant brain tumor (4MBT) domain of Drosophila's Sfmbt and of the orthologous mammalian L3MBTL2 is nonessential for the interaction with the spacer region of Drosophila's Pleiohomeotic (Pho) or its human ortholog YY1.", "gene_anchors": ["L3MBTL2", "YY1"], "source_component": 190}
+{"case_id": "1396", "claim": "p16INK4A accumulation is encoded by CDKN2A.", "gene_anchors": ["CDKN2A"], "source_component": 221}
+{"case_id": "1061", "claim": "S-nitrosylated GAPDH physiologically transnitrosylates DNA-activated protein kinase.", "gene_anchors": ["GAPDH"], "source_component": 166}
+{"case_id": "731", "claim": "Lysine histone demethylase inhibitor JIB 04 is primarily active against KDM5A.", "gene_anchors": ["KDM5A"], "source_component": 115}
+{"case_id": "958", "claim": "Polyglutamine binding protein 1 (PQBP1) is the co-receptor of HIV-DNA to trigger cell-autonomous antiviral responses.", "gene_anchors": ["PQBP1"], "source_component": 151}
+{"case_id": "1167", "claim": "The H3.3K36me3 histone reader protein ZMYND11 has a  higher binding affinity if G34R/V is mutated.", "gene_anchors": ["ZMYND11"], "source_component": 185}
+{"case_id": "701", "claim": "Localization of PIN1 in the Arabidopsis embryo requires VPS9a", "gene_anchors": ["PIN1"], "source_component": 111}

@@ -1,0 +1,18 @@
+{
+  "created_utc": "2026-11-10T21:36:46.640740+00:00",
+  "n": 16,
+  "eligible_claims": 17,
+  "selection": "At leastone approvedHGNCsymbol(exactcase);allgoldsourceIDsabsentfromlabelledNLI/sourcefit/calibrationmemberships;oneclaimpersource/evidencecomponent;SHA256rank;relationlabelsnotusedforselection.",
+  "hgnc_url": "https://storage.googleapis.com/public-download-files/hgnc/tsv/tsv/hgnc_complete_set.txt",
+  "hgnc_sha256": "86cc190fcae1abcd77a13ddba9a34327150477f4e3c6bcadd7f445b26dd31246",
+  "upstream": "88fd1adb40dce9545bde5b904ef3a628c09d747c",
+  "tracks": [
+    "native_GeneAgent_verification_auto",
+    "native_GeneAgent_first_tool_required_control",
+    "REVERSOME_certificate_continuation_of_required_tool_control"
+  ],
+  "fairness": "SameQwen30Bbackbone;originaltemperature0;twooriginalread-onlynativeAPIs(PubMed,NCBIGene);native20callloop. Strongcontrolrequiresfirsttoolattheproviderboundary. Certificatecontinuationreusestheactualstrongcontrolprefix,countingitsmeasuredcostinbothtracks,thenexecutesupto2claim-directedPubMedchecksifmissingcertificate. NotindependentlyrerunarmsororiginalGPT4score.",
+  "guard": "ActualsourcewitnessplusfrozenNLI0.7/0.2/0.1. Noresult-sensitiveparameterselection. Separatefactualreferenceaccuracyandtool-sourcegrounding.",
+  "report_parser": "First400chars:partial/insufficient/inconclusive/uncertain/not enough/cannot/not supported/unsupported->NEI;refute/contradict/false/incorrect/inaccurate->CONTRADICT;supported/accurate/correct/true/verified->SUPPORT;elseNEI. Negationscheckedfirst.",
+  "scope": "Publishednativeverificationcomponentinnoverlappingmolecularclaimtaskwithdeclaredproviderandtoolsubsetadapter,notfullGeneAgentgenesetpipeline/GPT4paperreproduction. ExistingpublicSciFactsourcebenchmark,notnewuntouchedsourcecohort. Noexpert/clinicalrecords."
+}

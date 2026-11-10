@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "passed": 20,
+  "total": 20,
+  "checks": {
+    "human1_all_celltype_pseudobulk": true,
+    "human2_all_celltype_pseudobulk": true,
+    "human3_all_celltype_pseudobulk": true,
+    "human4_all_celltype_pseudobulk": true,
+    "total_cells": true,
+    "source_qualified_cell_IDs": true,
+    "libraries": true,
+    "INS_donor_effects": true,
+    "INS_t_p": true,
+    "INS_exact_signflip": true,
+    "GCG_donor_effects": true,
+    "GCG_t_p": true,
+    "GCG_exact_signflip": true,
+    "MS4A1_donor_effects": true,
+    "MS4A1_t_p": true,
+    "MS4A1_exact_signflip": true,
+    "all_frozen_fault_axes_present": true,
+    "valid_controls_retained": true,
+    "all_actual_source_hashes_bound": true,
+    "at_least_one_donor_role_witness_fetched": true
+  },
+  "independent_implementation": "Pandas chunked full 20125-gene sums versus original CSV/NumPy row parser; independently recomputed donor t/signflip. Fault labels remain developer-authored, not independent human adjudication."
+}

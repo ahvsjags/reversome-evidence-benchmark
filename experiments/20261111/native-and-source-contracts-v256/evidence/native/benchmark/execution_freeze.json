@@ -1,0 +1,14 @@
+{
+  "created_utc": "2026-11-10T21:46:28.068193+00:00",
+  "driver_sha256": "fd6cfcdccd105fd517500ebbbe2a703720e711103a60877f464caf0b4debca0d",
+  "transport_sha256": "62c68273915182b83fb5fce76e6051411a53b5ef0b723a1e04e5f554833a256b",
+  "model_server_sha256": "51529fa1a780df2fc63f5803cd73458f9d0173ef6977bea3b52fd38a29c5422f",
+  "selection_protocol_sha256": "de501f9e7d850b63537a07a8d3f94b5cd44fd6c5e6c166889f0312e2c8e33ba8",
+  "upstream_intake_sha256": "ec36de1b0a9b387a1b7e1861d386d66166cbaeb01a13f5a66bdd910d8c6d7cdc",
+  "native_worker_sha256": "30093aca89feca1578f03d27bfe77ff7dbb2ea053a4e49b6d5cd893f2cd2d7f4",
+  "model": "OfficialQwen3-30B-A3BQ4_K_M,nonthinking,temperature0sameasnativeproviderrequest,top_p1,top_k0,seed20261111.",
+  "adapter": "NativeOpenAIlegacyfunctions serialized by JSONschema after native server tool_choice contract was not enforced in development. Originalworker,toolfunctions,toolparameters,promptsand20callloop unchanged; reportnewline normalized. Adapter appends serialization format/schema only. OriginalGPT4scoresnotreproduced.",
+  "certificate": "Source identities from actual toolresponses,NCBIGeneexactHGNCnameandtaxid9606binding,actualNLI0.7/.2/.1. Unknown witness triggers upto2deterministicPubMedchecks:exactclaim,thenHGNCanchorsplusfirst8nonstoplongwords. TotalAPIcalls<=20. CandidatefactsjudgedwithnativefrozenNLI,notgold.",
+  "counterfactual": "Certificatecontinuationreusestheactualfirst-tool-requiredprefix; nativeprefixcostandcallsattributedtoboth. Noindependentfull-armwall/CPUcausalclaim. LogicalAPIcallsandcachehitsseparate.",
+  "no_test_key_read_by_inference": true
+}

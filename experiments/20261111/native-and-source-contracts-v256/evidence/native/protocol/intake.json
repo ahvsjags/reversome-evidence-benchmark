@@ -1,0 +1,50 @@
+{
+  "created_utc": "2026-11-10T21:23:21.082587+00:00",
+  "upstream_repository": "https://github.com/ncbi-nlp/GeneAgent",
+  "pinned_commit": "88fd1adb40dce9545bde5b904ef3a628c09d747c",
+  "files": {
+    "LICENSE": "0d034c2af3a3ac467b9adcd1118270c7b676a177217054c49def0ff9c624c462",
+    "README.md": "ca10f5f2702a7ab91e52964db3099ad9a249140b6ace909c91c2819ca271209b",
+    "apis/get_complex_for_gene_set.py": "5896a74d7e9ba04338b18171f43f718facc7a35fc06caa614fb5531183945981",
+    "apis/get_disease_for_single_gene.py": "16d45e95aa35e8c51ebcf56f0e59859aee27b93b5d1b94a8899e7dc810f9fd8a",
+    "apis/get_domain_for_single_gene.py": "a7bb68f33f367b71578ba8ece5007c275a64deceef61d7ecc7f835f0df255d06",
+    "apis/get_enrichment_for_gene_set.py": "0e854d0ab85b60cf0a8ba4ef65e0a4c1ca91c84af16e64a3bf59d2a5602e29df",
+    "apis/get_gene_summary_for_single_gene.py": "bd489f63c18b61c58c7b33452051a696f0ef235fea41954643079b4e5a4d686d",
+    "apis/get_interactions_for_gene_set.py": "80bd36062a26a999996b9143b81adf9378215f686108bb5da0e9cd9faffda5ee",
+    "apis/get_pathway_for_gene_set.py": "0d39228463f8922efce2855957f42b3510c189e3c79c10814fb57c55aafd389b",
+    "apis/get_pubmed_articles.py": "b92dee78f336e1e1529d87f12698e3bb2352a1e1bd873cf54975021dd43de1d2",
+    "main_cascade.py": "07de895028ca4b9a5e4b32c4d432cab37537c8df9c344e592981695bae0cddca",
+    "worker.py": "30093aca89feca1578f03d27bfe77ff7dbb2ea053a4e49b6d5cd893f2cd2d7f4"
+  },
+  "versions": {
+    "openai": null,
+    "tiktoken": null,
+    "requests": "2.32.5",
+    "requests-oauthlib": null,
+    "numpy": "2.0.2",
+    "torch": "2.8.0+cu128",
+    "transformers": "4.57.6",
+    "tokenizers": "0.22.2",
+    "safetensors": "0.7.0",
+    "scikit-learn": "1.6.1"
+  },
+  "public_endpoint_preflight": [
+    {
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=SFTPC&retmax=1&retmode=xml",
+      "http_status": 200,
+      "bytes": 647,
+      "body_prefix": "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\n<!DOCTYPE eSearchResult PUBLIC \"-//NLM//DTD esearch 20060628//EN\" \"https://eutils.ncbi.nlm.nih.gov/eutils/dtd/20060628/e",
+      "sha256": "eae611aa0d3532bd792a630957d3e764adc488f1d3f18cb7896e6de019a49f41",
+      "elapsed": 1.3735922276973724
+    },
+    {
+      "url": "https://maayanlab.cloud/Enrichr/datasetStatistics",
+      "http_status": 200,
+      "bytes": 68971,
+      "body_prefix": "{\n   \"statistics\": [\n       {\n           \"geneCoverage\": 13362,\n           \"genesPerTerm\": 275,\n           \"libraryName\": \"Genome_Browser_PWMs\",\n           \"lin",
+      "sha256": "5add47c2cda081364397d8b91cd2bf6a26c4c8f7b38dfef912bbb561b8644749",
+      "elapsed": 1.1923104021698236
+    }
+  ],
+  "scope": "Published native AgentPhD verification component on overlapping claim-verification tasks; original source retained. Planned model/transport substitution is explicit, not a reproduction of original GPT4 paper scores. No protected records."
+}

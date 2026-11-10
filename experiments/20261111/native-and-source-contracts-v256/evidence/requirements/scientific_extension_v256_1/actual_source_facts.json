@@ -1,0 +1,78 @@
+{
+  "baron": {
+    "unit": "donor",
+    "n": 4,
+    "descriptive_cells": 8569,
+    "groups": [
+      "alpha",
+      "beta"
+    ],
+    "paired": true,
+    "modality": "RNA",
+    "source_hash": "6fdee6c7f0c2c3098f851c761d7fafa4f9a359af200703258f7fda255ddd3e69",
+    "role_source": "Baron GSE84133 human1-human4 donor matrices; scRNAseq make-baron-pancreas-data.Rmd donor assignment",
+    "pairing_key": "donor",
+    "donor_provenance": true,
+    "files": {
+      "GSM2230757_human1_umifm_counts.csv.gz": "6fdee6c7f0c2c3098f851c761d7fafa4f9a359af200703258f7fda255ddd3e69",
+      "GSM2230758_human2_umifm_counts.csv.gz": "376bbea51a35096b56e3e30b36e33b8a43ead9abcf5c5c87b4fcbfd04e76d5d7",
+      "GSM2230759_human3_umifm_counts.csv.gz": "187c77c0914043e2d56253a634b8cad5194ef87a64109e4f824df303ff5c215f",
+      "GSM2230760_human4_umifm_counts.csv.gz": "fd54cc3d83e213ac473632b2b938f608d48378c48fb1e0d0f7919cf2efa41e86"
+    },
+    "packet_sha256": "8261062e5e752412d17d4fb8abaad44c7318178aa958ef06472835c6a425e856",
+    "available_claims": [
+      "unit_design",
+      "cell_description",
+      "marker_contrast"
+    ],
+    "protocol_sha256": "799a57c530fa2ee08be377507693b9d5989c336c754c8e942ce9c676d5355997"
+  },
+  "pbmc": {
+    "unit": "donor",
+    "n": 8,
+    "descriptive_cells": 29065,
+    "groups": [
+      "ctrl",
+      "stim"
+    ],
+    "paired": true,
+    "modality": "RNA_metadata",
+    "source_hash": "1d57e72e92ca8695250e88cc0f1c3fa8c0be1175d974f8b427c58f1274dc6c09",
+    "role_source": "GSE96583 author metadata ind and stim columns; no expression results inferred",
+    "pairing_key": "ind",
+    "donor_provenance": true,
+    "files": {
+      "GSE96583_batch2.total.tsne.df.tsv.gz": "1d57e72e92ca8695250e88cc0f1c3fa8c0be1175d974f8b427c58f1274dc6c09"
+    },
+    "packet_sha256": "22115a600055bacd4ed518f9f724a5cd1ff8f5349027f13e6b8880d513a0654f",
+    "available_claims": [
+      "unit_design",
+      "cell_description"
+    ],
+    "protocol_sha256": "799a57c530fa2ee08be377507693b9d5989c336c754c8e942ce9c676d5355997"
+  },
+  "airway": {
+    "unit": "cell_line",
+    "n": 4,
+    "descriptive_cells": null,
+    "groups": [
+      "trt",
+      "untrt"
+    ],
+    "paired": true,
+    "modality": "RNA_metadata",
+    "source_hash": "741c0110963fc8f4f07304ecc166f0b32f1fa493004d41500b14364c81fc6f71",
+    "role_source": "Bioconductor airway sample_table cell/dex; four cell lines, not source-verified distinct donors",
+    "pairing_key": "cell",
+    "donor_provenance": false,
+    "files": {
+      "airway_sample_table_pinned.csv": "741c0110963fc8f4f07304ecc166f0b32f1fa493004d41500b14364c81fc6f71"
+    },
+    "packet_sha256": "020abcf35453ceaa37148e85df21b1c0affe13bab247475a8d3d246f2d085062",
+    "available_claims": [
+      "unit_design",
+      "cell_description"
+    ],
+    "protocol_sha256": "799a57c530fa2ee08be377507693b9d5989c336c754c8e942ce9c676d5355997"
+  }
+}

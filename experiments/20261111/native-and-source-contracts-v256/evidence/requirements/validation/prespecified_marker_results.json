@@ -1,0 +1,95 @@
+[
+  {
+    "gene": "INS",
+    "contrast": "beta minus alpha",
+    "role": "prespecified_primary",
+    "unit": "donor",
+    "n_donors": 4,
+    "donors": [
+      "human1",
+      "human2",
+      "human3",
+      "human4"
+    ],
+    "donor_effects_log1p_CPM": [
+      3.9262491632458456,
+      4.729469582454477,
+      4.820280731586832,
+      5.384871388886119
+    ],
+    "mean": 4.715217716543319,
+    "t_CI95": [
+      3.759534525956563,
+      5.670900907130075
+    ],
+    "two_sided_t_p": 0.0005614598670757336,
+    "exact_two_sided_signflip_p": 0.125,
+    "bootstrap_sensitivity_CI95": [
+      4.149757055331092,
+      5.221020937278208
+    ],
+    "minimum_cells_per_donor_type": 20
+  },
+  {
+    "gene": "GCG",
+    "contrast": "alpha minus beta",
+    "role": "positive_control",
+    "unit": "donor",
+    "n_donors": 4,
+    "donors": [
+      "human1",
+      "human2",
+      "human3",
+      "human4"
+    ],
+    "donor_effects_log1p_CPM": [
+      5.435846366683095,
+      4.8730554819823215,
+      5.482489854785125,
+      5.2535494981369215
+    ],
+    "mean": 5.261235300396866,
+    "t_CI95": [
+      4.820468167105283,
+      5.702002433688448
+    ],
+    "two_sided_t_p": 4.013003493152787e-05,
+    "exact_two_sided_signflip_p": 0.125,
+    "bootstrap_sensitivity_CI95": [
+      5.013753203157515,
+      5.45916811073411
+    ],
+    "minimum_cells_per_donor_type": 20
+  },
+  {
+    "gene": "MS4A1",
+    "contrast": "beta minus alpha",
+    "role": "exploratory_negative_control",
+    "unit": "donor",
+    "n_donors": 4,
+    "donors": [
+      "human1",
+      "human2",
+      "human3",
+      "human4"
+    ],
+    "donor_effects_log1p_CPM": [
+      0.0,
+      0.0,
+      0.4132682909300392,
+      0.0
+    ],
+    "mean": 0.1033170727325098,
+    "t_CI95": [
+      -0.2254839636578515,
+      0.4321181091228711
+    ],
+    "two_sided_t_p": 0.39100221895577053,
+    "exact_two_sided_signflip_p": 1.0,
+    "bootstrap_sensitivity_CI95": [
+      0.0,
+      0.3099512181975294
+    ],
+    "minimum_cells_per_donor_type": 20
+  }
+]
