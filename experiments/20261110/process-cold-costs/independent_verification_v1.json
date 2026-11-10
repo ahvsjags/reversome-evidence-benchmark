@@ -1,0 +1,86 @@
+{
+  "schema": "REVERSOME.B3.FreshProcessCostIndependentAudit.v1",
+  "created_utc": "2026-11-10T15:06:55.863727+00:00",
+  "status": "PASS",
+  "passed": 35,
+  "total": 35,
+  "checks": {
+    "six_actual_process_runs": true,
+    "source_driver_checks_pass": true,
+    "same_host_as_audited_warm_run": true,
+    "0_fixed3_same_all278_source_and_final_decisions": true,
+    "0_fixed3_guards_recomputed": true,
+    "0_fixed3_actual_logical_work_matches": true,
+    "0_fixed3_cost_includes_setup_shutdown": true,
+    "0_fixed3_source_code_unchanged": true,
+    "0_source_active_same_all278_source_and_final_decisions": true,
+    "0_source_active_guards_recomputed": true,
+    "0_source_active_actual_logical_work_matches": true,
+    "0_source_active_cost_includes_setup_shutdown": true,
+    "0_source_active_source_code_unchanged": true,
+    "1_source_active_same_all278_source_and_final_decisions": true,
+    "1_source_active_guards_recomputed": true,
+    "1_source_active_actual_logical_work_matches": true,
+    "1_source_active_cost_includes_setup_shutdown": true,
+    "1_source_active_source_code_unchanged": true,
+    "1_fixed3_same_all278_source_and_final_decisions": true,
+    "1_fixed3_guards_recomputed": true,
+    "1_fixed3_actual_logical_work_matches": true,
+    "1_fixed3_cost_includes_setup_shutdown": true,
+    "1_fixed3_source_code_unchanged": true,
+    "2_fixed3_same_all278_source_and_final_decisions": true,
+    "2_fixed3_guards_recomputed": true,
+    "2_fixed3_actual_logical_work_matches": true,
+    "2_fixed3_cost_includes_setup_shutdown": true,
+    "2_fixed3_source_code_unchanged": true,
+    "2_source_active_same_all278_source_and_final_decisions": true,
+    "2_source_active_guards_recomputed": true,
+    "2_source_active_actual_logical_work_matches": true,
+    "2_source_active_cost_includes_setup_shutdown": true,
+    "2_source_active_source_code_unchanged": true,
+    "posterior_tolerance_1e4": true,
+    "median_costs_recompute_exact": true
+  },
+  "max_posterior_difference": 0.0,
+  "medians": {
+    "fixed3": {
+      "whole_process_wall_seconds": 147.23860215209424,
+      "whole_process_CPU_seconds_including_waited_descendants": 379.9648380000001
+    },
+    "source_active": {
+      "whole_process_wall_seconds": 152.7001905478537,
+      "whole_process_CPU_seconds_including_waited_descendants": 337.15406299999984
+    }
+  },
+  "active_fraction_saved_vs_fixed3": {
+    "whole_process_wall_seconds": -0.037093454542021176,
+    "whole_process_CPU_seconds_including_waited_descendants": 0.11267035977681772
+  },
+  "prediction_manifest": [
+    {
+      "run": "0_fixed3",
+      "prediction_sha256": "f8ef8545bdae33eadd3df59b07447654fd18f3ffcd94fcdf133bbf7deeeedcf4"
+    },
+    {
+      "run": "0_source_active",
+      "prediction_sha256": "0296eb950b49a3c93e31b24846fb5c6fd933b41a01750f5ea4b3fa0f13221e85"
+    },
+    {
+      "run": "1_source_active",
+      "prediction_sha256": "0296eb950b49a3c93e31b24846fb5c6fd933b41a01750f5ea4b3fa0f13221e85"
+    },
+    {
+      "run": "1_fixed3",
+      "prediction_sha256": "f8ef8545bdae33eadd3df59b07447654fd18f3ffcd94fcdf133bbf7deeeedcf4"
+    },
+    {
+      "run": "2_fixed3",
+      "prediction_sha256": "f8ef8545bdae33eadd3df59b07447654fd18f3ffcd94fcdf133bbf7deeeedcf4"
+    },
+    {
+      "run": "2_source_active",
+      "prediction_sha256": "0296eb950b49a3c93e31b24846fb5c6fd933b41a01750f5ea4b3fa0f13221e85"
+    }
+  ],
+  "scope": "Whole new-process startup and shutdown included; not OS-cold caches. All 278 outputs checked against same-hardware warm reference for each of six actual executions. No universal wall-time savings or new accuracy validation."
+}
