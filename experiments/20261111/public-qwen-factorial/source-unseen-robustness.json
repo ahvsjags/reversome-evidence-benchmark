@@ -1,0 +1,150 @@
+{
+  "created_utc": "2026-11-10T20:59:38.256764+00:00",
+  "status": "PASS",
+  "primary_claims": 96,
+  "with_gold_source_in_labelled_NLI_fit": 22,
+  "with_gold_source_in_any_fit_cal_membership": 35,
+  "all_gold_sources_unseen_claims": 61,
+  "unseen_case_ids": [
+    "102",
+    "1022",
+    "103",
+    "1057",
+    "1060",
+    "1064",
+    "1095",
+    "1124",
+    "1167",
+    "1189",
+    "1198",
+    "1201",
+    "1242",
+    "1243",
+    "1250",
+    "1251",
+    "1287",
+    "1317",
+    "1338",
+    "1343",
+    "136",
+    "1365",
+    "1384",
+    "190",
+    "206",
+    "207",
+    "23",
+    "231",
+    "270",
+    "282",
+    "311",
+    "322",
+    "344",
+    "353",
+    "359",
+    "408",
+    "424",
+    "477",
+    "511",
+    "512",
+    "586",
+    "599",
+    "639",
+    "656",
+    "697",
+    "699",
+    "701",
+    "722",
+    "731",
+    "754",
+    "763",
+    "827",
+    "836",
+    "865",
+    "888",
+    "937",
+    "950",
+    "966",
+    "968",
+    "983",
+    "986"
+  ],
+  "source_membership_sha256": "93c97139acedeab69d6d91eee38fc568242c764b3dcf4d6a738cf0721283955b",
+  "source_membership_field_names": [
+    "NLI_labelled_training_evidence",
+    "source_model_fit_cited",
+    "calibration_cited"
+  ],
+  "metrics": {
+    "fixed3 | shared_NLI": {
+      "TP": 7,
+      "predicted_ECAPs": 36,
+      "gold_ECAPs": 58,
+      "ECAP_F1": 0.14893617021276595
+    },
+    "fixed3 | fresh_Qwen_only": {
+      "TP": 6,
+      "predicted_ECAPs": 21,
+      "gold_ECAPs": 58,
+      "ECAP_F1": 0.1518987341772152
+    },
+    "fixed3 | Qwen_NLI_source_consensus": {
+      "TP": 5,
+      "predicted_ECAPs": 10,
+      "gold_ECAPs": 58,
+      "ECAP_F1": 0.14705882352941177
+    },
+    "source_active | shared_NLI": {
+      "TP": 7,
+      "predicted_ECAPs": 29,
+      "gold_ECAPs": 58,
+      "ECAP_F1": 0.16091954022988506
+    },
+    "source_active | fresh_Qwen_only": {
+      "TP": 6,
+      "predicted_ECAPs": 19,
+      "gold_ECAPs": 58,
+      "ECAP_F1": 0.15584415584415584
+    },
+    "source_active | Qwen_NLI_source_consensus": {
+      "TP": 5,
+      "predicted_ECAPs": 12,
+      "gold_ECAPs": 58,
+      "ECAP_F1": 0.14285714285714285
+    },
+    "qwen_react_same_tools | shared_NLI": {
+      "TP": 12,
+      "predicted_ECAPs": 134,
+      "gold_ECAPs": 58,
+      "ECAP_F1": 0.125
+    },
+    "qwen_react_same_tools | fresh_Qwen_only": {
+      "TP": 16,
+      "predicted_ECAPs": 52,
+      "gold_ECAPs": 58,
+      "ECAP_F1": 0.2909090909090909
+    },
+    "qwen_react_same_tools | Qwen_NLI_source_consensus": {
+      "TP": 9,
+      "predicted_ECAPs": 30,
+      "gold_ECAPs": 58,
+      "ECAP_F1": 0.20454545454545456
+    }
+  },
+  "paired_comparisons": {
+    "qwen_react_same_tools minus fixed3 | fresh_Qwen_only": {
+      "ECAP_F1_difference": 0.1390103567318757,
+      "component_bootstrap95CI": [
+        -0.0036386040195573325,
+        0.26708205464747636
+      ]
+    },
+    "source_active minus fixed3 | shared_NLI": {
+      "ECAP_F1_difference": 0.011983370017119105,
+      "component_bootstrap95CI": [
+        -0.06490396805273833,
+        0.11027584508535018
+      ]
+    }
+  },
+  "scope": "Post-hoc source-unseen subgroup of the unchanged96claimcomparison, not a new confirmation cohort. Unseen means gold source absent from labelled NLI/source-fit/calibration memberships, not absent from language-model pretraining or unlabelled retrieval. Same source components used for resampling."
+}

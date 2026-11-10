@@ -1,0 +1,3074 @@
+[
+  {
+    "case_id": "baron:correct_inference",
+    "source": "baron",
+    "input": {
+      "source_hash": "6fdee6c7f0c2c3098f851c761d7fafa4f9a359af200703258f7fda255ddd3e69",
+      "unit": "donor",
+      "n": 4,
+      "groups": [
+        "alpha",
+        "beta"
+      ],
+      "pairing_key": "donor",
+      "uncertainty_unit": "donor",
+      "assay": "RNA",
+      "threshold": 0.05,
+      "threshold_origin": "Declared two-sided primary protocol, not a universal scientific-validity threshold"
+    },
+    "expected_control_disposition": "RELEASE",
+    "actual": {
+      "decision": "RELEASE",
+      "checks": [
+        {
+          "requirement": "source",
+          "state": "PASS",
+          "witness": "6fdee6c7f0c2c3098f851c761d7fafa4f9a359af200703258f7fda255ddd3e69"
+        },
+        {
+          "requirement": "unit",
+          "state": "PASS",
+          "witness": "Baron GSE84133 human1-human4 donor matrices; scRNAseq make-baron-pancreas-data.Rmd donor assignment"
+        },
+        {
+          "requirement": "n",
+          "state": "PASS",
+          "witness": "Computed eligible count 4"
+        },
+        {
+          "requirement": "comparator",
+          "state": "PASS",
+          "witness": "Actual groups ['alpha', 'beta']"
+        },
+        {
+          "requirement": "pairing",
+          "state": "PASS",
+          "witness": "Source matched parent donor"
+        },
+        {
+          "requirement": "uncertainty",
+          "state": "PASS",
+          "witness": "Resampling/SE unit must match independent parent"
+        },
+        {
+          "requirement": "assay",
+          "state": "PASS",
+          "witness": "Claim restricted to available RNA source/metadata"
+        },
+        {
+          "requirement": "threshold",
+          "state": "PASS",
+          "witness": "Explicit protocol threshold origin, not data-derived scientific standard"
+        }
+      ]
+    },
+    "matches_control": true
+  },
+  {
+    "case_id": "baron:missing_unit",
+    "source": "baron",
+    "input": {
+      "source_hash": "6fdee6c7f0c2c3098f851c761d7fafa4f9a359af200703258f7fda255ddd3e69",
+      "unit": null,
+      "n": 4,
+      "groups": [
+        "alpha",
+        "beta"
+      ],
+      "pairing_key": "donor",
+      "uncertainty_unit": "donor",
+      "assay": "RNA",
+      "threshold": 0.05,
+      "threshold_origin": "Declared two-sided primary protocol, not a universal scientific-validity threshold"
+    },
+    "expected_control_disposition": "ESCALATE",
+    "actual": {
+      "decision": "ESCALATE",
+      "checks": [
+        {
+          "requirement": "source",
+          "state": "PASS",
+          "witness": "6fdee6c7f0c2c3098f851c761d7fafa4f9a359af200703258f7fda255ddd3e69"
+        },
+        {
+          "requirement": "unit",
+          "state": "UNKNOWN",
+          "witness": "Inferential parent identity missing or ambiguous"
+        },
+        {
+          "requirement": "n",
+          "state": "PASS",
+          "witness": "Computed eligible count 4"
+        },
+        {
+          "requirement": "comparator",
+          "state": "PASS",
+          "witness": "Actual groups ['alpha', 'beta']"
+        },
+        {
+          "requirement": "pairing",
+          "state": "PASS",
+          "witness": "Source matched parent donor"
+        },
+        {
+          "requirement": "uncertainty",
+          "state": "PASS",
+          "witness": "Resampling/SE unit must match independent parent"
+        },
+        {
+          "requirement": "assay",
+          "state": "PASS",
+          "witness": "Claim restricted to available RNA source/metadata"
+        },
+        {
+          "requirement": "threshold",
+          "state": "PASS",
+          "witness": "Explicit protocol threshold origin, not data-derived scientific standard"
+        }
+      ]
+    },
+    "matches_control": true
+  },
+  {
+    "case_id": "baron:ambiguous_sample",
+    "source": "baron",
+    "input": {
+      "source_hash": "6fdee6c7f0c2c3098f851c761d7fafa4f9a359af200703258f7fda255ddd3e69",
+      "unit": "sample",
+      "n": 4,
+      "groups": [
+        "alpha",
+        "beta"
+      ],
+      "pairing_key": "donor",
+      "uncertainty_unit": "donor",
+      "assay": "RNA",
+      "threshold": 0.05,
+      "threshold_origin": "Declared two-sided primary protocol, not a universal scientific-validity threshold"
+    },
+    "expected_control_disposition": "ESCALATE",
+    "actual": {
+      "decision": "ESCALATE",
+      "checks": [
+        {
+          "requirement": "source",
+          "state": "PASS",
+          "witness": "6fdee6c7f0c2c3098f851c761d7fafa4f9a359af200703258f7fda255ddd3e69"
+        },
+        {
+          "requirement": "unit",
+          "state": "UNKNOWN",
+          "witness": "Inferential parent identity missing or ambiguous"
+        },
+        {
+          "requirement": "n",
+          "state": "PASS",
+          "witness": "Computed eligible count 4"
+        },
+        {
+          "requirement": "comparator",
+          "state": "PASS",
+          "witness": "Actual groups ['alpha', 'beta']"
+        },
+        {
+          "requirement": "pairing",
+          "state": "PASS",
+          "witness": "Source matched parent donor"
+        },
+        {
+          "requirement": "uncertainty",
+          "state": "PASS",
+          "witness": "Resampling/SE unit must match independent parent"
+        },
+        {
+          "requirement": "assay",
+          "state": "PASS",
+          "witness": "Claim restricted to available RNA source/metadata"
+        },
+        {
+          "requirement": "threshold",
+          "state": "PASS",
+          "witness": "Explicit protocol threshold origin, not data-derived scientific standard"
+        }
+      ]
+    },
+    "matches_control": true
+  },
+  {
+    "case_id": "baron:cell_pseudoreplication",
+    "source": "baron",
+    "input": {
+      "source_hash": "6fdee6c7f0c2c3098f851c761d7fafa4f9a359af200703258f7fda255ddd3e69",
+      "unit": "cell",
+      "n": 8569,
+      "groups": [
+        "alpha",
+        "beta"
+      ],
+      "pairing_key": "donor",
+      "uncertainty_unit": "cell",
+      "assay": "RNA",
+      "threshold": 0.05,
+      "threshold_origin": "Declared two-sided primary protocol, not a universal scientific-validity threshold"
+    },
+    "expected_control_disposition": "WITHHOLD",
+    "actual": {
+      "decision": "WITHHOLD",
+      "checks": [
+        {
+          "requirement": "source",
+          "state": "PASS",
+          "witness": "6fdee6c7f0c2c3098f851c761d7fafa4f9a359af200703258f7fda255ddd3e69"
+        },
+        {
+          "requirement": "unit",
+          "state": "FAIL",
+          "witness": "Claim unit differs from source independent parent donor"
+        },
+        {
+          "requirement": "n",
+          "state": "FAIL",
+          "witness": "Computed eligible count 4"
+        },
+        {
+          "requirement": "comparator",
+          "state": "PASS",
+          "witness": "Actual groups ['alpha', 'beta']"
+        },
+        {
+          "requirement": "pairing",
+          "state": "PASS",
+          "witness": "Source matched parent donor"
+        },
+        {
+          "requirement": "uncertainty",
+          "state": "FAIL",
+          "witness": "Resampling/SE unit must match independent parent"
+        },
+        {
+          "requirement": "assay",
+          "state": "PASS",
+          "witness": "Claim restricted to available RNA source/metadata"
+        },
+        {
+          "requirement": "threshold",
+          "state": "PASS",
+          "witness": "Explicit protocol threshold origin, not data-derived scientific standard"
+        }
+      ]
+    },
+    "matches_control": true
+  },
+  {
+    "case_id": "baron:wrong_n",
+    "source": "baron",
+    "input": {
+      "source_hash": "6fdee6c7f0c2c3098f851c761d7fafa4f9a359af200703258f7fda255ddd3e69",
+      "unit": "donor",
+      "n": 5,
+      "groups": [
+        "alpha",
+        "beta"
+      ],
+      "pairing_key": "donor",
+      "uncertainty_unit": "donor",
+      "assay": "RNA",
+      "threshold": 0.05,
+      "threshold_origin": "Declared two-sided primary protocol, not a universal scientific-validity threshold"
+    },
+    "expected_control_disposition": "WITHHOLD",
+    "actual": {
+      "decision": "WITHHOLD",
+      "checks": [
+        {
+          "requirement": "source",
+          "state": "PASS",
+          "witness": "6fdee6c7f0c2c3098f851c761d7fafa4f9a359af200703258f7fda255ddd3e69"
+        },
+        {
+          "requirement": "unit",
+          "state": "PASS",
+          "witness": "Baron GSE84133 human1-human4 donor matrices; scRNAseq make-baron-pancreas-data.Rmd donor assignment"
+        },
+        {
+          "requirement": "n",
+          "state": "FAIL",
+          "witness": "Computed eligible count 4"
+        },
+        {
+          "requirement": "comparator",
+          "state": "PASS",
+          "witness": "Actual groups ['alpha', 'beta']"
+        },
+        {
+          "requirement": "pairing",
+          "state": "PASS",
+          "witness": "Source matched parent donor"
+        },
+        {
+          "requirement": "uncertainty",
+          "state": "PASS",
+          "witness": "Resampling/SE unit must match independent parent"
+        },
+        {
+          "requirement": "assay",
+          "state": "PASS",
+          "witness": "Claim restricted to available RNA source/metadata"
+        },
+        {
+          "requirement": "threshold",
+          "state": "PASS",
+          "witness": "Explicit protocol threshold origin, not data-derived scientific standard"
+        }
+      ]
+    },
+    "matches_control": true
+  },
+  {
+    "case_id": "baron:missing_n",
+    "source": "baron",
+    "input": {
+      "source_hash": "6fdee6c7f0c2c3098f851c761d7fafa4f9a359af200703258f7fda255ddd3e69",
+      "unit": "donor",
+      "n": null,
+      "groups": [
+        "alpha",
+        "beta"
+      ],
+      "pairing_key": "donor",
+      "uncertainty_unit": "donor",
+      "assay": "RNA",
+      "threshold": 0.05,
+      "threshold_origin": "Declared two-sided primary protocol, not a universal scientific-validity threshold"
+    },
+    "expected_control_disposition": "ESCALATE",
+    "actual": {
+      "decision": "ESCALATE",
+      "checks": [
+        {
+          "requirement": "source",
+          "state": "PASS",
+          "witness": "6fdee6c7f0c2c3098f851c761d7fafa4f9a359af200703258f7fda255ddd3e69"
+        },
+        {
+          "requirement": "unit",
+          "state": "PASS",
+          "witness": "Baron GSE84133 human1-human4 donor matrices; scRNAseq make-baron-pancreas-data.Rmd donor assignment"
+        },
+        {
+          "requirement": "n",
+          "state": "UNKNOWN",
+          "witness": "Computed eligible count 4"
+        },
+        {
+          "requirement": "comparator",
+          "state": "PASS",
+          "witness": "Actual groups ['alpha', 'beta']"
+        },
+        {
+          "requirement": "pairing",
+          "state": "PASS",
+          "witness": "Source matched parent donor"
+        },
+        {
+          "requirement": "uncertainty",
+          "state": "PASS",
+          "witness": "Resampling/SE unit must match independent parent"
+        },
+        {
+          "requirement": "assay",
+          "state": "PASS",
+          "witness": "Claim restricted to available RNA source/metadata"
+        },
+        {
+          "requirement": "threshold",
+          "state": "PASS",
+          "witness": "Explicit protocol threshold origin, not data-derived scientific standard"
+        }
+      ]
+    },
+    "matches_control": true
+  },
+  {
+    "case_id": "baron:wrong_comparator",
+    "source": "baron",
+    "input": {
+      "source_hash": "6fdee6c7f0c2c3098f851c761d7fafa4f9a359af200703258f7fda255ddd3e69",
+      "unit": "donor",
+      "n": 4,
+      "groups": [
+        "treated",
+        "healthy"
+      ],
+      "pairing_key": "donor",
+      "uncertainty_unit": "donor",
+      "assay": "RNA",
+      "threshold": 0.05,
+      "threshold_origin": "Declared two-sided primary protocol, not a universal scientific-validity threshold"
+    },
+    "expected_control_disposition": "WITHHOLD",
+    "actual": {
+      "decision": "WITHHOLD",
+      "checks": [
+        {
+          "requirement": "source",
+          "state": "PASS",
+          "witness": "6fdee6c7f0c2c3098f851c761d7fafa4f9a359af200703258f7fda255ddd3e69"
+        },
+        {
+          "requirement": "unit",
+          "state": "PASS",
+          "witness": "Baron GSE84133 human1-human4 donor matrices; scRNAseq make-baron-pancreas-data.Rmd donor assignment"
+        },
+        {
+          "requirement": "n",
+          "state": "PASS",
+          "witness": "Computed eligible count 4"
+        },
+        {
+          "requirement": "comparator",
+          "state": "FAIL",
+          "witness": "Actual groups ['alpha', 'beta']"
+        },
+        {
+          "requirement": "pairing",
+          "state": "PASS",
+          "witness": "Source matched parent donor"
+        },
+        {
+          "requirement": "uncertainty",
+          "state": "PASS",
+          "witness": "Resampling/SE unit must match independent parent"
+        },
+        {
+          "requirement": "assay",
+          "state": "PASS",
+          "witness": "Claim restricted to available RNA source/metadata"
+        },
+        {
+          "requirement": "threshold",
+          "state": "PASS",
+          "witness": "Explicit protocol threshold origin, not data-derived scientific standard"
+        }
+      ]
+    },
+    "matches_control": true
+  },
+  {
+    "case_id": "baron:missing_pairing",
+    "source": "baron",
+    "input": {
+      "source_hash": "6fdee6c7f0c2c3098f851c761d7fafa4f9a359af200703258f7fda255ddd3e69",
+      "unit": "donor",
+      "n": 4,
+      "groups": [
+        "alpha",
+        "beta"
+      ],
+      "pairing_key": null,
+      "uncertainty_unit": "donor",
+      "assay": "RNA",
+      "threshold": 0.05,
+      "threshold_origin": "Declared two-sided primary protocol, not a universal scientific-validity threshold"
+    },
+    "expected_control_disposition": "ESCALATE",
+    "actual": {
+      "decision": "ESCALATE",
+      "checks": [
+        {
+          "requirement": "source",
+          "state": "PASS",
+          "witness": "6fdee6c7f0c2c3098f851c761d7fafa4f9a359af200703258f7fda255ddd3e69"
+        },
+        {
+          "requirement": "unit",
+          "state": "PASS",
+          "witness": "Baron GSE84133 human1-human4 donor matrices; scRNAseq make-baron-pancreas-data.Rmd donor assignment"
+        },
+        {
+          "requirement": "n",
+          "state": "PASS",
+          "witness": "Computed eligible count 4"
+        },
+        {
+          "requirement": "comparator",
+          "state": "PASS",
+          "witness": "Actual groups ['alpha', 'beta']"
+        },
+        {
+          "requirement": "pairing",
+          "state": "UNKNOWN",
+          "witness": "Source matched parent donor"
+        },
+        {
+          "requirement": "uncertainty",
+          "state": "PASS",
+          "witness": "Resampling/SE unit must match independent parent"
+        },
+        {
+          "requirement": "assay",
+          "state": "PASS",
+          "witness": "Claim restricted to available RNA source/metadata"
+        },
+        {
+          "requirement": "threshold",
+          "state": "PASS",
+          "witness": "Explicit protocol threshold origin, not data-derived scientific standard"
+        }
+      ]
+    },
+    "matches_control": true
+  },
+  {
+    "case_id": "baron:false_pairing",
+    "source": "baron",
+    "input": {
+      "source_hash": "6fdee6c7f0c2c3098f851c761d7fafa4f9a359af200703258f7fda255ddd3e69",
+      "unit": "donor",
+      "n": 4,
+      "groups": [
+        "alpha",
+        "beta"
+      ],
+      "pairing_key": "barcode",
+      "uncertainty_unit": "donor",
+      "assay": "RNA",
+      "threshold": 0.05,
+      "threshold_origin": "Declared two-sided primary protocol, not a universal scientific-validity threshold"
+    },
+    "expected_control_disposition": "WITHHOLD",
+    "actual": {
+      "decision": "WITHHOLD",
+      "checks": [
+        {
+          "requirement": "source",
+          "state": "PASS",
+          "witness": "6fdee6c7f0c2c3098f851c761d7fafa4f9a359af200703258f7fda255ddd3e69"
+        },
+        {
+          "requirement": "unit",
+          "state": "PASS",
+          "witness": "Baron GSE84133 human1-human4 donor matrices; scRNAseq make-baron-pancreas-data.Rmd donor assignment"
+        },
+        {
+          "requirement": "n",
+          "state": "PASS",
+          "witness": "Computed eligible count 4"
+        },
+        {
+          "requirement": "comparator",
+          "state": "PASS",
+          "witness": "Actual groups ['alpha', 'beta']"
+        },
+        {
+          "requirement": "pairing",
+          "state": "FAIL",
+          "witness": "Source matched parent donor"
+        },
+        {
+          "requirement": "uncertainty",
+          "state": "PASS",
+          "witness": "Resampling/SE unit must match independent parent"
+        },
+        {
+          "requirement": "assay",
+          "state": "PASS",
+          "witness": "Claim restricted to available RNA source/metadata"
+        },
+        {
+          "requirement": "threshold",
+          "state": "PASS",
+          "witness": "Explicit protocol threshold origin, not data-derived scientific standard"
+        }
+      ]
+    },
+    "matches_control": true
+  },
+  {
+    "case_id": "baron:missing_uncertainty",
+    "source": "baron",
+    "input": {
+      "source_hash": "6fdee6c7f0c2c3098f851c761d7fafa4f9a359af200703258f7fda255ddd3e69",
+      "unit": "donor",
+      "n": 4,
+      "groups": [
+        "alpha",
+        "beta"
+      ],
+      "pairing_key": "donor",
+      "uncertainty_unit": null,
+      "assay": "RNA",
+      "threshold": 0.05,
+      "threshold_origin": "Declared two-sided primary protocol, not a universal scientific-validity threshold"
+    },
+    "expected_control_disposition": "ESCALATE",
+    "actual": {
+      "decision": "ESCALATE",
+      "checks": [
+        {
+          "requirement": "source",
+          "state": "PASS",
+          "witness": "6fdee6c7f0c2c3098f851c761d7fafa4f9a359af200703258f7fda255ddd3e69"
+        },
+        {
+          "requirement": "unit",
+          "state": "PASS",
+          "witness": "Baron GSE84133 human1-human4 donor matrices; scRNAseq make-baron-pancreas-data.Rmd donor assignment"
+        },
+        {
+          "requirement": "n",
+          "state": "PASS",
+          "witness": "Computed eligible count 4"
+        },
+        {
+          "requirement": "comparator",
+          "state": "PASS",
+          "witness": "Actual groups ['alpha', 'beta']"
+        },
+        {
+          "requirement": "pairing",
+          "state": "PASS",
+          "witness": "Source matched parent donor"
+        },
+        {
+          "requirement": "uncertainty",
+          "state": "UNKNOWN",
+          "witness": "Resampling/SE unit must match independent parent"
+        },
+        {
+          "requirement": "assay",
+          "state": "PASS",
+          "witness": "Claim restricted to available RNA source/metadata"
+        },
+        {
+          "requirement": "threshold",
+          "state": "PASS",
+          "witness": "Explicit protocol threshold origin, not data-derived scientific standard"
+        }
+      ]
+    },
+    "matches_control": true
+  },
+  {
+    "case_id": "baron:cell_resampling",
+    "source": "baron",
+    "input": {
+      "source_hash": "6fdee6c7f0c2c3098f851c761d7fafa4f9a359af200703258f7fda255ddd3e69",
+      "unit": "donor",
+      "n": 4,
+      "groups": [
+        "alpha",
+        "beta"
+      ],
+      "pairing_key": "donor",
+      "uncertainty_unit": "cell",
+      "assay": "RNA",
+      "threshold": 0.05,
+      "threshold_origin": "Declared two-sided primary protocol, not a universal scientific-validity threshold"
+    },
+    "expected_control_disposition": "WITHHOLD",
+    "actual": {
+      "decision": "WITHHOLD",
+      "checks": [
+        {
+          "requirement": "source",
+          "state": "PASS",
+          "witness": "6fdee6c7f0c2c3098f851c761d7fafa4f9a359af200703258f7fda255ddd3e69"
+        },
+        {
+          "requirement": "unit",
+          "state": "PASS",
+          "witness": "Baron GSE84133 human1-human4 donor matrices; scRNAseq make-baron-pancreas-data.Rmd donor assignment"
+        },
+        {
+          "requirement": "n",
+          "state": "PASS",
+          "witness": "Computed eligible count 4"
+        },
+        {
+          "requirement": "comparator",
+          "state": "PASS",
+          "witness": "Actual groups ['alpha', 'beta']"
+        },
+        {
+          "requirement": "pairing",
+          "state": "PASS",
+          "witness": "Source matched parent donor"
+        },
+        {
+          "requirement": "uncertainty",
+          "state": "FAIL",
+          "witness": "Resampling/SE unit must match independent parent"
+        },
+        {
+          "requirement": "assay",
+          "state": "PASS",
+          "witness": "Claim restricted to available RNA source/metadata"
+        },
+        {
+          "requirement": "threshold",
+          "state": "PASS",
+          "witness": "Explicit protocol threshold origin, not data-derived scientific standard"
+        }
+      ]
+    },
+    "matches_control": true
+  },
+  {
+    "case_id": "baron:unsupported_ATAC",
+    "source": "baron",
+    "input": {
+      "source_hash": "6fdee6c7f0c2c3098f851c761d7fafa4f9a359af200703258f7fda255ddd3e69",
+      "unit": "donor",
+      "n": 4,
+      "groups": [
+        "alpha",
+        "beta"
+      ],
+      "pairing_key": "donor",
+      "uncertainty_unit": "donor",
+      "assay": "RNA_ATAC",
+      "threshold": 0.05,
+      "threshold_origin": "Declared two-sided primary protocol, not a universal scientific-validity threshold"
+    },
+    "expected_control_disposition": "WITHHOLD",
+    "actual": {
+      "decision": "WITHHOLD",
+      "checks": [
+        {
+          "requirement": "source",
+          "state": "PASS",
+          "witness": "6fdee6c7f0c2c3098f851c761d7fafa4f9a359af200703258f7fda255ddd3e69"
+        },
+        {
+          "requirement": "unit",
+          "state": "PASS",
+          "witness": "Baron GSE84133 human1-human4 donor matrices; scRNAseq make-baron-pancreas-data.Rmd donor assignment"
+        },
+        {
+          "requirement": "n",
+          "state": "PASS",
+          "witness": "Computed eligible count 4"
+        },
+        {
+          "requirement": "comparator",
+          "state": "PASS",
+          "witness": "Actual groups ['alpha', 'beta']"
+        },
+        {
+          "requirement": "pairing",
+          "state": "PASS",
+          "witness": "Source matched parent donor"
+        },
+        {
+          "requirement": "uncertainty",
+          "state": "PASS",
+          "witness": "Resampling/SE unit must match independent parent"
+        },
+        {
+          "requirement": "assay",
+          "state": "FAIL",
+          "witness": "Provided packet contains no verified same-cell ATAC measurement"
+        },
+        {
+          "requirement": "threshold",
+          "state": "PASS",
+          "witness": "Explicit protocol threshold origin, not data-derived scientific standard"
+        }
+      ]
+    },
+    "matches_control": true
+  },
+  {
+    "case_id": "baron:source_mismatch",
+    "source": "baron",
+    "input": {
+      "source_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "unit": "donor",
+      "n": 4,
+      "groups": [
+        "alpha",
+        "beta"
+      ],
+      "pairing_key": "donor",
+      "uncertainty_unit": "donor",
+      "assay": "RNA",
+      "threshold": 0.05,
+      "threshold_origin": "Declared two-sided primary protocol, not a universal scientific-validity threshold"
+    },
+    "expected_control_disposition": "WITHHOLD",
+    "actual": {
+      "decision": "WITHHOLD",
+      "checks": [
+        {
+          "requirement": "source",
+          "state": "FAIL",
+          "witness": "Actual source SHA256 mismatch"
+        },
+        {
+          "requirement": "unit",
+          "state": "PASS",
+          "witness": "Baron GSE84133 human1-human4 donor matrices; scRNAseq make-baron-pancreas-data.Rmd donor assignment"
+        },
+        {
+          "requirement": "n",
+          "state": "PASS",
+          "witness": "Computed eligible count 4"
+        },
+        {
+          "requirement": "comparator",
+          "state": "PASS",
+          "witness": "Actual groups ['alpha', 'beta']"
+        },
+        {
+          "requirement": "pairing",
+          "state": "PASS",
+          "witness": "Source matched parent donor"
+        },
+        {
+          "requirement": "uncertainty",
+          "state": "PASS",
+          "witness": "Resampling/SE unit must match independent parent"
+        },
+        {
+          "requirement": "assay",
+          "state": "PASS",
+          "witness": "Claim restricted to available RNA source/metadata"
+        },
+        {
+          "requirement": "threshold",
+          "state": "PASS",
+          "witness": "Explicit protocol threshold origin, not data-derived scientific standard"
+        }
+      ]
+    },
+    "matches_control": true
+  },
+  {
+    "case_id": "baron:missing_threshold_origin",
+    "source": "baron",
+    "input": {
+      "source_hash": "6fdee6c7f0c2c3098f851c761d7fafa4f9a359af200703258f7fda255ddd3e69",
+      "unit": "donor",
+      "n": 4,
+      "groups": [
+        "alpha",
+        "beta"
+      ],
+      "pairing_key": "donor",
+      "uncertainty_unit": "donor",
+      "assay": "RNA",
+      "threshold": 0.05,
+      "threshold_origin": null
+    },
+    "expected_control_disposition": "ESCALATE",
+    "actual": {
+      "decision": "ESCALATE",
+      "checks": [
+        {
+          "requirement": "source",
+          "state": "PASS",
+          "witness": "6fdee6c7f0c2c3098f851c761d7fafa4f9a359af200703258f7fda255ddd3e69"
+        },
+        {
+          "requirement": "unit",
+          "state": "PASS",
+          "witness": "Baron GSE84133 human1-human4 donor matrices; scRNAseq make-baron-pancreas-data.Rmd donor assignment"
+        },
+        {
+          "requirement": "n",
+          "state": "PASS",
+          "witness": "Computed eligible count 4"
+        },
+        {
+          "requirement": "comparator",
+          "state": "PASS",
+          "witness": "Actual groups ['alpha', 'beta']"
+        },
+        {
+          "requirement": "pairing",
+          "state": "PASS",
+          "witness": "Source matched parent donor"
+        },
+        {
+          "requirement": "uncertainty",
+          "state": "PASS",
+          "witness": "Resampling/SE unit must match independent parent"
+        },
+        {
+          "requirement": "assay",
+          "state": "PASS",
+          "witness": "Claim restricted to available RNA source/metadata"
+        },
+        {
+          "requirement": "threshold",
+          "state": "UNKNOWN",
+          "witness": "Explicit protocol threshold origin, not data-derived scientific standard"
+        }
+      ]
+    },
+    "matches_control": true
+  },
+  {
+    "case_id": "baron:stricter_registered_threshold",
+    "source": "baron",
+    "input": {
+      "source_hash": "6fdee6c7f0c2c3098f851c761d7fafa4f9a359af200703258f7fda255ddd3e69",
+      "unit": "donor",
+      "n": 4,
+      "groups": [
+        "alpha",
+        "beta"
+      ],
+      "pairing_key": "donor",
+      "uncertainty_unit": "donor",
+      "assay": "RNA",
+      "threshold": 0.01,
+      "threshold_origin": "Declared two-sided primary protocol, not a universal scientific-validity threshold"
+    },
+    "expected_control_disposition": "RELEASE",
+    "actual": {
+      "decision": "RELEASE",
+      "checks": [
+        {
+          "requirement": "source",
+          "state": "PASS",
+          "witness": "6fdee6c7f0c2c3098f851c761d7fafa4f9a359af200703258f7fda255ddd3e69"
+        },
+        {
+          "requirement": "unit",
+          "state": "PASS",
+          "witness": "Baron GSE84133 human1-human4 donor matrices; scRNAseq make-baron-pancreas-data.Rmd donor assignment"
+        },
+        {
+          "requirement": "n",
+          "state": "PASS",
+          "witness": "Computed eligible count 4"
+        },
+        {
+          "requirement": "comparator",
+          "state": "PASS",
+          "witness": "Actual groups ['alpha', 'beta']"
+        },
+        {
+          "requirement": "pairing",
+          "state": "PASS",
+          "witness": "Source matched parent donor"
+        },
+        {
+          "requirement": "uncertainty",
+          "state": "PASS",
+          "witness": "Resampling/SE unit must match independent parent"
+        },
+        {
+          "requirement": "assay",
+          "state": "PASS",
+          "witness": "Claim restricted to available RNA source/metadata"
+        },
+        {
+          "requirement": "threshold",
+          "state": "PASS",
+          "witness": "Explicit protocol threshold origin, not data-derived scientific standard"
+        }
+      ]
+    },
+    "matches_control": true
+  },
+  {
+    "case_id": "baron:legitimate_cell_description",
+    "source": "baron",
+    "input": {
+      "source_hash": "6fdee6c7f0c2c3098f851c761d7fafa4f9a359af200703258f7fda255ddd3e69",
+      "unit": "cell",
+      "n": 8569,
+      "groups": [
+        "alpha",
+        "beta"
+      ],
+      "pairing_key": "donor",
+      "uncertainty_unit": "donor",
+      "assay": "RNA",
+      "threshold": 0.05,
+      "threshold_origin": "Declared two-sided primary protocol, not a universal scientific-validity threshold",
+      "kind": "description"
+    },
+    "expected_control_disposition": "RELEASE",
+    "actual": {
+      "decision": "RELEASE",
+      "checks": [
+        {
+          "requirement": "source",
+          "state": "PASS",
+          "witness": "6fdee6c7f0c2c3098f851c761d7fafa4f9a359af200703258f7fda255ddd3e69"
+        },
+        {
+          "requirement": "unit",
+          "state": "PASS",
+          "witness": "Legitimate descriptive cell count"
+        },
+        {
+          "requirement": "n",
+          "state": "PASS",
+          "witness": "Computed eligible count 8569"
+        }
+      ]
+    },
+    "matches_control": true
+  },
+  {
+    "case_id": "pbmc:correct_inference",
+    "source": "pbmc",
+    "input": {
+      "source_hash": "1d57e72e92ca8695250e88cc0f1c3fa8c0be1175d974f8b427c58f1274dc6c09",
+      "unit": "donor",
+      "n": 8,
+      "groups": [
+        "ctrl",
+        "stim"
+      ],
+      "pairing_key": "ind",
+      "uncertainty_unit": "donor",
+      "assay": "RNA",
+      "threshold": 0.05,
+      "threshold_origin": "Declared two-sided primary protocol, not a universal scientific-validity threshold"
+    },
+    "expected_control_disposition": "RELEASE",
+    "actual": {
+      "decision": "RELEASE",
+      "checks": [
+        {
+          "requirement": "source",
+          "state": "PASS",
+          "witness": "1d57e72e92ca8695250e88cc0f1c3fa8c0be1175d974f8b427c58f1274dc6c09"
+        },
+        {
+          "requirement": "unit",
+          "state": "PASS",
+          "witness": "GSE96583 author metadata ind and stim columns; no expression results inferred"
+        },
+        {
+          "requirement": "n",
+          "state": "PASS",
+          "witness": "Computed eligible count 8"
+        },
+        {
+          "requirement": "comparator",
+          "state": "PASS",
+          "witness": "Actual groups ['ctrl', 'stim']"
+        },
+        {
+          "requirement": "pairing",
+          "state": "PASS",
+          "witness": "Source matched parent ind"
+        },
+        {
+          "requirement": "uncertainty",
+          "state": "PASS",
+          "witness": "Resampling/SE unit must match independent parent"
+        },
+        {
+          "requirement": "assay",
+          "state": "PASS",
+          "witness": "Claim restricted to available RNA source/metadata"
+        },
+        {
+          "requirement": "threshold",
+          "state": "PASS",
+          "witness": "Explicit protocol threshold origin, not data-derived scientific standard"
+        }
+      ]
+    },
+    "matches_control": true
+  },
+  {
+    "case_id": "pbmc:missing_unit",
+    "source": "pbmc",
+    "input": {
+      "source_hash": "1d57e72e92ca8695250e88cc0f1c3fa8c0be1175d974f8b427c58f1274dc6c09",
+      "unit": null,
+      "n": 8,
+      "groups": [
+        "ctrl",
+        "stim"
+      ],
+      "pairing_key": "ind",
+      "uncertainty_unit": "donor",
+      "assay": "RNA",
+      "threshold": 0.05,
+      "threshold_origin": "Declared two-sided primary protocol, not a universal scientific-validity threshold"
+    },
+    "expected_control_disposition": "ESCALATE",
+    "actual": {
+      "decision": "ESCALATE",
+      "checks": [
+        {
+          "requirement": "source",
+          "state": "PASS",
+          "witness": "1d57e72e92ca8695250e88cc0f1c3fa8c0be1175d974f8b427c58f1274dc6c09"
+        },
+        {
+          "requirement": "unit",
+          "state": "UNKNOWN",
+          "witness": "Inferential parent identity missing or ambiguous"
+        },
+        {
+          "requirement": "n",
+          "state": "PASS",
+          "witness": "Computed eligible count 8"
+        },
+        {
+          "requirement": "comparator",
+          "state": "PASS",
+          "witness": "Actual groups ['ctrl', 'stim']"
+        },
+        {
+          "requirement": "pairing",
+          "state": "PASS",
+          "witness": "Source matched parent ind"
+        },
+        {
+          "requirement": "uncertainty",
+          "state": "PASS",
+          "witness": "Resampling/SE unit must match independent parent"
+        },
+        {
+          "requirement": "assay",
+          "state": "PASS",
+          "witness": "Claim restricted to available RNA source/metadata"
+        },
+        {
+          "requirement": "threshold",
+          "state": "PASS",
+          "witness": "Explicit protocol threshold origin, not data-derived scientific standard"
+        }
+      ]
+    },
+    "matches_control": true
+  },
+  {
+    "case_id": "pbmc:ambiguous_sample",
+    "source": "pbmc",
+    "input": {
+      "source_hash": "1d57e72e92ca8695250e88cc0f1c3fa8c0be1175d974f8b427c58f1274dc6c09",
+      "unit": "sample",
+      "n": 8,
+      "groups": [
+        "ctrl",
+        "stim"
+      ],
+      "pairing_key": "ind",
+      "uncertainty_unit": "donor",
+      "assay": "RNA",
+      "threshold": 0.05,
+      "threshold_origin": "Declared two-sided primary protocol, not a universal scientific-validity threshold"
+    },
+    "expected_control_disposition": "ESCALATE",
+    "actual": {
+      "decision": "ESCALATE",
+      "checks": [
+        {
+          "requirement": "source",
+          "state": "PASS",
+          "witness": "1d57e72e92ca8695250e88cc0f1c3fa8c0be1175d974f8b427c58f1274dc6c09"
+        },
+        {
+          "requirement": "unit",
+          "state": "UNKNOWN",
+          "witness": "Inferential parent identity missing or ambiguous"
+        },
+        {
+          "requirement": "n",
+          "state": "PASS",
+          "witness": "Computed eligible count 8"
+        },
+        {
+          "requirement": "comparator",
+          "state": "PASS",
+          "witness": "Actual groups ['ctrl', 'stim']"
+        },
+        {
+          "requirement": "pairing",
+          "state": "PASS",
+          "witness": "Source matched parent ind"
+        },
+        {
+          "requirement": "uncertainty",
+          "state": "PASS",
+          "witness": "Resampling/SE unit must match independent parent"
+        },
+        {
+          "requirement": "assay",
+          "state": "PASS",
+          "witness": "Claim restricted to available RNA source/metadata"
+        },
+        {
+          "requirement": "threshold",
+          "state": "PASS",
+          "witness": "Explicit protocol threshold origin, not data-derived scientific standard"
+        }
+      ]
+    },
+    "matches_control": true
+  },
+  {
+    "case_id": "pbmc:cell_pseudoreplication",
+    "source": "pbmc",
+    "input": {
+      "source_hash": "1d57e72e92ca8695250e88cc0f1c3fa8c0be1175d974f8b427c58f1274dc6c09",
+      "unit": "cell",
+      "n": 29065,
+      "groups": [
+        "ctrl",
+        "stim"
+      ],
+      "pairing_key": "ind",
+      "uncertainty_unit": "cell",
+      "assay": "RNA",
+      "threshold": 0.05,
+      "threshold_origin": "Declared two-sided primary protocol, not a universal scientific-validity threshold"
+    },
+    "expected_control_disposition": "WITHHOLD",
+    "actual": {
+      "decision": "WITHHOLD",
+      "checks": [
+        {
+          "requirement": "source",
+          "state": "PASS",
+          "witness": "1d57e72e92ca8695250e88cc0f1c3fa8c0be1175d974f8b427c58f1274dc6c09"
+        },
+        {
+          "requirement": "unit",
+          "state": "FAIL",
+          "witness": "Claim unit differs from source independent parent donor"
+        },
+        {
+          "requirement": "n",
+          "state": "FAIL",
+          "witness": "Computed eligible count 8"
+        },
+        {
+          "requirement": "comparator",
+          "state": "PASS",
+          "witness": "Actual groups ['ctrl', 'stim']"
+        },
+        {
+          "requirement": "pairing",
+          "state": "PASS",
+          "witness": "Source matched parent ind"
+        },
+        {
+          "requirement": "uncertainty",
+          "state": "FAIL",
+          "witness": "Resampling/SE unit must match independent parent"
+        },
+        {
+          "requirement": "assay",
+          "state": "PASS",
+          "witness": "Claim restricted to available RNA source/metadata"
+        },
+        {
+          "requirement": "threshold",
+          "state": "PASS",
+          "witness": "Explicit protocol threshold origin, not data-derived scientific standard"
+        }
+      ]
+    },
+    "matches_control": true
+  },
+  {
+    "case_id": "pbmc:wrong_n",
+    "source": "pbmc",
+    "input": {
+      "source_hash": "1d57e72e92ca8695250e88cc0f1c3fa8c0be1175d974f8b427c58f1274dc6c09",
+      "unit": "donor",
+      "n": 9,
+      "groups": [
+        "ctrl",
+        "stim"
+      ],
+      "pairing_key": "ind",
+      "uncertainty_unit": "donor",
+      "assay": "RNA",
+      "threshold": 0.05,
+      "threshold_origin": "Declared two-sided primary protocol, not a universal scientific-validity threshold"
+    },
+    "expected_control_disposition": "WITHHOLD",
+    "actual": {
+      "decision": "WITHHOLD",
+      "checks": [
+        {
+          "requirement": "source",
+          "state": "PASS",
+          "witness": "1d57e72e92ca8695250e88cc0f1c3fa8c0be1175d974f8b427c58f1274dc6c09"
+        },
+        {
+          "requirement": "unit",
+          "state": "PASS",
+          "witness": "GSE96583 author metadata ind and stim columns; no expression results inferred"
+        },
+        {
+          "requirement": "n",
+          "state": "FAIL",
+          "witness": "Computed eligible count 8"
+        },
+        {
+          "requirement": "comparator",
+          "state": "PASS",
+          "witness": "Actual groups ['ctrl', 'stim']"
+        },
+        {
+          "requirement": "pairing",
+          "state": "PASS",
+          "witness": "Source matched parent ind"
+        },
+        {
+          "requirement": "uncertainty",
+          "state": "PASS",
+          "witness": "Resampling/SE unit must match independent parent"
+        },
+        {
+          "requirement": "assay",
+          "state": "PASS",
+          "witness": "Claim restricted to available RNA source/metadata"
+        },
+        {
+          "requirement": "threshold",
+          "state": "PASS",
+          "witness": "Explicit protocol threshold origin, not data-derived scientific standard"
+        }
+      ]
+    },
+    "matches_control": true
+  },
+  {
+    "case_id": "pbmc:missing_n",
+    "source": "pbmc",
+    "input": {
+      "source_hash": "1d57e72e92ca8695250e88cc0f1c3fa8c0be1175d974f8b427c58f1274dc6c09",
+      "unit": "donor",
+      "n": null,
+      "groups": [
+        "ctrl",
+        "stim"
+      ],
+      "pairing_key": "ind",
+      "uncertainty_unit": "donor",
+      "assay": "RNA",
+      "threshold": 0.05,
+      "threshold_origin": "Declared two-sided primary protocol, not a universal scientific-validity threshold"
+    },
+    "expected_control_disposition": "ESCALATE",
+    "actual": {
+      "decision": "ESCALATE",
+      "checks": [
+        {
+          "requirement": "source",
+          "state": "PASS",
+          "witness": "1d57e72e92ca8695250e88cc0f1c3fa8c0be1175d974f8b427c58f1274dc6c09"
+        },
+        {
+          "requirement": "unit",
+          "state": "PASS",
+          "witness": "GSE96583 author metadata ind and stim columns; no expression results inferred"
+        },
+        {
+          "requirement": "n",
+          "state": "UNKNOWN",
+          "witness": "Computed eligible count 8"
+        },
+        {
+          "requirement": "comparator",
+          "state": "PASS",
+          "witness": "Actual groups ['ctrl', 'stim']"
+        },
+        {
+          "requirement": "pairing",
+          "state": "PASS",
+          "witness": "Source matched parent ind"
+        },
+        {
+          "requirement": "uncertainty",
+          "state": "PASS",
+          "witness": "Resampling/SE unit must match independent parent"
+        },
+        {
+          "requirement": "assay",
+          "state": "PASS",
+          "witness": "Claim restricted to available RNA source/metadata"
+        },
+        {
+          "requirement": "threshold",
+          "state": "PASS",
+          "witness": "Explicit protocol threshold origin, not data-derived scientific standard"
+        }
+      ]
+    },
+    "matches_control": true
+  },
+  {
+    "case_id": "pbmc:wrong_comparator",
+    "source": "pbmc",
+    "input": {
+      "source_hash": "1d57e72e92ca8695250e88cc0f1c3fa8c0be1175d974f8b427c58f1274dc6c09",
+      "unit": "donor",
+      "n": 8,
+      "groups": [
+        "treated",
+        "healthy"
+      ],
+      "pairing_key": "ind",
+      "uncertainty_unit": "donor",
+      "assay": "RNA",
+      "threshold": 0.05,
+      "threshold_origin": "Declared two-sided primary protocol, not a universal scientific-validity threshold"
+    },
+    "expected_control_disposition": "WITHHOLD",
+    "actual": {
+      "decision": "WITHHOLD",
+      "checks": [
+        {
+          "requirement": "source",
+          "state": "PASS",
+          "witness": "1d57e72e92ca8695250e88cc0f1c3fa8c0be1175d974f8b427c58f1274dc6c09"
+        },
+        {
+          "requirement": "unit",
+          "state": "PASS",
+          "witness": "GSE96583 author metadata ind and stim columns; no expression results inferred"
+        },
+        {
+          "requirement": "n",
+          "state": "PASS",
+          "witness": "Computed eligible count 8"
+        },
+        {
+          "requirement": "comparator",
+          "state": "FAIL",
+          "witness": "Actual groups ['ctrl', 'stim']"
+        },
+        {
+          "requirement": "pairing",
+          "state": "PASS",
+          "witness": "Source matched parent ind"
+        },
+        {
+          "requirement": "uncertainty",
+          "state": "PASS",
+          "witness": "Resampling/SE unit must match independent parent"
+        },
+        {
+          "requirement": "assay",
+          "state": "PASS",
+          "witness": "Claim restricted to available RNA source/metadata"
+        },
+        {
+          "requirement": "threshold",
+          "state": "PASS",
+          "witness": "Explicit protocol threshold origin, not data-derived scientific standard"
+        }
+      ]
+    },
+    "matches_control": true
+  },
+  {
+    "case_id": "pbmc:missing_pairing",
+    "source": "pbmc",
+    "input": {
+      "source_hash": "1d57e72e92ca8695250e88cc0f1c3fa8c0be1175d974f8b427c58f1274dc6c09",
+      "unit": "donor",
+      "n": 8,
+      "groups": [
+        "ctrl",
+        "stim"
+      ],
+      "pairing_key": null,
+      "uncertainty_unit": "donor",
+      "assay": "RNA",
+      "threshold": 0.05,
+      "threshold_origin": "Declared two-sided primary protocol, not a universal scientific-validity threshold"
+    },
+    "expected_control_disposition": "ESCALATE",
+    "actual": {
+      "decision": "ESCALATE",
+      "checks": [
+        {
+          "requirement": "source",
+          "state": "PASS",
+          "witness": "1d57e72e92ca8695250e88cc0f1c3fa8c0be1175d974f8b427c58f1274dc6c09"
+        },
+        {
+          "requirement": "unit",
+          "state": "PASS",
+          "witness": "GSE96583 author metadata ind and stim columns; no expression results inferred"
+        },
+        {
+          "requirement": "n",
+          "state": "PASS",
+          "witness": "Computed eligible count 8"
+        },
+        {
+          "requirement": "comparator",
+          "state": "PASS",
+          "witness": "Actual groups ['ctrl', 'stim']"
+        },
+        {
+          "requirement": "pairing",
+          "state": "UNKNOWN",
+          "witness": "Source matched parent ind"
+        },
+        {
+          "requirement": "uncertainty",
+          "state": "PASS",
+          "witness": "Resampling/SE unit must match independent parent"
+        },
+        {
+          "requirement": "assay",
+          "state": "PASS",
+          "witness": "Claim restricted to available RNA source/metadata"
+        },
+        {
+          "requirement": "threshold",
+          "state": "PASS",
+          "witness": "Explicit protocol threshold origin, not data-derived scientific standard"
+        }
+      ]
+    },
+    "matches_control": true
+  },
+  {
+    "case_id": "pbmc:false_pairing",
+    "source": "pbmc",
+    "input": {
+      "source_hash": "1d57e72e92ca8695250e88cc0f1c3fa8c0be1175d974f8b427c58f1274dc6c09",
+      "unit": "donor",
+      "n": 8,
+      "groups": [
+        "ctrl",
+        "stim"
+      ],
+      "pairing_key": "barcode",
+      "uncertainty_unit": "donor",
+      "assay": "RNA",
+      "threshold": 0.05,
+      "threshold_origin": "Declared two-sided primary protocol, not a universal scientific-validity threshold"
+    },
+    "expected_control_disposition": "WITHHOLD",
+    "actual": {
+      "decision": "WITHHOLD",
+      "checks": [
+        {
+          "requirement": "source",
+          "state": "PASS",
+          "witness": "1d57e72e92ca8695250e88cc0f1c3fa8c0be1175d974f8b427c58f1274dc6c09"
+        },
+        {
+          "requirement": "unit",
+          "state": "PASS",
+          "witness": "GSE96583 author metadata ind and stim columns; no expression results inferred"
+        },
+        {
+          "requirement": "n",
+          "state": "PASS",
+          "witness": "Computed eligible count 8"
+        },
+        {
+          "requirement": "comparator",
+          "state": "PASS",
+          "witness": "Actual groups ['ctrl', 'stim']"
+        },
+        {
+          "requirement": "pairing",
+          "state": "FAIL",
+          "witness": "Source matched parent ind"
+        },
+        {
+          "requirement": "uncertainty",
+          "state": "PASS",
+          "witness": "Resampling/SE unit must match independent parent"
+        },
+        {
+          "requirement": "assay",
+          "state": "PASS",
+          "witness": "Claim restricted to available RNA source/metadata"
+        },
+        {
+          "requirement": "threshold",
+          "state": "PASS",
+          "witness": "Explicit protocol threshold origin, not data-derived scientific standard"
+        }
+      ]
+    },
+    "matches_control": true
+  },
+  {
+    "case_id": "pbmc:missing_uncertainty",
+    "source": "pbmc",
+    "input": {
+      "source_hash": "1d57e72e92ca8695250e88cc0f1c3fa8c0be1175d974f8b427c58f1274dc6c09",
+      "unit": "donor",
+      "n": 8,
+      "groups": [
+        "ctrl",
+        "stim"
+      ],
+      "pairing_key": "ind",
+      "uncertainty_unit": null,
+      "assay": "RNA",
+      "threshold": 0.05,
+      "threshold_origin": "Declared two-sided primary protocol, not a universal scientific-validity threshold"
+    },
+    "expected_control_disposition": "ESCALATE",
+    "actual": {
+      "decision": "ESCALATE",
+      "checks": [
+        {
+          "requirement": "source",
+          "state": "PASS",
+          "witness": "1d57e72e92ca8695250e88cc0f1c3fa8c0be1175d974f8b427c58f1274dc6c09"
+        },
+        {
+          "requirement": "unit",
+          "state": "PASS",
+          "witness": "GSE96583 author metadata ind and stim columns; no expression results inferred"
+        },
+        {
+          "requirement": "n",
+          "state": "PASS",
+          "witness": "Computed eligible count 8"
+        },
+        {
+          "requirement": "comparator",
+          "state": "PASS",
+          "witness": "Actual groups ['ctrl', 'stim']"
+        },
+        {
+          "requirement": "pairing",
+          "state": "PASS",
+          "witness": "Source matched parent ind"
+        },
+        {
+          "requirement": "uncertainty",
+          "state": "UNKNOWN",
+          "witness": "Resampling/SE unit must match independent parent"
+        },
+        {
+          "requirement": "assay",
+          "state": "PASS",
+          "witness": "Claim restricted to available RNA source/metadata"
+        },
+        {
+          "requirement": "threshold",
+          "state": "PASS",
+          "witness": "Explicit protocol threshold origin, not data-derived scientific standard"
+        }
+      ]
+    },
+    "matches_control": true
+  },
+  {
+    "case_id": "pbmc:cell_resampling",
+    "source": "pbmc",
+    "input": {
+      "source_hash": "1d57e72e92ca8695250e88cc0f1c3fa8c0be1175d974f8b427c58f1274dc6c09",
+      "unit": "donor",
+      "n": 8,
+      "groups": [
+        "ctrl",
+        "stim"
+      ],
+      "pairing_key": "ind",
+      "uncertainty_unit": "cell",
+      "assay": "RNA",
+      "threshold": 0.05,
+      "threshold_origin": "Declared two-sided primary protocol, not a universal scientific-validity threshold"
+    },
+    "expected_control_disposition": "WITHHOLD",
+    "actual": {
+      "decision": "WITHHOLD",
+      "checks": [
+        {
+          "requirement": "source",
+          "state": "PASS",
+          "witness": "1d57e72e92ca8695250e88cc0f1c3fa8c0be1175d974f8b427c58f1274dc6c09"
+        },
+        {
+          "requirement": "unit",
+          "state": "PASS",
+          "witness": "GSE96583 author metadata ind and stim columns; no expression results inferred"
+        },
+        {
+          "requirement": "n",
+          "state": "PASS",
+          "witness": "Computed eligible count 8"
+        },
+        {
+          "requirement": "comparator",
+          "state": "PASS",
+          "witness": "Actual groups ['ctrl', 'stim']"
+        },
+        {
+          "requirement": "pairing",
+          "state": "PASS",
+          "witness": "Source matched parent ind"
+        },
+        {
+          "requirement": "uncertainty",
+          "state": "FAIL",
+          "witness": "Resampling/SE unit must match independent parent"
+        },
+        {
+          "requirement": "assay",
+          "state": "PASS",
+          "witness": "Claim restricted to available RNA source/metadata"
+        },
+        {
+          "requirement": "threshold",
+          "state": "PASS",
+          "witness": "Explicit protocol threshold origin, not data-derived scientific standard"
+        }
+      ]
+    },
+    "matches_control": true
+  },
+  {
+    "case_id": "pbmc:unsupported_ATAC",
+    "source": "pbmc",
+    "input": {
+      "source_hash": "1d57e72e92ca8695250e88cc0f1c3fa8c0be1175d974f8b427c58f1274dc6c09",
+      "unit": "donor",
+      "n": 8,
+      "groups": [
+        "ctrl",
+        "stim"
+      ],
+      "pairing_key": "ind",
+      "uncertainty_unit": "donor",
+      "assay": "RNA_ATAC",
+      "threshold": 0.05,
+      "threshold_origin": "Declared two-sided primary protocol, not a universal scientific-validity threshold"
+    },
+    "expected_control_disposition": "WITHHOLD",
+    "actual": {
+      "decision": "WITHHOLD",
+      "checks": [
+        {
+          "requirement": "source",
+          "state": "PASS",
+          "witness": "1d57e72e92ca8695250e88cc0f1c3fa8c0be1175d974f8b427c58f1274dc6c09"
+        },
+        {
+          "requirement": "unit",
+          "state": "PASS",
+          "witness": "GSE96583 author metadata ind and stim columns; no expression results inferred"
+        },
+        {
+          "requirement": "n",
+          "state": "PASS",
+          "witness": "Computed eligible count 8"
+        },
+        {
+          "requirement": "comparator",
+          "state": "PASS",
+          "witness": "Actual groups ['ctrl', 'stim']"
+        },
+        {
+          "requirement": "pairing",
+          "state": "PASS",
+          "witness": "Source matched parent ind"
+        },
+        {
+          "requirement": "uncertainty",
+          "state": "PASS",
+          "witness": "Resampling/SE unit must match independent parent"
+        },
+        {
+          "requirement": "assay",
+          "state": "FAIL",
+          "witness": "Provided packet contains no verified same-cell ATAC measurement"
+        },
+        {
+          "requirement": "threshold",
+          "state": "PASS",
+          "witness": "Explicit protocol threshold origin, not data-derived scientific standard"
+        }
+      ]
+    },
+    "matches_control": true
+  },
+  {
+    "case_id": "pbmc:source_mismatch",
+    "source": "pbmc",
+    "input": {
+      "source_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "unit": "donor",
+      "n": 8,
+      "groups": [
+        "ctrl",
+        "stim"
+      ],
+      "pairing_key": "ind",
+      "uncertainty_unit": "donor",
+      "assay": "RNA",
+      "threshold": 0.05,
+      "threshold_origin": "Declared two-sided primary protocol, not a universal scientific-validity threshold"
+    },
+    "expected_control_disposition": "WITHHOLD",
+    "actual": {
+      "decision": "WITHHOLD",
+      "checks": [
+        {
+          "requirement": "source",
+          "state": "FAIL",
+          "witness": "Actual source SHA256 mismatch"
+        },
+        {
+          "requirement": "unit",
+          "state": "PASS",
+          "witness": "GSE96583 author metadata ind and stim columns; no expression results inferred"
+        },
+        {
+          "requirement": "n",
+          "state": "PASS",
+          "witness": "Computed eligible count 8"
+        },
+        {
+          "requirement": "comparator",
+          "state": "PASS",
+          "witness": "Actual groups ['ctrl', 'stim']"
+        },
+        {
+          "requirement": "pairing",
+          "state": "PASS",
+          "witness": "Source matched parent ind"
+        },
+        {
+          "requirement": "uncertainty",
+          "state": "PASS",
+          "witness": "Resampling/SE unit must match independent parent"
+        },
+        {
+          "requirement": "assay",
+          "state": "PASS",
+          "witness": "Claim restricted to available RNA source/metadata"
+        },
+        {
+          "requirement": "threshold",
+          "state": "PASS",
+          "witness": "Explicit protocol threshold origin, not data-derived scientific standard"
+        }
+      ]
+    },
+    "matches_control": true
+  },
+  {
+    "case_id": "pbmc:missing_threshold_origin",
+    "source": "pbmc",
+    "input": {
+      "source_hash": "1d57e72e92ca8695250e88cc0f1c3fa8c0be1175d974f8b427c58f1274dc6c09",
+      "unit": "donor",
+      "n": 8,
+      "groups": [
+        "ctrl",
+        "stim"
+      ],
+      "pairing_key": "ind",
+      "uncertainty_unit": "donor",
+      "assay": "RNA",
+      "threshold": 0.05,
+      "threshold_origin": null
+    },
+    "expected_control_disposition": "ESCALATE",
+    "actual": {
+      "decision": "ESCALATE",
+      "checks": [
+        {
+          "requirement": "source",
+          "state": "PASS",
+          "witness": "1d57e72e92ca8695250e88cc0f1c3fa8c0be1175d974f8b427c58f1274dc6c09"
+        },
+        {
+          "requirement": "unit",
+          "state": "PASS",
+          "witness": "GSE96583 author metadata ind and stim columns; no expression results inferred"
+        },
+        {
+          "requirement": "n",
+          "state": "PASS",
+          "witness": "Computed eligible count 8"
+        },
+        {
+          "requirement": "comparator",
+          "state": "PASS",
+          "witness": "Actual groups ['ctrl', 'stim']"
+        },
+        {
+          "requirement": "pairing",
+          "state": "PASS",
+          "witness": "Source matched parent ind"
+        },
+        {
+          "requirement": "uncertainty",
+          "state": "PASS",
+          "witness": "Resampling/SE unit must match independent parent"
+        },
+        {
+          "requirement": "assay",
+          "state": "PASS",
+          "witness": "Claim restricted to available RNA source/metadata"
+        },
+        {
+          "requirement": "threshold",
+          "state": "UNKNOWN",
+          "witness": "Explicit protocol threshold origin, not data-derived scientific standard"
+        }
+      ]
+    },
+    "matches_control": true
+  },
+  {
+    "case_id": "pbmc:stricter_registered_threshold",
+    "source": "pbmc",
+    "input": {
+      "source_hash": "1d57e72e92ca8695250e88cc0f1c3fa8c0be1175d974f8b427c58f1274dc6c09",
+      "unit": "donor",
+      "n": 8,
+      "groups": [
+        "ctrl",
+        "stim"
+      ],
+      "pairing_key": "ind",
+      "uncertainty_unit": "donor",
+      "assay": "RNA",
+      "threshold": 0.01,
+      "threshold_origin": "Declared two-sided primary protocol, not a universal scientific-validity threshold"
+    },
+    "expected_control_disposition": "RELEASE",
+    "actual": {
+      "decision": "RELEASE",
+      "checks": [
+        {
+          "requirement": "source",
+          "state": "PASS",
+          "witness": "1d57e72e92ca8695250e88cc0f1c3fa8c0be1175d974f8b427c58f1274dc6c09"
+        },
+        {
+          "requirement": "unit",
+          "state": "PASS",
+          "witness": "GSE96583 author metadata ind and stim columns; no expression results inferred"
+        },
+        {
+          "requirement": "n",
+          "state": "PASS",
+          "witness": "Computed eligible count 8"
+        },
+        {
+          "requirement": "comparator",
+          "state": "PASS",
+          "witness": "Actual groups ['ctrl', 'stim']"
+        },
+        {
+          "requirement": "pairing",
+          "state": "PASS",
+          "witness": "Source matched parent ind"
+        },
+        {
+          "requirement": "uncertainty",
+          "state": "PASS",
+          "witness": "Resampling/SE unit must match independent parent"
+        },
+        {
+          "requirement": "assay",
+          "state": "PASS",
+          "witness": "Claim restricted to available RNA source/metadata"
+        },
+        {
+          "requirement": "threshold",
+          "state": "PASS",
+          "witness": "Explicit protocol threshold origin, not data-derived scientific standard"
+        }
+      ]
+    },
+    "matches_control": true
+  },
+  {
+    "case_id": "pbmc:legitimate_cell_description",
+    "source": "pbmc",
+    "input": {
+      "source_hash": "1d57e72e92ca8695250e88cc0f1c3fa8c0be1175d974f8b427c58f1274dc6c09",
+      "unit": "cell",
+      "n": 29065,
+      "groups": [
+        "ctrl",
+        "stim"
+      ],
+      "pairing_key": "ind",
+      "uncertainty_unit": "donor",
+      "assay": "RNA",
+      "threshold": 0.05,
+      "threshold_origin": "Declared two-sided primary protocol, not a universal scientific-validity threshold",
+      "kind": "description"
+    },
+    "expected_control_disposition": "RELEASE",
+    "actual": {
+      "decision": "RELEASE",
+      "checks": [
+        {
+          "requirement": "source",
+          "state": "PASS",
+          "witness": "1d57e72e92ca8695250e88cc0f1c3fa8c0be1175d974f8b427c58f1274dc6c09"
+        },
+        {
+          "requirement": "unit",
+          "state": "PASS",
+          "witness": "Legitimate descriptive cell count"
+        },
+        {
+          "requirement": "n",
+          "state": "PASS",
+          "witness": "Computed eligible count 29065"
+        }
+      ]
+    },
+    "matches_control": true
+  },
+  {
+    "case_id": "airway:correct_inference",
+    "source": "airway",
+    "input": {
+      "source_hash": "741c0110963fc8f4f07304ecc166f0b32f1fa493004d41500b14364c81fc6f71",
+      "unit": "cell_line",
+      "n": 4,
+      "groups": [
+        "trt",
+        "untrt"
+      ],
+      "pairing_key": "cell",
+      "uncertainty_unit": "cell_line",
+      "assay": "RNA",
+      "threshold": 0.05,
+      "threshold_origin": "Declared two-sided primary protocol, not a universal scientific-validity threshold"
+    },
+    "expected_control_disposition": "RELEASE",
+    "actual": {
+      "decision": "RELEASE",
+      "checks": [
+        {
+          "requirement": "source",
+          "state": "PASS",
+          "witness": "741c0110963fc8f4f07304ecc166f0b32f1fa493004d41500b14364c81fc6f71"
+        },
+        {
+          "requirement": "unit",
+          "state": "PASS",
+          "witness": "Bioconductor airway sample_table cell/dex; four cell lines, not source-verified distinct donors"
+        },
+        {
+          "requirement": "n",
+          "state": "PASS",
+          "witness": "Computed eligible count 4"
+        },
+        {
+          "requirement": "comparator",
+          "state": "PASS",
+          "witness": "Actual groups ['trt', 'untrt']"
+        },
+        {
+          "requirement": "pairing",
+          "state": "PASS",
+          "witness": "Source matched parent cell"
+        },
+        {
+          "requirement": "uncertainty",
+          "state": "PASS",
+          "witness": "Resampling/SE unit must match independent parent"
+        },
+        {
+          "requirement": "assay",
+          "state": "PASS",
+          "witness": "Claim restricted to available RNA source/metadata"
+        },
+        {
+          "requirement": "threshold",
+          "state": "PASS",
+          "witness": "Explicit protocol threshold origin, not data-derived scientific standard"
+        }
+      ]
+    },
+    "matches_control": true
+  },
+  {
+    "case_id": "airway:missing_unit",
+    "source": "airway",
+    "input": {
+      "source_hash": "741c0110963fc8f4f07304ecc166f0b32f1fa493004d41500b14364c81fc6f71",
+      "unit": null,
+      "n": 4,
+      "groups": [
+        "trt",
+        "untrt"
+      ],
+      "pairing_key": "cell",
+      "uncertainty_unit": "cell_line",
+      "assay": "RNA",
+      "threshold": 0.05,
+      "threshold_origin": "Declared two-sided primary protocol, not a universal scientific-validity threshold"
+    },
+    "expected_control_disposition": "ESCALATE",
+    "actual": {
+      "decision": "ESCALATE",
+      "checks": [
+        {
+          "requirement": "source",
+          "state": "PASS",
+          "witness": "741c0110963fc8f4f07304ecc166f0b32f1fa493004d41500b14364c81fc6f71"
+        },
+        {
+          "requirement": "unit",
+          "state": "UNKNOWN",
+          "witness": "Inferential parent identity missing or ambiguous"
+        },
+        {
+          "requirement": "n",
+          "state": "PASS",
+          "witness": "Computed eligible count 4"
+        },
+        {
+          "requirement": "comparator",
+          "state": "PASS",
+          "witness": "Actual groups ['trt', 'untrt']"
+        },
+        {
+          "requirement": "pairing",
+          "state": "PASS",
+          "witness": "Source matched parent cell"
+        },
+        {
+          "requirement": "uncertainty",
+          "state": "PASS",
+          "witness": "Resampling/SE unit must match independent parent"
+        },
+        {
+          "requirement": "assay",
+          "state": "PASS",
+          "witness": "Claim restricted to available RNA source/metadata"
+        },
+        {
+          "requirement": "threshold",
+          "state": "PASS",
+          "witness": "Explicit protocol threshold origin, not data-derived scientific standard"
+        }
+      ]
+    },
+    "matches_control": true
+  },
+  {
+    "case_id": "airway:ambiguous_sample",
+    "source": "airway",
+    "input": {
+      "source_hash": "741c0110963fc8f4f07304ecc166f0b32f1fa493004d41500b14364c81fc6f71",
+      "unit": "sample",
+      "n": 4,
+      "groups": [
+        "trt",
+        "untrt"
+      ],
+      "pairing_key": "cell",
+      "uncertainty_unit": "cell_line",
+      "assay": "RNA",
+      "threshold": 0.05,
+      "threshold_origin": "Declared two-sided primary protocol, not a universal scientific-validity threshold"
+    },
+    "expected_control_disposition": "ESCALATE",
+    "actual": {
+      "decision": "ESCALATE",
+      "checks": [
+        {
+          "requirement": "source",
+          "state": "PASS",
+          "witness": "741c0110963fc8f4f07304ecc166f0b32f1fa493004d41500b14364c81fc6f71"
+        },
+        {
+          "requirement": "unit",
+          "state": "UNKNOWN",
+          "witness": "Inferential parent identity missing or ambiguous"
+        },
+        {
+          "requirement": "n",
+          "state": "PASS",
+          "witness": "Computed eligible count 4"
+        },
+        {
+          "requirement": "comparator",
+          "state": "PASS",
+          "witness": "Actual groups ['trt', 'untrt']"
+        },
+        {
+          "requirement": "pairing",
+          "state": "PASS",
+          "witness": "Source matched parent cell"
+        },
+        {
+          "requirement": "uncertainty",
+          "state": "PASS",
+          "witness": "Resampling/SE unit must match independent parent"
+        },
+        {
+          "requirement": "assay",
+          "state": "PASS",
+          "witness": "Claim restricted to available RNA source/metadata"
+        },
+        {
+          "requirement": "threshold",
+          "state": "PASS",
+          "witness": "Explicit protocol threshold origin, not data-derived scientific standard"
+        }
+      ]
+    },
+    "matches_control": true
+  },
+  {
+    "case_id": "airway:cell_pseudoreplication",
+    "source": "airway",
+    "input": {
+      "source_hash": "741c0110963fc8f4f07304ecc166f0b32f1fa493004d41500b14364c81fc6f71",
+      "unit": "cell",
+      "n": 8,
+      "groups": [
+        "trt",
+        "untrt"
+      ],
+      "pairing_key": "cell",
+      "uncertainty_unit": "cell",
+      "assay": "RNA",
+      "threshold": 0.05,
+      "threshold_origin": "Declared two-sided primary protocol, not a universal scientific-validity threshold"
+    },
+    "expected_control_disposition": "WITHHOLD",
+    "actual": {
+      "decision": "WITHHOLD",
+      "checks": [
+        {
+          "requirement": "source",
+          "state": "PASS",
+          "witness": "741c0110963fc8f4f07304ecc166f0b32f1fa493004d41500b14364c81fc6f71"
+        },
+        {
+          "requirement": "unit",
+          "state": "FAIL",
+          "witness": "Claim unit differs from source independent parent cell_line"
+        },
+        {
+          "requirement": "n",
+          "state": "FAIL",
+          "witness": "Computed eligible count 4"
+        },
+        {
+          "requirement": "comparator",
+          "state": "PASS",
+          "witness": "Actual groups ['trt', 'untrt']"
+        },
+        {
+          "requirement": "pairing",
+          "state": "PASS",
+          "witness": "Source matched parent cell"
+        },
+        {
+          "requirement": "uncertainty",
+          "state": "FAIL",
+          "witness": "Resampling/SE unit must match independent parent"
+        },
+        {
+          "requirement": "assay",
+          "state": "PASS",
+          "witness": "Claim restricted to available RNA source/metadata"
+        },
+        {
+          "requirement": "threshold",
+          "state": "PASS",
+          "witness": "Explicit protocol threshold origin, not data-derived scientific standard"
+        }
+      ]
+    },
+    "matches_control": true
+  },
+  {
+    "case_id": "airway:wrong_n",
+    "source": "airway",
+    "input": {
+      "source_hash": "741c0110963fc8f4f07304ecc166f0b32f1fa493004d41500b14364c81fc6f71",
+      "unit": "cell_line",
+      "n": 5,
+      "groups": [
+        "trt",
+        "untrt"
+      ],
+      "pairing_key": "cell",
+      "uncertainty_unit": "cell_line",
+      "assay": "RNA",
+      "threshold": 0.05,
+      "threshold_origin": "Declared two-sided primary protocol, not a universal scientific-validity threshold"
+    },
+    "expected_control_disposition": "WITHHOLD",
+    "actual": {
+      "decision": "WITHHOLD",
+      "checks": [
+        {
+          "requirement": "source",
+          "state": "PASS",
+          "witness": "741c0110963fc8f4f07304ecc166f0b32f1fa493004d41500b14364c81fc6f71"
+        },
+        {
+          "requirement": "unit",
+          "state": "PASS",
+          "witness": "Bioconductor airway sample_table cell/dex; four cell lines, not source-verified distinct donors"
+        },
+        {
+          "requirement": "n",
+          "state": "FAIL",
+          "witness": "Computed eligible count 4"
+        },
+        {
+          "requirement": "comparator",
+          "state": "PASS",
+          "witness": "Actual groups ['trt', 'untrt']"
+        },
+        {
+          "requirement": "pairing",
+          "state": "PASS",
+          "witness": "Source matched parent cell"
+        },
+        {
+          "requirement": "uncertainty",
+          "state": "PASS",
+          "witness": "Resampling/SE unit must match independent parent"
+        },
+        {
+          "requirement": "assay",
+          "state": "PASS",
+          "witness": "Claim restricted to available RNA source/metadata"
+        },
+        {
+          "requirement": "threshold",
+          "state": "PASS",
+          "witness": "Explicit protocol threshold origin, not data-derived scientific standard"
+        }
+      ]
+    },
+    "matches_control": true
+  },
+  {
+    "case_id": "airway:missing_n",
+    "source": "airway",
+    "input": {
+      "source_hash": "741c0110963fc8f4f07304ecc166f0b32f1fa493004d41500b14364c81fc6f71",
+      "unit": "cell_line",
+      "n": null,
+      "groups": [
+        "trt",
+        "untrt"
+      ],
+      "pairing_key": "cell",
+      "uncertainty_unit": "cell_line",
+      "assay": "RNA",
+      "threshold": 0.05,
+      "threshold_origin": "Declared two-sided primary protocol, not a universal scientific-validity threshold"
+    },
+    "expected_control_disposition": "ESCALATE",
+    "actual": {
+      "decision": "ESCALATE",
+      "checks": [
+        {
+          "requirement": "source",
+          "state": "PASS",
+          "witness": "741c0110963fc8f4f07304ecc166f0b32f1fa493004d41500b14364c81fc6f71"
+        },
+        {
+          "requirement": "unit",
+          "state": "PASS",
+          "witness": "Bioconductor airway sample_table cell/dex; four cell lines, not source-verified distinct donors"
+        },
+        {
+          "requirement": "n",
+          "state": "UNKNOWN",
+          "witness": "Computed eligible count 4"
+        },
+        {
+          "requirement": "comparator",
+          "state": "PASS",
+          "witness": "Actual groups ['trt', 'untrt']"
+        },
+        {
+          "requirement": "pairing",
+          "state": "PASS",
+          "witness": "Source matched parent cell"
+        },
+        {
+          "requirement": "uncertainty",
+          "state": "PASS",
+          "witness": "Resampling/SE unit must match independent parent"
+        },
+        {
+          "requirement": "assay",
+          "state": "PASS",
+          "witness": "Claim restricted to available RNA source/metadata"
+        },
+        {
+          "requirement": "threshold",
+          "state": "PASS",
+          "witness": "Explicit protocol threshold origin, not data-derived scientific standard"
+        }
+      ]
+    },
+    "matches_control": true
+  },
+  {
+    "case_id": "airway:wrong_comparator",
+    "source": "airway",
+    "input": {
+      "source_hash": "741c0110963fc8f4f07304ecc166f0b32f1fa493004d41500b14364c81fc6f71",
+      "unit": "cell_line",
+      "n": 4,
+      "groups": [
+        "treated",
+        "healthy"
+      ],
+      "pairing_key": "cell",
+      "uncertainty_unit": "cell_line",
+      "assay": "RNA",
+      "threshold": 0.05,
+      "threshold_origin": "Declared two-sided primary protocol, not a universal scientific-validity threshold"
+    },
+    "expected_control_disposition": "WITHHOLD",
+    "actual": {
+      "decision": "WITHHOLD",
+      "checks": [
+        {
+          "requirement": "source",
+          "state": "PASS",
+          "witness": "741c0110963fc8f4f07304ecc166f0b32f1fa493004d41500b14364c81fc6f71"
+        },
+        {
+          "requirement": "unit",
+          "state": "PASS",
+          "witness": "Bioconductor airway sample_table cell/dex; four cell lines, not source-verified distinct donors"
+        },
+        {
+          "requirement": "n",
+          "state": "PASS",
+          "witness": "Computed eligible count 4"
+        },
+        {
+          "requirement": "comparator",
+          "state": "FAIL",
+          "witness": "Actual groups ['trt', 'untrt']"
+        },
+        {
+          "requirement": "pairing",
+          "state": "PASS",
+          "witness": "Source matched parent cell"
+        },
+        {
+          "requirement": "uncertainty",
+          "state": "PASS",
+          "witness": "Resampling/SE unit must match independent parent"
+        },
+        {
+          "requirement": "assay",
+          "state": "PASS",
+          "witness": "Claim restricted to available RNA source/metadata"
+        },
+        {
+          "requirement": "threshold",
+          "state": "PASS",
+          "witness": "Explicit protocol threshold origin, not data-derived scientific standard"
+        }
+      ]
+    },
+    "matches_control": true
+  },
+  {
+    "case_id": "airway:missing_pairing",
+    "source": "airway",
+    "input": {
+      "source_hash": "741c0110963fc8f4f07304ecc166f0b32f1fa493004d41500b14364c81fc6f71",
+      "unit": "cell_line",
+      "n": 4,
+      "groups": [
+        "trt",
+        "untrt"
+      ],
+      "pairing_key": null,
+      "uncertainty_unit": "cell_line",
+      "assay": "RNA",
+      "threshold": 0.05,
+      "threshold_origin": "Declared two-sided primary protocol, not a universal scientific-validity threshold"
+    },
+    "expected_control_disposition": "ESCALATE",
+    "actual": {
+      "decision": "ESCALATE",
+      "checks": [
+        {
+          "requirement": "source",
+          "state": "PASS",
+          "witness": "741c0110963fc8f4f07304ecc166f0b32f1fa493004d41500b14364c81fc6f71"
+        },
+        {
+          "requirement": "unit",
+          "state": "PASS",
+          "witness": "Bioconductor airway sample_table cell/dex; four cell lines, not source-verified distinct donors"
+        },
+        {
+          "requirement": "n",
+          "state": "PASS",
+          "witness": "Computed eligible count 4"
+        },
+        {
+          "requirement": "comparator",
+          "state": "PASS",
+          "witness": "Actual groups ['trt', 'untrt']"
+        },
+        {
+          "requirement": "pairing",
+          "state": "UNKNOWN",
+          "witness": "Source matched parent cell"
+        },
+        {
+          "requirement": "uncertainty",
+          "state": "PASS",
+          "witness": "Resampling/SE unit must match independent parent"
+        },
+        {
+          "requirement": "assay",
+          "state": "PASS",
+          "witness": "Claim restricted to available RNA source/metadata"
+        },
+        {
+          "requirement": "threshold",
+          "state": "PASS",
+          "witness": "Explicit protocol threshold origin, not data-derived scientific standard"
+        }
+      ]
+    },
+    "matches_control": true
+  },
+  {
+    "case_id": "airway:false_pairing",
+    "source": "airway",
+    "input": {
+      "source_hash": "741c0110963fc8f4f07304ecc166f0b32f1fa493004d41500b14364c81fc6f71",
+      "unit": "cell_line",
+      "n": 4,
+      "groups": [
+        "trt",
+        "untrt"
+      ],
+      "pairing_key": "barcode",
+      "uncertainty_unit": "cell_line",
+      "assay": "RNA",
+      "threshold": 0.05,
+      "threshold_origin": "Declared two-sided primary protocol, not a universal scientific-validity threshold"
+    },
+    "expected_control_disposition": "WITHHOLD",
+    "actual": {
+      "decision": "WITHHOLD",
+      "checks": [
+        {
+          "requirement": "source",
+          "state": "PASS",
+          "witness": "741c0110963fc8f4f07304ecc166f0b32f1fa493004d41500b14364c81fc6f71"
+        },
+        {
+          "requirement": "unit",
+          "state": "PASS",
+          "witness": "Bioconductor airway sample_table cell/dex; four cell lines, not source-verified distinct donors"
+        },
+        {
+          "requirement": "n",
+          "state": "PASS",
+          "witness": "Computed eligible count 4"
+        },
+        {
+          "requirement": "comparator",
+          "state": "PASS",
+          "witness": "Actual groups ['trt', 'untrt']"
+        },
+        {
+          "requirement": "pairing",
+          "state": "FAIL",
+          "witness": "Source matched parent cell"
+        },
+        {
+          "requirement": "uncertainty",
+          "state": "PASS",
+          "witness": "Resampling/SE unit must match independent parent"
+        },
+        {
+          "requirement": "assay",
+          "state": "PASS",
+          "witness": "Claim restricted to available RNA source/metadata"
+        },
+        {
+          "requirement": "threshold",
+          "state": "PASS",
+          "witness": "Explicit protocol threshold origin, not data-derived scientific standard"
+        }
+      ]
+    },
+    "matches_control": true
+  },
+  {
+    "case_id": "airway:missing_uncertainty",
+    "source": "airway",
+    "input": {
+      "source_hash": "741c0110963fc8f4f07304ecc166f0b32f1fa493004d41500b14364c81fc6f71",
+      "unit": "cell_line",
+      "n": 4,
+      "groups": [
+        "trt",
+        "untrt"
+      ],
+      "pairing_key": "cell",
+      "uncertainty_unit": null,
+      "assay": "RNA",
+      "threshold": 0.05,
+      "threshold_origin": "Declared two-sided primary protocol, not a universal scientific-validity threshold"
+    },
+    "expected_control_disposition": "ESCALATE",
+    "actual": {
+      "decision": "ESCALATE",
+      "checks": [
+        {
+          "requirement": "source",
+          "state": "PASS",
+          "witness": "741c0110963fc8f4f07304ecc166f0b32f1fa493004d41500b14364c81fc6f71"
+        },
+        {
+          "requirement": "unit",
+          "state": "PASS",
+          "witness": "Bioconductor airway sample_table cell/dex; four cell lines, not source-verified distinct donors"
+        },
+        {
+          "requirement": "n",
+          "state": "PASS",
+          "witness": "Computed eligible count 4"
+        },
+        {
+          "requirement": "comparator",
+          "state": "PASS",
+          "witness": "Actual groups ['trt', 'untrt']"
+        },
+        {
+          "requirement": "pairing",
+          "state": "PASS",
+          "witness": "Source matched parent cell"
+        },
+        {
+          "requirement": "uncertainty",
+          "state": "UNKNOWN",
+          "witness": "Resampling/SE unit must match independent parent"
+        },
+        {
+          "requirement": "assay",
+          "state": "PASS",
+          "witness": "Claim restricted to available RNA source/metadata"
+        },
+        {
+          "requirement": "threshold",
+          "state": "PASS",
+          "witness": "Explicit protocol threshold origin, not data-derived scientific standard"
+        }
+      ]
+    },
+    "matches_control": true
+  },
+  {
+    "case_id": "airway:cell_resampling",
+    "source": "airway",
+    "input": {
+      "source_hash": "741c0110963fc8f4f07304ecc166f0b32f1fa493004d41500b14364c81fc6f71",
+      "unit": "cell_line",
+      "n": 4,
+      "groups": [
+        "trt",
+        "untrt"
+      ],
+      "pairing_key": "cell",
+      "uncertainty_unit": "cell",
+      "assay": "RNA",
+      "threshold": 0.05,
+      "threshold_origin": "Declared two-sided primary protocol, not a universal scientific-validity threshold"
+    },
+    "expected_control_disposition": "WITHHOLD",
+    "actual": {
+      "decision": "WITHHOLD",
+      "checks": [
+        {
+          "requirement": "source",
+          "state": "PASS",
+          "witness": "741c0110963fc8f4f07304ecc166f0b32f1fa493004d41500b14364c81fc6f71"
+        },
+        {
+          "requirement": "unit",
+          "state": "PASS",
+          "witness": "Bioconductor airway sample_table cell/dex; four cell lines, not source-verified distinct donors"
+        },
+        {
+          "requirement": "n",
+          "state": "PASS",
+          "witness": "Computed eligible count 4"
+        },
+        {
+          "requirement": "comparator",
+          "state": "PASS",
+          "witness": "Actual groups ['trt', 'untrt']"
+        },
+        {
+          "requirement": "pairing",
+          "state": "PASS",
+          "witness": "Source matched parent cell"
+        },
+        {
+          "requirement": "uncertainty",
+          "state": "FAIL",
+          "witness": "Resampling/SE unit must match independent parent"
+        },
+        {
+          "requirement": "assay",
+          "state": "PASS",
+          "witness": "Claim restricted to available RNA source/metadata"
+        },
+        {
+          "requirement": "threshold",
+          "state": "PASS",
+          "witness": "Explicit protocol threshold origin, not data-derived scientific standard"
+        }
+      ]
+    },
+    "matches_control": true
+  },
+  {
+    "case_id": "airway:unsupported_ATAC",
+    "source": "airway",
+    "input": {
+      "source_hash": "741c0110963fc8f4f07304ecc166f0b32f1fa493004d41500b14364c81fc6f71",
+      "unit": "cell_line",
+      "n": 4,
+      "groups": [
+        "trt",
+        "untrt"
+      ],
+      "pairing_key": "cell",
+      "uncertainty_unit": "cell_line",
+      "assay": "RNA_ATAC",
+      "threshold": 0.05,
+      "threshold_origin": "Declared two-sided primary protocol, not a universal scientific-validity threshold"
+    },
+    "expected_control_disposition": "WITHHOLD",
+    "actual": {
+      "decision": "WITHHOLD",
+      "checks": [
+        {
+          "requirement": "source",
+          "state": "PASS",
+          "witness": "741c0110963fc8f4f07304ecc166f0b32f1fa493004d41500b14364c81fc6f71"
+        },
+        {
+          "requirement": "unit",
+          "state": "PASS",
+          "witness": "Bioconductor airway sample_table cell/dex; four cell lines, not source-verified distinct donors"
+        },
+        {
+          "requirement": "n",
+          "state": "PASS",
+          "witness": "Computed eligible count 4"
+        },
+        {
+          "requirement": "comparator",
+          "state": "PASS",
+          "witness": "Actual groups ['trt', 'untrt']"
+        },
+        {
+          "requirement": "pairing",
+          "state": "PASS",
+          "witness": "Source matched parent cell"
+        },
+        {
+          "requirement": "uncertainty",
+          "state": "PASS",
+          "witness": "Resampling/SE unit must match independent parent"
+        },
+        {
+          "requirement": "assay",
+          "state": "FAIL",
+          "witness": "Provided packet contains no verified same-cell ATAC measurement"
+        },
+        {
+          "requirement": "threshold",
+          "state": "PASS",
+          "witness": "Explicit protocol threshold origin, not data-derived scientific standard"
+        }
+      ]
+    },
+    "matches_control": true
+  },
+  {
+    "case_id": "airway:source_mismatch",
+    "source": "airway",
+    "input": {
+      "source_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "unit": "cell_line",
+      "n": 4,
+      "groups": [
+        "trt",
+        "untrt"
+      ],
+      "pairing_key": "cell",
+      "uncertainty_unit": "cell_line",
+      "assay": "RNA",
+      "threshold": 0.05,
+      "threshold_origin": "Declared two-sided primary protocol, not a universal scientific-validity threshold"
+    },
+    "expected_control_disposition": "WITHHOLD",
+    "actual": {
+      "decision": "WITHHOLD",
+      "checks": [
+        {
+          "requirement": "source",
+          "state": "FAIL",
+          "witness": "Actual source SHA256 mismatch"
+        },
+        {
+          "requirement": "unit",
+          "state": "PASS",
+          "witness": "Bioconductor airway sample_table cell/dex; four cell lines, not source-verified distinct donors"
+        },
+        {
+          "requirement": "n",
+          "state": "PASS",
+          "witness": "Computed eligible count 4"
+        },
+        {
+          "requirement": "comparator",
+          "state": "PASS",
+          "witness": "Actual groups ['trt', 'untrt']"
+        },
+        {
+          "requirement": "pairing",
+          "state": "PASS",
+          "witness": "Source matched parent cell"
+        },
+        {
+          "requirement": "uncertainty",
+          "state": "PASS",
+          "witness": "Resampling/SE unit must match independent parent"
+        },
+        {
+          "requirement": "assay",
+          "state": "PASS",
+          "witness": "Claim restricted to available RNA source/metadata"
+        },
+        {
+          "requirement": "threshold",
+          "state": "PASS",
+          "witness": "Explicit protocol threshold origin, not data-derived scientific standard"
+        }
+      ]
+    },
+    "matches_control": true
+  },
+  {
+    "case_id": "airway:missing_threshold_origin",
+    "source": "airway",
+    "input": {
+      "source_hash": "741c0110963fc8f4f07304ecc166f0b32f1fa493004d41500b14364c81fc6f71",
+      "unit": "cell_line",
+      "n": 4,
+      "groups": [
+        "trt",
+        "untrt"
+      ],
+      "pairing_key": "cell",
+      "uncertainty_unit": "cell_line",
+      "assay": "RNA",
+      "threshold": 0.05,
+      "threshold_origin": null
+    },
+    "expected_control_disposition": "ESCALATE",
+    "actual": {
+      "decision": "ESCALATE",
+      "checks": [
+        {
+          "requirement": "source",
+          "state": "PASS",
+          "witness": "741c0110963fc8f4f07304ecc166f0b32f1fa493004d41500b14364c81fc6f71"
+        },
+        {
+          "requirement": "unit",
+          "state": "PASS",
+          "witness": "Bioconductor airway sample_table cell/dex; four cell lines, not source-verified distinct donors"
+        },
+        {
+          "requirement": "n",
+          "state": "PASS",
+          "witness": "Computed eligible count 4"
+        },
+        {
+          "requirement": "comparator",
+          "state": "PASS",
+          "witness": "Actual groups ['trt', 'untrt']"
+        },
+        {
+          "requirement": "pairing",
+          "state": "PASS",
+          "witness": "Source matched parent cell"
+        },
+        {
+          "requirement": "uncertainty",
+          "state": "PASS",
+          "witness": "Resampling/SE unit must match independent parent"
+        },
+        {
+          "requirement": "assay",
+          "state": "PASS",
+          "witness": "Claim restricted to available RNA source/metadata"
+        },
+        {
+          "requirement": "threshold",
+          "state": "UNKNOWN",
+          "witness": "Explicit protocol threshold origin, not data-derived scientific standard"
+        }
+      ]
+    },
+    "matches_control": true
+  },
+  {
+    "case_id": "airway:stricter_registered_threshold",
+    "source": "airway",
+    "input": {
+      "source_hash": "741c0110963fc8f4f07304ecc166f0b32f1fa493004d41500b14364c81fc6f71",
+      "unit": "cell_line",
+      "n": 4,
+      "groups": [
+        "trt",
+        "untrt"
+      ],
+      "pairing_key": "cell",
+      "uncertainty_unit": "cell_line",
+      "assay": "RNA",
+      "threshold": 0.01,
+      "threshold_origin": "Declared two-sided primary protocol, not a universal scientific-validity threshold"
+    },
+    "expected_control_disposition": "RELEASE",
+    "actual": {
+      "decision": "RELEASE",
+      "checks": [
+        {
+          "requirement": "source",
+          "state": "PASS",
+          "witness": "741c0110963fc8f4f07304ecc166f0b32f1fa493004d41500b14364c81fc6f71"
+        },
+        {
+          "requirement": "unit",
+          "state": "PASS",
+          "witness": "Bioconductor airway sample_table cell/dex; four cell lines, not source-verified distinct donors"
+        },
+        {
+          "requirement": "n",
+          "state": "PASS",
+          "witness": "Computed eligible count 4"
+        },
+        {
+          "requirement": "comparator",
+          "state": "PASS",
+          "witness": "Actual groups ['trt', 'untrt']"
+        },
+        {
+          "requirement": "pairing",
+          "state": "PASS",
+          "witness": "Source matched parent cell"
+        },
+        {
+          "requirement": "uncertainty",
+          "state": "PASS",
+          "witness": "Resampling/SE unit must match independent parent"
+        },
+        {
+          "requirement": "assay",
+          "state": "PASS",
+          "witness": "Claim restricted to available RNA source/metadata"
+        },
+        {
+          "requirement": "threshold",
+          "state": "PASS",
+          "witness": "Explicit protocol threshold origin, not data-derived scientific standard"
+        }
+      ]
+    },
+    "matches_control": true
+  },
+  {
+    "case_id": "airway:unsupported_donor_role",
+    "source": "airway",
+    "input": {
+      "source_hash": "741c0110963fc8f4f07304ecc166f0b32f1fa493004d41500b14364c81fc6f71",
+      "unit": "donor",
+      "n": 4,
+      "groups": [
+        "trt",
+        "untrt"
+      ],
+      "pairing_key": "cell",
+      "uncertainty_unit": "cell_line",
+      "assay": "RNA",
+      "threshold": 0.05,
+      "threshold_origin": "Declared two-sided primary protocol, not a universal scientific-validity threshold"
+    },
+    "expected_control_disposition": "ESCALATE",
+    "actual": {
+      "decision": "ESCALATE",
+      "checks": [
+        {
+          "requirement": "source",
+          "state": "PASS",
+          "witness": "741c0110963fc8f4f07304ecc166f0b32f1fa493004d41500b14364c81fc6f71"
+        },
+        {
+          "requirement": "unit",
+          "state": "UNKNOWN",
+          "witness": "Source only identifies cell lines, donor equivalence unavailable"
+        },
+        {
+          "requirement": "n",
+          "state": "PASS",
+          "witness": "Computed eligible count 4"
+        },
+        {
+          "requirement": "comparator",
+          "state": "PASS",
+          "witness": "Actual groups ['trt', 'untrt']"
+        },
+        {
+          "requirement": "pairing",
+          "state": "PASS",
+          "witness": "Source matched parent cell"
+        },
+        {
+          "requirement": "uncertainty",
+          "state": "PASS",
+          "witness": "Resampling/SE unit must match independent parent"
+        },
+        {
+          "requirement": "assay",
+          "state": "PASS",
+          "witness": "Claim restricted to available RNA source/metadata"
+        },
+        {
+          "requirement": "threshold",
+          "state": "PASS",
+          "witness": "Explicit protocol threshold origin, not data-derived scientific standard"
+        }
+      ]
+    },
+    "matches_control": true
+  }
+]

@@ -1,0 +1,122 @@
+{
+  "GSE96583_batch2.total.tsne.df.tsv.gz": {
+    "header_first12": [
+      "tsne1",
+      "tsne2",
+      "ind",
+      "stim",
+      "cluster",
+      "cell",
+      "multiplets"
+    ],
+    "columns": 7,
+    "firstrow_first6": [
+      "AAACATACAATGCC-1",
+      "-4.27783307986973",
+      "-19.2947087769253",
+      "107",
+      "ctrl",
+      "5"
+    ]
+  },
+  "GSM2230757_human1_umifm_counts.csv.gz": {
+    "header_first12": [
+      "",
+      "barcode",
+      "assigned_cluster",
+      "A1BG",
+      "A1CF",
+      "A2M",
+      "A2ML1",
+      "A4GALT",
+      "A4GNT",
+      "AA06",
+      "AAAS",
+      "AACS"
+    ],
+    "columns": 20128,
+    "firstrow_first6": [
+      "human1_lib1.final_cell_0001",
+      "GATGACGGAC-GGTGGGAT",
+      "acinar",
+      "0",
+      "4",
+      "0"
+    ]
+  },
+  "GSM2230758_human2_umifm_counts.csv.gz": {
+    "header_first12": [
+      "",
+      "barcode",
+      "assigned_cluster",
+      "A1BG",
+      "A1CF",
+      "A2M",
+      "A2ML1",
+      "A4GALT",
+      "A4GNT",
+      "AA06",
+      "AAAS",
+      "AACS"
+    ],
+    "columns": 20128,
+    "firstrow_first6": [
+      "human2_lib1.final_cell_0001",
+      "TCCAGGGA-CTGGTGCA",
+      "delta",
+      "0",
+      "0",
+      "0"
+    ]
+  },
+  "GSM2230759_human3_umifm_counts.csv.gz": {
+    "header_first12": [
+      "",
+      "barcode",
+      "assigned_cluster",
+      "A1BG",
+      "A1CF",
+      "A2M",
+      "A2ML1",
+      "A4GALT",
+      "A4GNT",
+      "AA06",
+      "AAAS",
+      "AACS"
+    ],
+    "columns": 20128,
+    "firstrow_first6": [
+      "human3_lib1.final_cell_0001",
+      "TGAAAACTGGT-ATGTTGGC",
+      "acinar",
+      "0",
+      "0",
+      "0"
+    ]
+  },
+  "GSM2230760_human4_umifm_counts.csv.gz": {
+    "header_first12": [
+      "",
+      "barcode",
+      "assigned_cluster",
+      "A1BG",
+      "A1CF",
+      "A2M",
+      "A2ML1",
+      "A4GALT",
+      "A4GNT",
+      "AA06",
+      "AAAS",
+      "AACS"
+    ],
+    "columns": 20128,
+    "firstrow_first6": [
+      "human4_lib1.final_cell_0001",
+      "AATATCTTC-AGTGAAAG",
+      "ductal",
+      "0",
+      "1",
+      "0"
+    ]
+  }
+}

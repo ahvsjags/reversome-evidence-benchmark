@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "cases": 35,
+  "matched_controls": 35,
+  "valid_controls_retained": 8,
+  "source_facts_sha256": "8c70efb14ed01e21dcb4ce6ad6eaffd9c4de8ddd75cbe412cec948a919f41669",
+  "base_checks_independently_recomputed": "PASS",
+  "scope": "Source-bound controlled test extension. No independent expert labels; metadata-only packets cannot authorize measured-expression claims. Threshold validity is a frozen protocol constraint, not automatic scientific-standard discovery.",
+  "private_records_accessed": false,
+  "created_utc": "2026-11-10T22:00:08.802438+00:00"
+}

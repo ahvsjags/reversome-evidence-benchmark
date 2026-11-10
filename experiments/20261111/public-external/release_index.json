@@ -1,0 +1,92 @@
+{
+  "schema": "REVERSOME.PublicExternalReleaseParts.v251",
+  "archive_bytes": 31445492,
+  "archive_sha256": "51914b76d4d70bdd0f9db793362491e684c27b017732a88e5bf8cf1c5daf5678",
+  "public_source": "GSE286182",
+  "libraries": 10,
+  "donors": 8,
+  "cells": 70400,
+  "parts": [
+    {
+      "name": "part_000.bin",
+      "bytes": 2000000,
+      "sha256": "c632720596ace11537e3c733662770a9c7a050300bc1d588f734a16af18f5fe8"
+    },
+    {
+      "name": "part_001.bin",
+      "bytes": 2000000,
+      "sha256": "e12cf455aec1fc9a41b15ce592f2d7ec29d065d7fc414920f7e17b84c17ed31d"
+    },
+    {
+      "name": "part_002.bin",
+      "bytes": 2000000,
+      "sha256": "1cd8e2fbb2e353278361cfc418fc97d86ff58f42eeb04ddcc7faa3fc0bb49ad1"
+    },
+    {
+      "name": "part_003.bin",
+      "bytes": 2000000,
+      "sha256": "4f89166d85a311718f98cd160770dcc4aa7cebf26890c3b78061f1142d01b39b"
+    },
+    {
+      "name": "part_004.bin",
+      "bytes": 2000000,
+      "sha256": "580de7d42e62ac3b8be32f9a1ce7c3291749d8749a1d27325246b547dfb9ca38"
+    },
+    {
+      "name": "part_005.bin",
+      "bytes": 2000000,
+      "sha256": "623a281b83ce9a8dc85ee54d71541564934b81bfac6d4c87a55519b4a4796ed3"
+    },
+    {
+      "name": "part_006.bin",
+      "bytes": 2000000,
+      "sha256": "cf1f1e9537792d89664b051914f5616425861812111d41d97a75d40565b2c790"
+    },
+    {
+      "name": "part_007.bin",
+      "bytes": 2000000,
+      "sha256": "adbf88a8f50a853c13037c9caeab0450cde07c0b2b8c8a29b1ac49f46de3b17a"
+    },
+    {
+      "name": "part_008.bin",
+      "bytes": 2000000,
+      "sha256": "83a17fbf4008a24f3c7fa314eb272516ab59f3f681cef7363d13ac6041ba5c07"
+    },
+    {
+      "name": "part_009.bin",
+      "bytes": 2000000,
+      "sha256": "7b5b913247158f96c6c41a1598383c34a11e4fccf177b2c8a2c9d71e9d04accc"
+    },
+    {
+      "name": "part_010.bin",
+      "bytes": 2000000,
+      "sha256": "37f76faf0b89cc61f6062f7f2416d84d95e7e32af9b9b9a6acc967350fd01c84"
+    },
+    {
+      "name": "part_011.bin",
+      "bytes": 2000000,
+      "sha256": "24443b0056fe6e64bfd0bc24ab12daefdf865d50ae602c8a69287ebac09d5d57"
+    },
+    {
+      "name": "part_012.bin",
+      "bytes": 2000000,
+      "sha256": "20da3b5cc437cf6c4ff75589eb946d31958b3a70b45027bd7cbddf495a4c13f4"
+    },
+    {
+      "name": "part_013.bin",
+      "bytes": 2000000,
+      "sha256": "d8eb92fba15f2d7c3f29a4d7d3ad6fe4c28c92d5d31fa347637dac29fbb03282"
+    },
+    {
+      "name": "part_014.bin",
+      "bytes": 2000000,
+      "sha256": "09e9e78cb9a3b9cbc339b622872f800c8596c2c70c33269cf019765c8f3661f7"
+    },
+    {
+      "name": "part_015.bin",
+      "bytes": 1445492,
+      "sha256": "a88a3d8465adec3bc295a002f8cf83695e5f03d72d5e8e1ba55c3d46ae963a02"
+    }
+  ],
+  "scope": "Portable derived-array to frozen-model/statistic replay. Actual full FASTQ processing was completed separately on IBEX. No private hospital or expert records included."
+}

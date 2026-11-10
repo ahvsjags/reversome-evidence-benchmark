@@ -1,0 +1,307 @@
+[
+  {
+    "case_id": "836",
+    "reference_label": "NOT_ENOUGH_INFO",
+    "reference_relation_set": [
+      "NOT_ENOUGH_INFO"
+    ],
+    "source_component": 128,
+    "run_sha256": "18233afba1b51bb846817edb391d7516607de329a4acaab6ba708db9d8f6fd64",
+    "native_auto_frozen": "SUPPORT",
+    "native_auto_corrected": "SUPPORT",
+    "native_auto_actual_source_count": 5,
+    "native_auto_execution_error": null,
+    "native_required_tool_frozen": "SUPPORT",
+    "native_required_tool_corrected": "SUPPORT",
+    "native_required_tool_actual_source_count": 5,
+    "native_required_tool_execution_error": null,
+    "certificate_continuation": "SUPPORT",
+    "certificate_actual_source_count": 5
+  },
+  {
+    "case_id": "731",
+    "reference_label": "NOT_ENOUGH_INFO",
+    "reference_relation_set": [
+      "NOT_ENOUGH_INFO"
+    ],
+    "source_component": 115,
+    "run_sha256": "50e86b5636abf582fde455b2b622e460596418719ba8d793ef62caff917d3955",
+    "native_auto_frozen": "NOT_ENOUGH_INFO",
+    "native_auto_corrected": "NOT_ENOUGH_INFO",
+    "native_auto_actual_source_count": 1,
+    "native_auto_execution_error": null,
+    "native_required_tool_frozen": "NOT_ENOUGH_INFO",
+    "native_required_tool_corrected": "NOT_ENOUGH_INFO",
+    "native_required_tool_actual_source_count": 1,
+    "native_required_tool_execution_error": null,
+    "certificate_continuation": "NOT_ENOUGH_INFO",
+    "certificate_actual_source_count": 1
+  },
+  {
+    "case_id": "402",
+    "reference_label": "NOT_ENOUGH_INFO",
+    "reference_relation_set": [
+      "NOT_ENOUGH_INFO"
+    ],
+    "source_component": 65,
+    "run_sha256": "2395136efacff9070b9a394573c52c2209ff01adb4d3c2c0a7a0f6f72af12ba7",
+    "native_auto_frozen": "SUPPORT",
+    "native_auto_corrected": "NOT_ENOUGH_INFO",
+    "native_auto_actual_source_count": 3,
+    "native_auto_execution_error": null,
+    "native_required_tool_frozen": "SUPPORT",
+    "native_required_tool_corrected": "NOT_ENOUGH_INFO",
+    "native_required_tool_actual_source_count": 3,
+    "native_required_tool_execution_error": null,
+    "certificate_continuation": "NOT_ENOUGH_INFO",
+    "certificate_actual_source_count": 3
+  },
+  {
+    "case_id": "833",
+    "reference_label": "CONTRADICT",
+    "reference_relation_set": [
+      "CONTRADICT"
+    ],
+    "source_component": 127,
+    "run_sha256": "797077c723471fad62a4d76f9362292f76a31aa58978a33862b5a3c88d1fd5c4",
+    "native_auto_frozen": "SUPPORT",
+    "native_auto_corrected": "NOT_ENOUGH_INFO",
+    "native_auto_actual_source_count": 5,
+    "native_auto_execution_error": null,
+    "native_required_tool_frozen": "SUPPORT",
+    "native_required_tool_corrected": "NOT_ENOUGH_INFO",
+    "native_required_tool_actual_source_count": 5,
+    "native_required_tool_execution_error": null,
+    "certificate_continuation": "NOT_ENOUGH_INFO",
+    "certificate_actual_source_count": 5
+  },
+  {
+    "case_id": "1384",
+    "reference_label": "SUPPORT",
+    "reference_relation_set": [
+      "SUPPORT"
+    ],
+    "source_component": 219,
+    "run_sha256": "ed47fbf8c3d0a3c30c90052fdb77491804f7b12e75b5d7f10be7a7d40696bf89",
+    "native_auto_frozen": "SUPPORT",
+    "native_auto_corrected": "SUPPORT",
+    "native_auto_actual_source_count": 5,
+    "native_auto_execution_error": null,
+    "native_required_tool_frozen": "SUPPORT",
+    "native_required_tool_corrected": "SUPPORT",
+    "native_required_tool_actual_source_count": 5,
+    "native_required_tool_execution_error": null,
+    "certificate_continuation": "SUPPORT",
+    "certificate_actual_source_count": 5
+  },
+  {
+    "case_id": "958",
+    "reference_label": "SUPPORT",
+    "reference_relation_set": [
+      "SUPPORT"
+    ],
+    "source_component": 151,
+    "run_sha256": "54a989e54bc3f7e671cee6b7fa91cfb4514e24cf30be5bdb2945161bd344e844",
+    "native_auto_frozen": "NOT_ENOUGH_INFO",
+    "native_auto_corrected": "NOT_ENOUGH_INFO",
+    "native_auto_actual_source_count": 1,
+    "native_auto_execution_error": null,
+    "native_required_tool_frozen": "NOT_ENOUGH_INFO",
+    "native_required_tool_corrected": "NOT_ENOUGH_INFO",
+    "native_required_tool_actual_source_count": 1,
+    "native_required_tool_execution_error": null,
+    "certificate_continuation": "NOT_ENOUGH_INFO",
+    "certificate_actual_source_count": 1
+  },
+  {
+    "case_id": "322",
+    "reference_label": "SUPPORT",
+    "reference_relation_set": [
+      "SUPPORT"
+    ],
+    "source_component": 54,
+    "run_sha256": "af202daf6ccd61250069e89d705350c5b6cd61535b23b9440dd45eeb37f2b2e1",
+    "native_auto_frozen": "SUPPORT",
+    "native_auto_corrected": "SUPPORT",
+    "native_auto_actual_source_count": 6,
+    "native_auto_execution_error": null,
+    "native_required_tool_frozen": "SUPPORT",
+    "native_required_tool_corrected": "SUPPORT",
+    "native_required_tool_actual_source_count": 6,
+    "native_required_tool_execution_error": null,
+    "certificate_continuation": "SUPPORT",
+    "certificate_actual_source_count": 6
+  },
+  {
+    "case_id": "1217",
+    "reference_label": "NOT_ENOUGH_INFO",
+    "reference_relation_set": [
+      "NOT_ENOUGH_INFO"
+    ],
+    "source_component": 190,
+    "run_sha256": "d911816f0425fbfb1293063b7dacd07645b1b4e621b87ec05a3a6b8f24b3e91d",
+    "native_auto_frozen": "SUPPORT",
+    "native_auto_corrected": "SUPPORT",
+    "native_auto_actual_source_count": 6,
+    "native_auto_execution_error": null,
+    "native_required_tool_frozen": "SUPPORT",
+    "native_required_tool_corrected": "SUPPORT",
+    "native_required_tool_actual_source_count": 6,
+    "native_required_tool_execution_error": null,
+    "certificate_continuation": "NOT_ENOUGH_INFO",
+    "certificate_actual_source_count": 6
+  },
+  {
+    "case_id": "1167",
+    "reference_label": "NOT_ENOUGH_INFO",
+    "reference_relation_set": [
+      "NOT_ENOUGH_INFO"
+    ],
+    "source_component": 185,
+    "run_sha256": "f828eefa7a67ac27d60493e5966f35063054e49dee0b39525398f4c904a0a68b",
+    "native_auto_frozen": "NOT_ENOUGH_INFO",
+    "native_auto_corrected": "NOT_ENOUGH_INFO",
+    "native_auto_actual_source_count": 1,
+    "native_auto_execution_error": null,
+    "native_required_tool_frozen": "NOT_ENOUGH_INFO",
+    "native_required_tool_corrected": "NOT_ENOUGH_INFO",
+    "native_required_tool_actual_source_count": 1,
+    "native_required_tool_execution_error": null,
+    "certificate_continuation": "NOT_ENOUGH_INFO",
+    "certificate_actual_source_count": 1
+  },
+  {
+    "case_id": "1039",
+    "reference_label": "NOT_ENOUGH_INFO",
+    "reference_relation_set": [
+      "NOT_ENOUGH_INFO"
+    ],
+    "source_component": 163,
+    "run_sha256": "7880ad761aee19fbc21b1b8f18ec28c3d6915d8f9586cda8756b28bbdc8b8ceb",
+    "native_auto_frozen": "NOT_ENOUGH_INFO",
+    "native_auto_corrected": "NOT_ENOUGH_INFO",
+    "native_auto_actual_source_count": 4,
+    "native_auto_execution_error": null,
+    "native_required_tool_frozen": "NOT_ENOUGH_INFO",
+    "native_required_tool_corrected": "NOT_ENOUGH_INFO",
+    "native_required_tool_actual_source_count": 4,
+    "native_required_tool_execution_error": null,
+    "certificate_continuation": "SUPPORT",
+    "certificate_actual_source_count": 4
+  },
+  {
+    "case_id": "1396",
+    "reference_label": "NOT_ENOUGH_INFO",
+    "reference_relation_set": [
+      "NOT_ENOUGH_INFO"
+    ],
+    "source_component": 221,
+    "run_sha256": "0c3258e4cf9f3ab55a0227441efa993bfb268a0cf013677bc7bfe3454b2fb294",
+    "native_auto_frozen": "SUPPORT",
+    "native_auto_corrected": "SUPPORT",
+    "native_auto_actual_source_count": 5,
+    "native_auto_execution_error": null,
+    "native_required_tool_frozen": "SUPPORT",
+    "native_required_tool_corrected": "SUPPORT",
+    "native_required_tool_actual_source_count": 5,
+    "native_required_tool_execution_error": null,
+    "certificate_continuation": "SUPPORT",
+    "certificate_actual_source_count": 5
+  },
+  {
+    "case_id": "207",
+    "reference_label": "MIXED_SOURCE_RELATIONS",
+    "reference_relation_set": [
+      "CONTRADICT",
+      "SUPPORT"
+    ],
+    "source_component": 34,
+    "run_sha256": "91eafa6ca25c25512854e17f05042eb576018fd2ad655046180147533abded1c",
+    "native_auto_frozen": "SUPPORT",
+    "native_auto_corrected": "SUPPORT",
+    "native_auto_actual_source_count": 6,
+    "native_auto_execution_error": null,
+    "native_required_tool_frozen": "SUPPORT",
+    "native_required_tool_corrected": "SUPPORT",
+    "native_required_tool_actual_source_count": 6,
+    "native_required_tool_execution_error": null,
+    "certificate_continuation": "SUPPORT",
+    "certificate_actual_source_count": 6
+  },
+  {
+    "case_id": "675",
+    "reference_label": "NOT_ENOUGH_INFO",
+    "reference_relation_set": [
+      "NOT_ENOUGH_INFO"
+    ],
+    "source_component": 106,
+    "run_sha256": "cebae8ac87ccb22b0d3e4fc8ebbd95292b39bac7751a3187b125615d14acff90",
+    "native_auto_frozen": "SUPPORT",
+    "native_auto_corrected": "SUPPORT",
+    "native_auto_actual_source_count": 6,
+    "native_auto_execution_error": null,
+    "native_required_tool_frozen": "SUPPORT",
+    "native_required_tool_corrected": "SUPPORT",
+    "native_required_tool_actual_source_count": 6,
+    "native_required_tool_execution_error": null,
+    "certificate_continuation": "SUPPORT",
+    "certificate_actual_source_count": 6
+  },
+  {
+    "case_id": "701",
+    "reference_label": "NOT_ENOUGH_INFO",
+    "reference_relation_set": [
+      "NOT_ENOUGH_INFO"
+    ],
+    "source_component": 111,
+    "run_sha256": "da34d06ee4f0ee51406a0eaa07a7609811d26ef9b77671371124dca316fc7f07",
+    "native_auto_frozen": "NOT_ENOUGH_INFO",
+    "native_auto_corrected": "NOT_ENOUGH_INFO",
+    "native_auto_actual_source_count": 0,
+    "native_auto_execution_error": null,
+    "native_required_tool_frozen": "NOT_ENOUGH_INFO",
+    "native_required_tool_corrected": "NOT_ENOUGH_INFO",
+    "native_required_tool_actual_source_count": 0,
+    "native_required_tool_execution_error": null,
+    "certificate_continuation": "NOT_ENOUGH_INFO",
+    "certificate_actual_source_count": 0
+  },
+  {
+    "case_id": "1064",
+    "reference_label": "SUPPORT",
+    "reference_relation_set": [
+      "SUPPORT"
+    ],
+    "source_component": 167,
+    "run_sha256": "5d747b8ce05b14790bd71c50532599f25ea1cdd2e27cd72e2538de45387cd580",
+    "native_auto_frozen": "SUPPORT",
+    "native_auto_corrected": "SUPPORT",
+    "native_auto_actual_source_count": 6,
+    "native_auto_execution_error": null,
+    "native_required_tool_frozen": "SUPPORT",
+    "native_required_tool_corrected": "SUPPORT",
+    "native_required_tool_actual_source_count": 6,
+    "native_required_tool_execution_error": null,
+    "certificate_continuation": "SUPPORT",
+    "certificate_actual_source_count": 6
+  },
+  {
+    "case_id": "1061",
+    "reference_label": "SUPPORT",
+    "reference_relation_set": [
+      "SUPPORT"
+    ],
+    "source_component": 166,
+    "run_sha256": "e04d7a819b372d53eba7aac2deb5ac30034312819845092f9bf29bb07b21cdf0",
+    "native_auto_frozen": "NOT_ENOUGH_INFO",
+    "native_auto_corrected": "NOT_ENOUGH_INFO",
+    "native_auto_actual_source_count": 1,
+    "native_auto_execution_error": null,
+    "native_required_tool_frozen": "NOT_ENOUGH_INFO",
+    "native_required_tool_corrected": "NOT_ENOUGH_INFO",
+    "native_required_tool_actual_source_count": 1,
+    "native_required_tool_execution_error": null,
+    "certificate_continuation": "NOT_ENOUGH_INFO",
+    "certificate_actual_source_count": 1
+  }
+]

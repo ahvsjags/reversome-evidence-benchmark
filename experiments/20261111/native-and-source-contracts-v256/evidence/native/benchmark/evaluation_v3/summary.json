@@ -1,0 +1,184 @@
+{
+  "status": "PASS",
+  "cases": 16,
+  "source_components": 16,
+  "single_label_subset_n": 15,
+  "mixed_source_relation_cases": [
+    "207"
+  ],
+  "reference_distribution": {
+    "NOT_ENOUGH_INFO": 9,
+    "CONTRADICT": 1,
+    "SUPPORT": 5
+  },
+  "metrics": {
+    "native_auto_frozen": {
+      "single_label_subset_n": 15,
+      "all16_reference_set_compatibility": 0.5,
+      "reference_agreement": 0.4666666666666667,
+      "macro_F1_3declaredclasses": 0.3206349206349206,
+      "confusion_order": [
+        "SUPPORT",
+        "CONTRADICT",
+        "NOT_ENOUGH_INFO"
+      ],
+      "confusion_matrix": [
+        [
+          3,
+          0,
+          2
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          5,
+          0,
+          4
+        ]
+      ],
+      "SUPPORT_calls": 9,
+      "SUPPORT_matching_reference": 3,
+      "SUPPORT_not_matching_reference": 6
+    },
+    "native_required_tool_frozen": {
+      "single_label_subset_n": 15,
+      "all16_reference_set_compatibility": 0.5,
+      "reference_agreement": 0.4666666666666667,
+      "macro_F1_3declaredclasses": 0.3206349206349206,
+      "confusion_order": [
+        "SUPPORT",
+        "CONTRADICT",
+        "NOT_ENOUGH_INFO"
+      ],
+      "confusion_matrix": [
+        [
+          3,
+          0,
+          2
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          5,
+          0,
+          4
+        ]
+      ],
+      "SUPPORT_calls": 9,
+      "SUPPORT_matching_reference": 3,
+      "SUPPORT_not_matching_reference": 6
+    },
+    "native_auto_corrected": {
+      "single_label_subset_n": 15,
+      "all16_reference_set_compatibility": 0.5625,
+      "reference_agreement": 0.5333333333333333,
+      "macro_F1_3declaredclasses": 0.36274509803921573,
+      "confusion_order": [
+        "SUPPORT",
+        "CONTRADICT",
+        "NOT_ENOUGH_INFO"
+      ],
+      "confusion_matrix": [
+        [
+          3,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          5
+        ]
+      ],
+      "SUPPORT_calls": 7,
+      "SUPPORT_matching_reference": 3,
+      "SUPPORT_not_matching_reference": 4
+    },
+    "native_required_tool_corrected": {
+      "single_label_subset_n": 15,
+      "all16_reference_set_compatibility": 0.5625,
+      "reference_agreement": 0.5333333333333333,
+      "macro_F1_3declaredclasses": 0.36274509803921573,
+      "confusion_order": [
+        "SUPPORT",
+        "CONTRADICT",
+        "NOT_ENOUGH_INFO"
+      ],
+      "confusion_matrix": [
+        [
+          3,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          5
+        ]
+      ],
+      "SUPPORT_calls": 7,
+      "SUPPORT_matching_reference": 3,
+      "SUPPORT_not_matching_reference": 4
+    },
+    "certificate_continuation": {
+      "single_label_subset_n": 15,
+      "all16_reference_set_compatibility": 0.5625,
+      "reference_agreement": 0.5333333333333333,
+      "macro_F1_3declaredclasses": 0.36274509803921573,
+      "confusion_order": [
+        "SUPPORT",
+        "CONTRADICT",
+        "NOT_ENOUGH_INFO"
+      ],
+      "confusion_matrix": [
+        [
+          3,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          5
+        ]
+      ],
+      "SUPPORT_calls": 7,
+      "SUPPORT_matching_reference": 3,
+      "SUPPORT_not_matching_reference": 4
+    }
+  },
+  "certificate_minus_required_corrected_reference_agreement": {
+    "difference": 0.0,
+    "paired_component_bootstrap95CI": [
+      -0.1875,
+      0.1875
+    ]
+  },
+  "integrity_passed": 647,
+  "integrity_total": 647,
+  "scope": "Native published verification component with declared Qwen provider/JSON transport and two original tools. Not full GeneAgent cascade or published GPT4 reproduction. Existing public source-heldout subset, not untouched confirmation. Reference-label agreement is not independent expert adjudication of newly retrieved 2026 literature.",
+  "readout_repair": "Frozen and generic negation-corrected readouts both retained; no execution outcomes modified.",
+  "private_records_accessed": false,
+  "manuscript_modified": false
+}

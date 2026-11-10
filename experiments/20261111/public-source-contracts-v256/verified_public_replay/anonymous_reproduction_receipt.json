@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "created_utc": "2026-11-10T22:05:23.542902+00:00",
+  "commit": "668c1c4eace973685e5f97ed09692cd880b5390c",
+  "checks": {
+    "donor_pseudobulk_counts.json_identical": true,
+    "prespecified_marker_results.json_identical": true,
+    "validation_PASS": true,
+    "independent_check_PASS": true,
+    "scientific_extension_v256_1_PASS": true
+  },
+  "fresh_public_code_download": true,
+  "fresh_public_input_download": true,
+  "credentials_used": false,
+  "private_records_accessed": false
+}

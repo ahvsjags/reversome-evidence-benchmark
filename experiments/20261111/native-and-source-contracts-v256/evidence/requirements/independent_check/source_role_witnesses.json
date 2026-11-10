@@ -1,0 +1,29 @@
+[
+  {
+    "name": "baron_curator",
+    "url": "https://genome.ucsc.edu/cgi-bin/hgTrackUi?db=hg38&g=pancreasBaron",
+    "sha256": "7202aac7f77ca0af44036f3555c4c59904d18989c999ca92b045332f015a1abe",
+    "bytes": 813,
+    "status": "DOWNLOADED"
+  },
+  {
+    "name": "baron_recipe",
+    "url": "https://rdrr.io/github/drisso/scRNAseq/f/inst/scripts/2.0.0/make-baron-pancreas-data.Rmd",
+    "sha256": "9e1cefc76d3bb2e97924e23561daa020466747f4b7acbd3c26124e640fcd7b3b",
+    "bytes": 35621,
+    "status": "DOWNLOADED"
+  },
+  {
+    "name": "airway_package",
+    "url": "https://bioconductor.org/packages/release/data/experiment/html/airway.html",
+    "status": "FAILED",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "name": "pbmc_GEO",
+    "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE96583",
+    "sha256": "24f1f059090866cf878babe29642a6119878d065ecdf6517a23cb45b48580142",
+    "bytes": 21477,
+    "status": "DOWNLOADED"
+  }
+]

@@ -1,0 +1,274 @@
+{
+  "schema": "REVERSOME.B6.AbsoluteLatentErrorBaseline.v1",
+  "created_utc": "2026-11-10T18:39:59.351746+00:00",
+  "status": "PASS",
+  "checks": {
+    "0b689c7052f5e12b_valid_shapes": true,
+    "0b689c7052f5e12b_direct_sum_MAE_recompute": true,
+    "0b689c7052f5e12b_direct_squared_RMSE_recompute": true,
+    "24f46e0b48d4aa32_valid_shapes": true,
+    "24f46e0b48d4aa32_direct_sum_MAE_recompute": true,
+    "24f46e0b48d4aa32_direct_squared_RMSE_recompute": true,
+    "2ff48ce8eb9e2cbb_valid_shapes": true,
+    "2ff48ce8eb9e2cbb_direct_sum_MAE_recompute": true,
+    "2ff48ce8eb9e2cbb_direct_squared_RMSE_recompute": true,
+    "37f64a06e25fbc35_valid_shapes": true,
+    "37f64a06e25fbc35_direct_sum_MAE_recompute": true,
+    "37f64a06e25fbc35_direct_squared_RMSE_recompute": true,
+    "43160870ebd813c9_valid_shapes": true,
+    "43160870ebd813c9_direct_sum_MAE_recompute": true,
+    "43160870ebd813c9_direct_squared_RMSE_recompute": true,
+    "4cbd27ec6506192b_valid_shapes": true,
+    "4cbd27ec6506192b_direct_sum_MAE_recompute": true,
+    "4cbd27ec6506192b_direct_squared_RMSE_recompute": true,
+    "94795c14c5dc7f13_valid_shapes": true,
+    "94795c14c5dc7f13_direct_sum_MAE_recompute": true,
+    "94795c14c5dc7f13_direct_squared_RMSE_recompute": true,
+    "99f829d6187f805c_valid_shapes": true,
+    "99f829d6187f805c_direct_sum_MAE_recompute": true,
+    "99f829d6187f805c_direct_squared_RMSE_recompute": true,
+    "f696bc26f2f888be_valid_shapes": true,
+    "f696bc26f2f888be_direct_sum_MAE_recompute": true,
+    "f696bc26f2f888be_direct_squared_RMSE_recompute": true,
+    "f7b423e15388345c_valid_shapes": true,
+    "f7b423e15388345c_direct_sum_MAE_recompute": true,
+    "f7b423e15388345c_direct_squared_RMSE_recompute": true,
+    "all10_samples8donors": true
+  },
+  "samples": [
+    {
+      "sample_ref": "0b689c7052f5e12b",
+      "subject_ref": "a987ee8b36045b12",
+      "n_cells": 6429,
+      "latent_dimensions": 16,
+      "frozen_model_MAE": 0.8985106619476224,
+      "frozen_model_RMSE": 1.3503698428177808,
+      "frozen_training_mean_baseline_MAE": 0.9179474820038541,
+      "frozen_training_mean_baseline_RMSE": 1.4430282495940903,
+      "model_minus_mean_MAE": -0.019436820056231707,
+      "model_minus_mean_RMSE": -0.09265840677630943
+    },
+    {
+      "sample_ref": "24f46e0b48d4aa32",
+      "subject_ref": "fdc895a889d168df",
+      "n_cells": 9479,
+      "latent_dimensions": 16,
+      "frozen_model_MAE": 0.8151422155286009,
+      "frozen_model_RMSE": 1.249949487183094,
+      "frozen_training_mean_baseline_MAE": 0.8540243954097714,
+      "frozen_training_mean_baseline_RMSE": 1.4136887235696332,
+      "model_minus_mean_MAE": -0.03888217988117049,
+      "model_minus_mean_RMSE": -0.1637392363865391
+    },
+    {
+      "sample_ref": "2ff48ce8eb9e2cbb",
+      "subject_ref": "e86b2c1fe75303aa",
+      "n_cells": 8833,
+      "latent_dimensions": 16,
+      "frozen_model_MAE": 0.8702064739590278,
+      "frozen_model_RMSE": 1.3551075202430711,
+      "frozen_training_mean_baseline_MAE": 0.8874266150946509,
+      "frozen_training_mean_baseline_RMSE": 1.4490455291461963,
+      "model_minus_mean_MAE": -0.01722014113562309,
+      "model_minus_mean_RMSE": -0.0939380089031252
+    },
+    {
+      "sample_ref": "37f64a06e25fbc35",
+      "subject_ref": "862570583e89ca8a",
+      "n_cells": 7630,
+      "latent_dimensions": 16,
+      "frozen_model_MAE": 0.8384382333514347,
+      "frozen_model_RMSE": 1.2624200787725475,
+      "frozen_training_mean_baseline_MAE": 0.8714885836501128,
+      "frozen_training_mean_baseline_RMSE": 1.4023693473146996,
+      "model_minus_mean_MAE": -0.03305035029867809,
+      "model_minus_mean_RMSE": -0.13994926854215217
+    },
+    {
+      "sample_ref": "43160870ebd813c9",
+      "subject_ref": "d167b1704324f8b1",
+      "n_cells": 10692,
+      "latent_dimensions": 16,
+      "frozen_model_MAE": 0.8777897261018048,
+      "frozen_model_RMSE": 1.2356128698750537,
+      "frozen_training_mean_baseline_MAE": 0.9078377127459805,
+      "frozen_training_mean_baseline_RMSE": 1.3216944066872167,
+      "model_minus_mean_MAE": -0.030047986644175628,
+      "model_minus_mean_RMSE": -0.08608153681216302
+    },
+    {
+      "sample_ref": "4cbd27ec6506192b",
+      "subject_ref": "ba6522a58f2a2b31",
+      "n_cells": 5647,
+      "latent_dimensions": 16,
+      "frozen_model_MAE": 0.8952022800171362,
+      "frozen_model_RMSE": 1.2373012576263551,
+      "frozen_training_mean_baseline_MAE": 0.9229804224970467,
+      "frozen_training_mean_baseline_RMSE": 1.3194859072180851,
+      "model_minus_mean_MAE": -0.027778142479910506,
+      "model_minus_mean_RMSE": -0.08218464959173
+    },
+    {
+      "sample_ref": "94795c14c5dc7f13",
+      "subject_ref": "80c5f9e682966f7a",
+      "n_cells": 2070,
+      "latent_dimensions": 16,
+      "frozen_model_MAE": 0.9881445013922235,
+      "frozen_model_RMSE": 1.3328711620289264,
+      "frozen_training_mean_baseline_MAE": 1.007338996004454,
+      "frozen_training_mean_baseline_RMSE": 1.3846924160967677,
+      "model_minus_mean_MAE": -0.01919449461223055,
+      "model_minus_mean_RMSE": -0.05182125406784133
+    },
+    {
+      "sample_ref": "99f829d6187f805c",
+      "subject_ref": "a987ee8b36045b12",
+      "n_cells": 9578,
+      "latent_dimensions": 16,
+      "frozen_model_MAE": 1.0215076649927546,
+      "frozen_model_RMSE": 1.3968921091931479,
+      "frozen_training_mean_baseline_MAE": 1.0148493579282396,
+      "frozen_training_mean_baseline_RMSE": 1.3871367275504347,
+      "model_minus_mean_MAE": 0.006658307064514979,
+      "model_minus_mean_RMSE": 0.009755381642713168
+    },
+    {
+      "sample_ref": "f696bc26f2f888be",
+      "subject_ref": "69ced8f5955fbb3c",
+      "n_cells": 4575,
+      "latent_dimensions": 16,
+      "frozen_model_MAE": 0.9700459729289136,
+      "frozen_model_RMSE": 1.3213199513892484,
+      "frozen_training_mean_baseline_MAE": 0.9691422280155202,
+      "frozen_training_mean_baseline_RMSE": 1.3310768370255464,
+      "model_minus_mean_MAE": 0.0009037449133934006,
+      "model_minus_mean_RMSE": -0.009756885636297952
+    },
+    {
+      "sample_ref": "f7b423e15388345c",
+      "subject_ref": "fdc895a889d168df",
+      "n_cells": 5467,
+      "latent_dimensions": 16,
+      "frozen_model_MAE": 0.9274391029394037,
+      "frozen_model_RMSE": 1.313036311116998,
+      "frozen_training_mean_baseline_MAE": 0.9437319816896672,
+      "frozen_training_mean_baseline_RMSE": 1.3809047943701138,
+      "model_minus_mean_MAE": -0.01629287875026353,
+      "model_minus_mean_RMSE": -0.06786848325311579
+    }
+  ],
+  "donors": {
+    "69ced8f5955fbb3c": {
+      "frozen_model_MAE": 0.9700459729289136,
+      "frozen_model_RMSE": 1.3213199513892484,
+      "frozen_training_mean_baseline_MAE": 0.9691422280155202,
+      "frozen_training_mean_baseline_RMSE": 1.3310768370255464,
+      "model_minus_mean_MAE": 0.0009037449133934006,
+      "model_minus_mean_RMSE": -0.009756885636297952
+    },
+    "80c5f9e682966f7a": {
+      "frozen_model_MAE": 0.9881445013922235,
+      "frozen_model_RMSE": 1.3328711620289264,
+      "frozen_training_mean_baseline_MAE": 1.007338996004454,
+      "frozen_training_mean_baseline_RMSE": 1.3846924160967677,
+      "model_minus_mean_MAE": -0.01919449461223055,
+      "model_minus_mean_RMSE": -0.05182125406784133
+    },
+    "862570583e89ca8a": {
+      "frozen_model_MAE": 0.8384382333514347,
+      "frozen_model_RMSE": 1.2624200787725475,
+      "frozen_training_mean_baseline_MAE": 0.8714885836501128,
+      "frozen_training_mean_baseline_RMSE": 1.4023693473146996,
+      "model_minus_mean_MAE": -0.03305035029867809,
+      "model_minus_mean_RMSE": -0.13994926854215217
+    },
+    "a987ee8b36045b12": {
+      "frozen_model_MAE": 0.9600091634701885,
+      "frozen_model_RMSE": 1.3736309760054644,
+      "frozen_training_mean_baseline_MAE": 0.9663984199660469,
+      "frozen_training_mean_baseline_RMSE": 1.4150824885722626,
+      "model_minus_mean_MAE": -0.006389256495858364,
+      "model_minus_mean_RMSE": -0.04145151256679813
+    },
+    "ba6522a58f2a2b31": {
+      "frozen_model_MAE": 0.8952022800171362,
+      "frozen_model_RMSE": 1.2373012576263551,
+      "frozen_training_mean_baseline_MAE": 0.9229804224970467,
+      "frozen_training_mean_baseline_RMSE": 1.3194859072180851,
+      "model_minus_mean_MAE": -0.027778142479910506,
+      "model_minus_mean_RMSE": -0.08218464959173
+    },
+    "d167b1704324f8b1": {
+      "frozen_model_MAE": 0.8777897261018048,
+      "frozen_model_RMSE": 1.2356128698750537,
+      "frozen_training_mean_baseline_MAE": 0.9078377127459805,
+      "frozen_training_mean_baseline_RMSE": 1.3216944066872167,
+      "model_minus_mean_MAE": -0.030047986644175628,
+      "model_minus_mean_RMSE": -0.08608153681216302
+    },
+    "e86b2c1fe75303aa": {
+      "frozen_model_MAE": 0.8702064739590278,
+      "frozen_model_RMSE": 1.3551075202430711,
+      "frozen_training_mean_baseline_MAE": 0.8874266150946509,
+      "frozen_training_mean_baseline_RMSE": 1.4490455291461963,
+      "model_minus_mean_MAE": -0.01722014113562309,
+      "model_minus_mean_RMSE": -0.0939380089031252
+    },
+    "fdc895a889d168df": {
+      "frozen_model_MAE": 0.8712906592340023,
+      "frozen_model_RMSE": 1.281492899150046,
+      "frozen_training_mean_baseline_MAE": 0.8988781885497192,
+      "frozen_training_mean_baseline_RMSE": 1.3972967589698735,
+      "model_minus_mean_MAE": -0.027587529315717008,
+      "model_minus_mean_RMSE": -0.11580385981982744
+    }
+  },
+  "summary": {
+    "frozen_model_MAE": {
+      "donor_equal_mean": 0.9088908763068414,
+      "donor_bootstrap95CI": [
+        0.8746745318724051,
+        0.9455900084316287
+      ]
+    },
+    "frozen_model_RMSE": {
+      "donor_equal_mean": 1.2999695893863392,
+      "donor_bootstrap95CI": [
+        1.2660845435107213,
+        1.3346585096796098
+      ]
+    },
+    "frozen_training_mean_baseline_MAE": {
+      "donor_equal_mean": 0.9289363958154414,
+      "donor_bootstrap95CI": [
+        0.9000598948828238,
+        0.9601512805440116
+      ]
+    },
+    "frozen_training_mean_baseline_RMSE": {
+      "donor_equal_mean": 1.3775929613788311,
+      "donor_bootstrap95CI": [
+        1.3465091437838441,
+        1.40852074083182
+      ]
+    },
+    "model_minus_mean_MAE": {
+      "donor_equal_mean": -0.02004551950859998,
+      "donor_bootstrap95CI": [
+        -0.027247165133982173,
+        -0.011764783389571473
+      ]
+    },
+    "model_minus_mean_RMSE": {
+      "donor_equal_mean": -0.0776233719924919,
+      "donor_bootstrap95CI": [
+        -0.10393136265364226,
+        -0.050265403831979374
+      ]
+    }
+  },
+  "baseline": "Zero in centered frozen ATAC-PCA coordinates represents the training-mean standardized ATAC state, without reading external target data or fitting an intercept on it.",
+  "unit": "Mean absolute or root mean squared error per frozen ATAC latent coordinate; not genome-wide peak reconstruction, clinical error, or raw ATAC-count error. Equal sample weight within each donor and equal donor weight across8 donors.",
+  "scope": "Post-result exploratory absolute-error context, not preregistered confirmatory testing; scientific negative comparisons are retained. No new model fitting or model/feature/threshold selection.",
+  "source_score_sha256": "97fad3a3dd9439bb48e1f56e3dcd08721f067038e524d8fb8d07729c8c3e53be"
+}

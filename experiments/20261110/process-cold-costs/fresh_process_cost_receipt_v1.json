@@ -1,0 +1,207 @@
+{
+  "schema": "REVERSOME.B3.FreshProcessActualCosts.v1",
+  "created_utc": "2026-11-10T15:03:33.257914+00:00",
+  "status": "PASS",
+  "checks": {
+    "0_fixed3_278claims": true,
+    "0_fixed3_same_scientific_F1": true,
+    "0_fixed3_actual_cost_positive": true,
+    "0_source_active_278claims": true,
+    "0_source_active_same_scientific_F1": true,
+    "0_source_active_actual_cost_positive": true,
+    "1_source_active_278claims": true,
+    "1_source_active_same_scientific_F1": true,
+    "1_source_active_actual_cost_positive": true,
+    "1_fixed3_278claims": true,
+    "1_fixed3_same_scientific_F1": true,
+    "1_fixed3_actual_cost_positive": true,
+    "2_fixed3_278claims": true,
+    "2_fixed3_same_scientific_F1": true,
+    "2_fixed3_actual_cost_positive": true,
+    "2_source_active_278claims": true,
+    "2_source_active_same_scientific_F1": true,
+    "2_source_active_actual_cost_positive": true
+  },
+  "records": [
+    {
+      "repeat": 0,
+      "policy": "fixed3",
+      "whole_process_wall_seconds": 200.54228907078505,
+      "whole_process_CPU_seconds_including_waited_descendants": 830.772272,
+      "worker_receipt": {
+        "policy": "fixed3",
+        "fresh_process_setup_seconds": 144.1569274198264,
+        "source_pool_initialization_seconds": 0.0,
+        "inner_setup_workload_shutdown_seconds": 198.55644715204835,
+        "workload": {
+          "repeat": 0,
+          "policy": "fixed3",
+          "wall_seconds": 54.39242073893547,
+          "CPU_seconds": 695.2959434659999,
+          "CPU_seconds_parent": 695.295970356,
+          "CPU_seconds_source_children": 0.0,
+          "logical_NLI_pairs": 1519,
+          "actual_NLI_pairs_including_numeric_fallbacks": 1519,
+          "numeric_fallback_requests": 0,
+          "source_alignment_claims_executed": 0,
+          "neural_threads_restored": 16
+        },
+        "audited_source_sha256": "426c33a69b30f95bc51560d74e826a34fdac2c824ffe28bdf65e3e153e3b918c",
+        "unchanged_action_body_sha256": "5880cc59ea413f6ceb330c102db4798396f6532cc11b298de6205163ecdf40cc",
+        "no_test_keys_opened": true
+      }
+    },
+    {
+      "repeat": 0,
+      "policy": "source_active",
+      "whole_process_wall_seconds": 171.16475038975477,
+      "whole_process_CPU_seconds_including_waited_descendants": 406.3231249999998,
+      "worker_receipt": {
+        "policy": "source_active",
+        "fresh_process_setup_seconds": 146.524850461632,
+        "source_pool_initialization_seconds": 7.945677889510989,
+        "inner_setup_workload_shutdown_seconds": 168.78275805339217,
+        "workload": {
+          "repeat": 0,
+          "policy": "source_active",
+          "wall_seconds": 22.03619915805757,
+          "CPU_seconds": 265.01877170800003,
+          "CPU_seconds_parent": 253.94930276,
+          "CPU_seconds_source_children": 11.07,
+          "logical_NLI_pairs": 938,
+          "actual_NLI_pairs_including_numeric_fallbacks": 938,
+          "numeric_fallback_requests": 0,
+          "source_alignment_claims_executed": 188,
+          "neural_threads_restored": 16
+        },
+        "audited_source_sha256": "426c33a69b30f95bc51560d74e826a34fdac2c824ffe28bdf65e3e153e3b918c",
+        "unchanged_action_body_sha256": "5880cc59ea413f6ceb330c102db4798396f6532cc11b298de6205163ecdf40cc",
+        "no_test_keys_opened": true
+      }
+    },
+    {
+      "repeat": 1,
+      "policy": "source_active",
+      "whole_process_wall_seconds": 150.76911444962025,
+      "whole_process_CPU_seconds_including_waited_descendants": 329.6828390000002,
+      "worker_receipt": {
+        "policy": "source_active",
+        "fresh_process_setup_seconds": 132.46352890506387,
+        "source_pool_initialization_seconds": 7.610239688307047,
+        "inner_setup_workload_shutdown_seconds": 148.5980273000896,
+        "workload": {
+          "repeat": 0,
+          "policy": "source_active",
+          "wall_seconds": 15.932366412132978,
+          "CPU_seconds": 200.95957238100002,
+          "CPU_seconds_parent": 191.14010821199997,
+          "CPU_seconds_source_children": 9.819999999999999,
+          "logical_NLI_pairs": 938,
+          "actual_NLI_pairs_including_numeric_fallbacks": 938,
+          "numeric_fallback_requests": 0,
+          "source_alignment_claims_executed": 188,
+          "neural_threads_restored": 16
+        },
+        "audited_source_sha256": "426c33a69b30f95bc51560d74e826a34fdac2c824ffe28bdf65e3e153e3b918c",
+        "unchanged_action_body_sha256": "5880cc59ea413f6ceb330c102db4798396f6532cc11b298de6205163ecdf40cc",
+        "no_test_keys_opened": true
+      }
+    },
+    {
+      "repeat": 1,
+      "policy": "fixed3",
+      "whole_process_wall_seconds": 141.60041722282767,
+      "whole_process_CPU_seconds_including_waited_descendants": 372.6581309999999,
+      "worker_receipt": {
+        "policy": "fixed3",
+        "fresh_process_setup_seconds": 121.90588880702853,
+        "source_pool_initialization_seconds": 0.0,
+        "inner_setup_workload_shutdown_seconds": 139.7041333913803,
+        "workload": {
+          "repeat": 0,
+          "policy": "fixed3",
+          "wall_seconds": 17.791990395635366,
+          "CPU_seconds": 254.656793511,
+          "CPU_seconds_parent": 254.65680761599998,
+          "CPU_seconds_source_children": 0.0,
+          "logical_NLI_pairs": 1519,
+          "actual_NLI_pairs_including_numeric_fallbacks": 1519,
+          "numeric_fallback_requests": 0,
+          "source_alignment_claims_executed": 0,
+          "neural_threads_restored": 16
+        },
+        "audited_source_sha256": "426c33a69b30f95bc51560d74e826a34fdac2c824ffe28bdf65e3e153e3b918c",
+        "unchanged_action_body_sha256": "5880cc59ea413f6ceb330c102db4798396f6532cc11b298de6205163ecdf40cc",
+        "no_test_keys_opened": true
+      }
+    },
+    {
+      "repeat": 2,
+      "policy": "fixed3",
+      "whole_process_wall_seconds": 147.23860215209424,
+      "whole_process_CPU_seconds_including_waited_descendants": 379.9648380000001,
+      "worker_receipt": {
+        "policy": "fixed3",
+        "fresh_process_setup_seconds": 127.44851177185774,
+        "source_pool_initialization_seconds": 0.0,
+        "inner_setup_workload_shutdown_seconds": 145.41880997270346,
+        "workload": {
+          "repeat": 0,
+          "policy": "fixed3",
+          "wall_seconds": 17.964517563581467,
+          "CPU_seconds": 256.78686602999994,
+          "CPU_seconds_parent": 256.786894138,
+          "CPU_seconds_source_children": 0.0,
+          "logical_NLI_pairs": 1519,
+          "actual_NLI_pairs_including_numeric_fallbacks": 1519,
+          "numeric_fallback_requests": 0,
+          "source_alignment_claims_executed": 0,
+          "neural_threads_restored": 16
+        },
+        "audited_source_sha256": "426c33a69b30f95bc51560d74e826a34fdac2c824ffe28bdf65e3e153e3b918c",
+        "unchanged_action_body_sha256": "5880cc59ea413f6ceb330c102db4798396f6532cc11b298de6205163ecdf40cc",
+        "no_test_keys_opened": true
+      }
+    },
+    {
+      "repeat": 2,
+      "policy": "source_active",
+      "whole_process_wall_seconds": 152.7001905478537,
+      "whole_process_CPU_seconds_including_waited_descendants": 337.15406299999984,
+      "worker_receipt": {
+        "policy": "source_active",
+        "fresh_process_setup_seconds": 132.129966404289,
+        "source_pool_initialization_seconds": 6.098764814436436,
+        "inner_setup_workload_shutdown_seconds": 150.5225477721542,
+        "workload": {
+          "repeat": 0,
+          "policy": "source_active",
+          "wall_seconds": 18.17934830673039,
+          "CPU_seconds": 206.67634251699997,
+          "CPU_seconds_parent": 195.691888688,
+          "CPU_seconds_source_children": 11.000000000000002,
+          "logical_NLI_pairs": 938,
+          "actual_NLI_pairs_including_numeric_fallbacks": 938,
+          "numeric_fallback_requests": 0,
+          "source_alignment_claims_executed": 188,
+          "neural_threads_restored": 16
+        },
+        "audited_source_sha256": "426c33a69b30f95bc51560d74e826a34fdac2c824ffe28bdf65e3e153e3b918c",
+        "unchanged_action_body_sha256": "5880cc59ea413f6ceb330c102db4798396f6532cc11b298de6205163ecdf40cc",
+        "no_test_keys_opened": true
+      }
+    }
+  ],
+  "medians": {
+    "fixed3": {
+      "whole_process_wall_seconds": 147.23860215209424,
+      "whole_process_CPU_seconds_including_waited_descendants": 379.9648380000001
+    },
+    "source_active": {
+      "whole_process_wall_seconds": 152.7001905478537,
+      "whole_process_CPU_seconds_including_waited_descendants": 337.15406299999984
+    }
+  },
+  "scope": "Six actual new-process model/index/pool/workload/shutdown executions, including interpreter startup, not sums of separate estimated stages. Shared filesystem/OS page caches not flushed: process-cold does not mean OS-cold. This is a cost/reproducibility experiment on known frozen outputs, not new independent accuracy confirmation.",
+  "hostname": "gpu510-32"
+}

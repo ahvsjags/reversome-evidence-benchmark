@@ -1,0 +1,5 @@
+{
+  "date": "2026-11-10T21:46:28.307055+00:00",
+  "reason": "ENGLISH_STOP_WORDS import corrected before any formal case execution; selection, decisions and thresholds unchanged.",
+  "previous_freeze": "execution_freeze_preexecution_import_fix.json"
+}

@@ -1,0 +1,58 @@
+{
+  "status": "PASS",
+  "passed": 19,
+  "total": 19,
+  "checks": {
+    "native_auto_frozen_independent_confusion": true,
+    "native_auto_frozen_independent_macroF1": true,
+    "native_auto_frozen_all16_compatibility": true,
+    "native_required_tool_frozen_independent_confusion": true,
+    "native_required_tool_frozen_independent_macroF1": true,
+    "native_required_tool_frozen_all16_compatibility": true,
+    "native_auto_corrected_independent_confusion": true,
+    "native_auto_corrected_independent_macroF1": true,
+    "native_auto_corrected_all16_compatibility": true,
+    "native_required_tool_corrected_independent_confusion": true,
+    "native_required_tool_corrected_independent_macroF1": true,
+    "native_required_tool_corrected_all16_compatibility": true,
+    "certificate_continuation_independent_confusion": true,
+    "certificate_continuation_independent_macroF1": true,
+    "certificate_continuation_all16_compatibility": true,
+    "all16outputs_retained": true,
+    "mixed_reference_not_silently_relabelled": true,
+    "original_worker_intact": true,
+    "negative_result_not_claimed_superior": true
+  },
+  "measured_totals": {
+    "native_auto": {
+      "errors": 0,
+      "logical_tool_calls": 40,
+      "actual_HTTP_requests": 69,
+      "HTTP_cache_hits": 2,
+      "wall_seconds": 753.6895564682782,
+      "LLM_calls": 56,
+      "prompt_tokens": 70300,
+      "completion_tokens": 4320,
+      "HTTP_requests_or_cache_hits": 71
+    },
+    "native_required_tool": {
+      "errors": 0,
+      "logical_tool_calls": 40,
+      "actual_HTTP_requests": 1,
+      "HTTP_cache_hits": 70,
+      "wall_seconds": 622.2803314775229,
+      "LLM_calls": 56,
+      "prompt_tokens": 70681,
+      "completion_tokens": 4299,
+      "HTTP_requests_or_cache_hits": 71
+    },
+    "certificate_continuation": {
+      "actual_extra_tool_actions": 14,
+      "logical_tool_calls": 54,
+      "wall_seconds_including_shared_prefix": 660.9140351898968,
+      "actual_NLI_pairs_including_rechecks": 180,
+      "LLM_calls": 56
+    }
+  },
+  "scope": "Independent standard-library metric reconstruction, not new model executions or independent expert adjudication."
+}

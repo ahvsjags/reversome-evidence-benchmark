@@ -1,0 +1,8 @@
+"""Fresh public-data requirement checks and donor marker analysis; no credentials."""
+from pathlib import Path
+import argparse,subprocess,sys,os,json,hashlib,datetime
+def main():
+ a=argparse.ArgumentParser();a.add_argument('--work-dir',required=True);x=a.parse_args();W=Path(x.work_dir).resolve();W.mkdir(parents=True,exist_ok=False);env=dict(os.environ,REVERSOME_EVIDENCE_ROOT=str(W),OPENBLAS_NUM_THREADS='4',OMP_NUM_THREADS='4');here=Path(__file__).resolve().parent
+ for name in ['intake_real_requirement_sources_v255_20261111.py','real_source_requirement_validation_v255_20261111.py','check_real_requirements_independent_v255_20261111.py','scientific_contract_extension_v256_1_20261111.py']:subprocess.run([sys.executable,str(here/name)],env=env,check=True)
+ B=W/'real_source_requirements_v255_20261111';receipts={n:json.loads((B/p).read_text()) for n,p in [('base','validation/validation_summary.json'),('independent','independent_check/receipt.json'),('extension','scientific_extension_v256_1/summary.json')]};assert all(r['status']=='PASS' for r in receipts.values());result={'status':'PASS','created_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'receipts':receipts,'scope':'Fresh downloads of public GEO counts/metadata and pinned Bioconductor sample metadata; controlled faults and actual donor pseudobulk recomputation, not independent human adjudication.','private_records_accessed':False};(W/'public_requirements_replay_receipt.json').write_text(json.dumps(result,indent=2));print(json.dumps({k:v for k,v in result.items() if k!='receipts'},indent=2))
+if __name__=='__main__':main()

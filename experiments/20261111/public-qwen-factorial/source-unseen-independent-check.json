@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "passed": 15,
+  "total": 15,
+  "checks": {
+    "source_membership_hash": true,
+    "61subset_same_ids": true,
+    "22NLI_seen": true,
+    "35any_membership_seen": true,
+    "fixed3_shared_NLI_counts_F1": true,
+    "fixed3_fresh_Qwen_only_counts_F1": true,
+    "fixed3_Qwen_NLI_source_consensus_counts_F1": true,
+    "source_active_shared_NLI_counts_F1": true,
+    "source_active_fresh_Qwen_only_counts_F1": true,
+    "source_active_Qwen_NLI_source_consensus_counts_F1": true,
+    "qwen_react_same_tools_shared_NLI_counts_F1": true,
+    "qwen_react_same_tools_fresh_Qwen_only_counts_F1": true,
+    "qwen_react_same_tools_Qwen_NLI_source_consensus_counts_F1": true,
+    "qwen_react_same_tools_fixed3_bootstrap": true,
+    "source_active_fixed3_bootstrap": true
+  },
+  "scope": "Independent source-mask and metric reconstruction using anonymous public prediction bundle and explicit public fit/calibration source-ID sets. Post-hoc subgroup, not new scientific confirmation."
+}

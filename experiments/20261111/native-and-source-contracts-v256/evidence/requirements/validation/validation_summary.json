@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "cases": 48,
+  "passed": 48,
+  "retained_valid_controls": 8,
+  "decision_confusion": {
+    "RELEASE -> RELEASE": 8,
+    "ESCALATE -> ESCALATE": 19,
+    "WITHHOLD -> WITHHOLD": 21
+  },
+  "classification_scope": "Developer-authored controlled scientific contract faults against three actual public artifacts; expected dispositions are not independent expert adjudications. Not a general open-language reasoning accuracy benchmark.",
+  "scientific_thresholds": "Protocol declaration checked, not an assertion that p<.05 is sufficient for biological truth.",
+  "marker_scope": "Prespecified public donor-level worked packet; not novel biological discovery or researcher-judgment trial.",
+  "private_records_accessed": false,
+  "manuscript_modified": false,
+  "source_protocol_sha256": "799a57c530fa2ee08be377507693b9d5989c336c754c8e942ce9c676d5355997",
+  "driver_sha256": "03873d81146284ca22b81e72e45ce7ce28df294692dad552fd8949b6d0e60ebd",
+  "created_utc": "2026-11-10T21:49:16.601563+00:00"
+}
