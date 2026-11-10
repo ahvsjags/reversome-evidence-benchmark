@@ -1,0 +1,48 @@
+{
+  "commit": "668c1c4eace973685e5f97ed09692cd880b5390c",
+  "files": [
+    {
+      "file": "intake_real_requirement_sources_v255_20261111.py",
+      "url": "https://raw.githubusercontent.com/ahvsjags/reversome-evidence-benchmark/668c1c4eace973685e5f97ed09692cd880b5390c/experiments/20261111/public-source-contracts-v256/intake_real_requirement_sources_v255_20261111.py",
+      "sha256": "ec3a1a87988f6bef02f6f59506bc964e3ea8d5382ae47dada26d2367e89795d9",
+      "bytes": 3618
+    },
+    {
+      "file": "real_source_requirement_validation_v255_20261111.py",
+      "url": "https://raw.githubusercontent.com/ahvsjags/reversome-evidence-benchmark/668c1c4eace973685e5f97ed09692cd880b5390c/experiments/20261111/public-source-contracts-v256/real_source_requirement_validation_v255_20261111.py",
+      "sha256": "a09a888a899c6b309e8cdca82b74ab4875bd4f5e9b721f7f9eba78b5461af604",
+      "bytes": 11423
+    },
+    {
+      "file": "check_real_requirements_independent_v255_20261111.py",
+      "url": "https://raw.githubusercontent.com/ahvsjags/reversome-evidence-benchmark/668c1c4eace973685e5f97ed09692cd880b5390c/experiments/20261111/public-source-contracts-v256/check_real_requirements_independent_v255_20261111.py",
+      "sha256": "cdc3c7b77e31d8737d2f817b59bcc65f408b5e03eeb1ca91e60be589c644321f",
+      "bytes": 4509
+    },
+    {
+      "file": "scientific_contract_extension_v256_1_20261111.py",
+      "url": "https://raw.githubusercontent.com/ahvsjags/reversome-evidence-benchmark/668c1c4eace973685e5f97ed09692cd880b5390c/experiments/20261111/public-source-contracts-v256/scientific_contract_extension_v256_1_20261111.py",
+      "sha256": "d84dfeae410fc08d85de86cddd8f096fbe54edbd469f68a1ff05b33419b39443",
+      "bytes": 6724
+    },
+    {
+      "file": "reproduce_public_requirements.py",
+      "url": "https://raw.githubusercontent.com/ahvsjags/reversome-evidence-benchmark/668c1c4eace973685e5f97ed09692cd880b5390c/experiments/20261111/public-source-contracts-v256/reproduce_public_requirements.py",
+      "sha256": "e68a37b0d7a8e9a11874dacbed6e939b68d18c7a3d32d4c7a16f21af74c704dd",
+      "bytes": 1611
+    },
+    {
+      "file": "README.md",
+      "url": "https://raw.githubusercontent.com/ahvsjags/reversome-evidence-benchmark/668c1c4eace973685e5f97ed09692cd880b5390c/experiments/20261111/public-source-contracts-v256/README.md",
+      "sha256": "33026955280b56a4796a6b154052e19dffdd831c3ea821ffda113dfdf11d6b64",
+      "bytes": 2292
+    },
+    {
+      "file": "requirements.txt",
+      "url": "https://raw.githubusercontent.com/ahvsjags/reversome-evidence-benchmark/668c1c4eace973685e5f97ed09692cd880b5390c/experiments/20261111/public-source-contracts-v256/requirements.txt",
+      "sha256": "1718b941653ae0c0cc83420847c704c4c9c2db4e77d239a3ad11d5501676f0db",
+      "bytes": 41
+    }
+  ],
+  "credentials_used": false
+}
